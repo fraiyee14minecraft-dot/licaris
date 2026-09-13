@@ -20,3 +20,5 @@ Publier*.exe
 
 launcher-config.json
 Documentation locale/
+__pycache__/
+*.pyc
