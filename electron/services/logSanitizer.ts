@@ -1,3 +1,5 @@
+import { launcherRuntimeConfig } from '../config';
+
 const REDACTED_IP = "[REDACTED_IP]";
 const REDACTED_TOKEN = "[REDACTED_TOKEN]";
 const REDACTED_USER_DATA = "[USER_DATA]";
@@ -108,10 +110,11 @@ export function sanitizeLaunchArgs(args: string[]): string[] {
 }
 
 function redactServerAddress(value: string): string {
-  return value
-    .replace(/heritagedepoudlard\.minesr\.com(?::\d{1,5})?/giu, REDACTED_SERVER)
-    .replace(/\b91\.197\.6\.237(?::\d{1,5})?\b/gu, REDACTED_IP)
-    .replace(/\b(?:25565|28461)\b/gu, REDACTED_PORT);
+  const {host, port} = launcherRuntimeConfig.officialServer;
+  let sanitized = value;
+  if (host) sanitized = sanitized.replace(new RegExp(`${escapeRegExp(host)}(?::\\d{1,5})?`, 'giu'), REDACTED_SERVER);
+  if (port) sanitized = sanitized.replace(new RegExp(`\\b${port}\\b`, 'gu'), REDACTED_PORT);
+  return sanitized;
 }
 
 function redactIpAddresses(value: string): string {

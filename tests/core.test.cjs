@@ -26,6 +26,34 @@ test('preferences reject malformed addresses, argument injection and invalid mem
  for(const bad of [{serverHost:'https://example.net'},{serverHost:'host --demo'},{serverPort:70000},{serverPort:1.5},{ramGb:'8 -jar evil'},{microsoftClientId:'a&redirect_uri=evil'}])assert.throws(()=>prefs.validatePreferences({...good,...bad}));
  assert.equal(prefs.validatePreferences({...good,serverHost:'[::1]'}).serverHost,'::1');
 });
+
+test('player settings never expose or overwrite connection details when saving memory',async()=>{
+ const config=require('../dist-electron/config').launcherRuntimeConfig;
+ const current={ramGb:8,serverHost:'play.example.net',serverPort:25571,microsoftClientId:'test-client-id'};
+ const before={...config.officialServer},previousId=config.microsoftClientId;
+ const file=installPaths.getSettingsFile();
+ try{
+  assert.deepEqual(prefs.getPlayerSettings(current),{settings:{ramGb:8},serverConfigured:true,microsoftConfigured:true});
+  const saved=await prefs.savePlayerPreferences(current,{ramGb:4,serverHost:'attacker.example',serverPort:12345,microsoftClientId:'replacement-id'});
+  assert.deepEqual(saved,{...current,ramGb:4});
+  assert.deepEqual(JSON.parse(await fs.readFile(file,'utf8')),saved);
+  assert.deepEqual(prefs.getPlayerSettings({...current,serverHost:'',microsoftClientId:''}),{settings:{ramGb:8},serverConfigured:false,microsoftConfigured:false});
+ }finally{Object.assign(config.officialServer,before);config.microsoftClientId=previousId;await fs.rm(file,{force:true});}
+});
+
+test('logs and error notices redact configured endpoints, IPs and credentials',()=>{
+ const config=require('../dist-electron/config').launcherRuntimeConfig;
+ const before={...config.officialServer};
+ const {sanitizeLogMessage}=require('../dist-electron/services/logSanitizer');
+ try{
+  for(const host of ['play.example.net','192.0.2.10','2001:db8::10']){
+   config.officialServer.host=host;config.officialServer.port=25571;
+   const message=sanitizeLogMessage(`Connexion ${host}:25571 — --quickPlayMultiplayer ${host}:25571 — ECONNREFUSED 192.0.2.11:25571 — port 25571 — access_token=private-value`);
+   for(const value of [host,'192.0.2.11','25571','private-value'])assert.ok(!message.includes(value),`Le journal contient encore ${value}`);
+   assert.ok(message.includes('ECONNREFUSED'),'Keep the useful error cause');
+  }
+ }finally{Object.assign(config.officialServer,before);}
+});
 test('a damaged file of the same size fails SHA-256 validation',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'cobblemon-hash-'));
  try{const file=path.join(dir,'mod.jar');await fs.writeFile(file,'abc');const expected={size:3,sha256:crypto.createHash('sha256').update('abc').digest('hex')};assert.equal(await pack.matches(file,expected),true);await fs.writeFile(file,'abd');assert.equal(await pack.matches(file,expected),false);}finally{await fs.rm(dir,{recursive:true,force:true});}

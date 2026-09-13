@@ -20,7 +20,7 @@
     </nav>
     <div class="sidebar-note"><span class="mini-spark">✳</span><p>Une aventure à partager.<br>À votre rythme.</p><span class="tiny" id="pack-sidebar">COBBLEMON ACADEMY · 2.0</span></div>
     <button class="sidebar-link" id="pack-link">Découvrir le modpack <span>↗</span></button>
-    <div class="sidebar-bottom"><span class="status-dot"></span> Launcher privé <small>v0.3.0</small></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Launcher privé <small id="launcher-version"></small></div>
   </aside>
   <main>
     <header><div class="breadcrumb">Votre espace <span>/</span> <strong id="page-title">Jouer</strong></div><button id="account" class="account"><span class="account-icon">☺</span><span id="account-label">Connexion Microsoft</span><span>↗</span></button></header>
@@ -34,7 +34,7 @@
       </div>
       <div class="facts">
         <div><span class="fact-icon">◇</span><p>Le modpack<strong><span id="pack-name">Academy 2.0</span> <em id="pack-version">2.6.0</em></strong></p></div>
-        <div><span class="fact-icon">◉</span><p>Votre serveur<strong id="server-label">Adresse à renseigner</strong></p><button class="icon-button" id="refresh-server" title="Actualiser l’état du serveur" aria-label="Actualiser l’état du serveur">↻</button></div>
+        <div><span class="fact-icon">◉</span><p>Votre serveur<strong id="server-label">Connexion automatique</strong></p><button class="icon-button" id="refresh-server" title="Actualiser l’état du serveur" aria-label="Actualiser l’état du serveur">↻</button></div>
         <div><span class="fact-icon">▤</span><p>Mémoire allouée<strong id="ram-label">8 Go</strong></p><button class="icon-button" id="edit-settings" title="Modifier les réglages" aria-label="Modifier les réglages">↗</button></div>
       </div>
       <div class="launch-box">
@@ -49,7 +49,7 @@
       <form id="settings-form">
         <div class="settings-card account-card"><div class="card-heading"><div><span class="eyebrow">VOTRE IDENTITÉ EN JEU</span><h2>Compte Microsoft</h2></div><span class="account-badge" id="account-state">Non connecté</span></div><p id="account-detail">Connectez le compte qui possède Minecraft Java Edition.</p><div class="account-actions"><button class="secondary" id="switch-account" type="button">Choisir un compte Microsoft</button><button class="text-button danger" id="logout" type="button">Se déconnecter</button><button class="text-button" id="device-login" type="button">Connexion avec un code</button></div></div>
         <div class="settings-grid">
-          <div class="settings-card"><span class="eyebrow">LE POINT DE RENDEZ-VOUS</span><h2>Votre serveur</h2><p>Déjà configuré pour rejoindre les amis.</p><div class="form-row"><label class="wide">Adresse Minecraft<input id="server-host" autocomplete="off"></label><label>Port<input id="server-port" type="number" min="1" max="65535" value="25565" required></label></div></div>
+          <div class="settings-card"><span class="eyebrow">LE POINT DE RENDEZ-VOUS</span><h2>Votre serveur</h2><div class="server-connection"><span class="connection-icon" aria-hidden="true">◇</span><div><strong id="server-configured">Connexion automatique</strong><span>Licaris · Entre amis</span></div></div><p id="server-help">Cliquez sur Jouer ensemble pour nous rejoindre.</p></div>
           <div class="settings-card"><div class="card-heading"><div><span class="eyebrow">LE CONFORT DE JEU</span><h2>Mémoire du jeu</h2></div><output id="ram-selected">8 Go</output></div><p id="ram-help">Gardez de la mémoire pour Windows.</p><fieldset class="ram-choices" id="ram-choices"><legend class="sr-only">Mémoire allouée</legend></fieldset><p class="small">Conseillé : 8 Go si votre ordinateur le permet.</p></div>
         </div>
         <div class="form-actions"><button class="primary" type="submit">Enregistrer les réglages <span>✓</span></button><button class="secondary" id="repair" type="button">Vérifier les fichiers</button></div>

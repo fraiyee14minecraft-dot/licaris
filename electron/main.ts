@@ -7,9 +7,9 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { launcherRuntimeConfig, packDefinition } from './config';
 import { getLauncherDataDir, getMinecraftInstanceDir, getLogsDir } from './services/installPaths';
-import { readPreferences, savePreferences, applyPreferences, type Preferences } from './services/preferences';
+import { readPreferences, savePlayerPreferences, getPlayerSettings, applyPreferences, type Preferences } from './services/preferences';
 import { getMicrosoftAuthStatus, getAuthenticatedSession, startMicrosoftLogin, startMicrosoftDeviceCodeLogin, logoutMicrosoft } from './services/authService';
-import { clearAuthSession } from './services/authSessionStore';
+import { sanitizeLogMessage } from './services/logSanitizer';
 import { getCurrentSessionLogs, addLogListener, writeLauncherLog } from './services/logService';
 import { installPack, readPackLock, type Progress } from './services/packService';
 import { ensureJavaRuntime } from './services/javaRuntimeService';
@@ -57,7 +57,7 @@ async function prepare() {
 }
 async function state() {
   const ready = await readFile(path.join(getMinecraftInstanceDir(), '.launcher-ready.json'), 'utf8').then(JSON.parse).catch(() => null);
-  return {settings, pack:packDefinition, auth:await getMicrosoftAuthStatus(), installed:ready?.version === packDefinition.version, running:!!game,
+  return {...getPlayerSettings(settings), pack:packDefinition, auth:await getMicrosoftAuthStatus(), installed:ready?.version === packDefinition.version, running:!!game,
     totalRamGb:Math.floor(os.totalmem()/1024**3), instancePath:getMinecraftInstanceDir(), version:app.getVersion(), busy};
 }
 async function exclusive(action: () => Promise<unknown>) {
@@ -65,7 +65,7 @@ async function exclusive(action: () => Promise<unknown>) {
   busy = true; send('busy', true);
   try { return await action(); }
   catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
+    const message = sanitizeLogMessage(error instanceof Error ? error.message : String(error));
     await writeLauncherLog(`[error] ${message}`);
     return {ok:false, message};
   } finally { busy=false; send('busy', false); }
@@ -89,12 +89,12 @@ async function play() {
   });
   await new Promise<void>((resolve, reject) => { child.once('spawn', resolve); child.once('error', reject); });
   child.unref();
-  return {ok:true, message:settings.serverHost ? 'Minecraft démarre et va rejoindre votre serveur…' : 'Minecraft démarre. Ajoute votre serveur dans les réglages pour le rejoindre directement.'};
+  return {ok:true, message:settings.serverHost ? 'Minecraft démarre et va rejoindre votre serveur…' : 'Minecraft démarre. Contactez l’organisateur pour activer la connexion au serveur.'};
 }
 function registerIpc() {
   const handle = (name: string, action: (input: any) => unknown) => ipcMain.handle(name, async (event, input) => {
     if (event.sender !== window?.webContents || event.senderFrame?.url !== pathToFileURL(uiFile).href) throw new Error('Source IPC refusée.');
-    try { return await action(input); } catch (error) { return {ok:false, message:error instanceof Error ? error.message : String(error)}; }
+    try { return await action(input); } catch (error) { return {ok:false, message:sanitizeLogMessage(error instanceof Error ? error.message : String(error))}; }
   });
   handle('state', state);
   handle('ui-ready', () => {
@@ -107,13 +107,11 @@ function registerIpc() {
   });
   handle('logs', () => getCurrentSessionLogs().slice(-400));
   handle('save-settings', input => exclusive(async () => {
-    const previousId = settings.microsoftClientId;
-    settings = await savePreferences({...input, microsoftClientId:settings.microsoftClientId});
-    if (previousId !== settings.microsoftClientId) await clearAuthSession();
-    return {ok:true, message:'Réglages enregistrés.', settings};
+    settings = await savePlayerPreferences(settings, input);
+    return {ok:true, message:'Réglages enregistrés.'};
   }));
   handle('login', method => exclusive(async () => {
-    if (!settings.microsoftClientId) return {ok:false, message:'Renseigne l’identifiant public de votre application Microsoft dans Réglages → Connexion Microsoft.'};
+    if (!settings.microsoftClientId) return {ok:false, message:'La connexion Microsoft n’est pas disponible. Contactez l’organisateur du launcher.'};
     return (method === 'device' ? startMicrosoftDeviceCodeLogin : startMicrosoftLogin)(status => send('auth', status));
   }));
   handle('switch-account', () => exclusive(async () => {
@@ -129,7 +127,11 @@ function registerIpc() {
   handle('logout', () => exclusive(() => logoutMicrosoft(status => send('auth', status))));
   handle('install', () => exclusive(async () => { await prepare(); return {ok:true, message:'Installation terminée. Le pack est prêt.'}; }));
   handle('play', () => exclusive(play));
-  handle('server-status', () => settings.serverHost ? getOfficialServerStatus() : {state:'not-configured', message:'Adresse à renseigner'});
+  handle('server-status', async () => {
+    if (!settings.serverHost) return {state:'not-configured'};
+    const {state, onlinePlayers, maxPlayers, latencyMs} = await getOfficialServerStatus();
+    return {state, onlinePlayers, maxPlayers, latencyMs};
+  });
   handle('open-folder', async which => {
     const directory = which === 'logs' ? getLogsDir() : getMinecraftInstanceDir();
     await mkdir(directory, {recursive:true});
@@ -152,9 +154,22 @@ async function createWindow() {
     await writeFile(path.join(__dirname,'../.test-data/launcher-preview.png'), (await window.webContents.capturePage()).toPNG()).catch(error => writeLauncherLog(`[capture] ${error.message}`));
     await window.webContents.executeJavaScript("document.querySelector('[data-view=settings]').click()");
     await new Promise(resolve => setTimeout(resolve, 300));
+    const privacyCheck = await window.webContents.executeJavaScript(`(async () => {
+      const state = await window.cobblemon.invoke('state');
+      const status = await window.cobblemon.invoke('server-status');
+      return {settingsFields:Object.keys(state.settings), statusFields:Object.keys(status),
+        serverInputs:!!document.querySelector('#server-host, #server-port'),
+        serverLabel:document.getElementById('server-configured').textContent,
+        version:document.getElementById('launcher-version').textContent,
+        markup:document.documentElement.outerHTML};
+    })()`);
+    if (privacyCheck.settingsFields.join(',') !== 'ramGb' || privacyCheck.statusFields.some((key:string) => ['host','port','error'].includes(key)) || privacyCheck.serverInputs || (settings.serverHost && privacyCheck.markup.includes(settings.serverHost))) {
+      throw new Error('Des coordonnées du serveur sont encore exposées dans l’interface.');
+    }
     await writeFile(path.join(__dirname,'../.test-data/settings-preview.png'), (await window.webContents.capturePage()).toPNG());
     if (!rendererReady) throw new Error('Le renderer ne communique pas avec le processus principal.');
-    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady}, null, 2));
+    const {markup, ...privacy} = privacyCheck;
+    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady, privacy}, null, 2));
     app.quit();
   }
 }
@@ -174,6 +189,6 @@ app.whenReady().then(async () => {
   registerIpc(); await createWindow();checkLauncherUpdate();
 }).catch(async error => {
   await writeLauncherLog(`[error] ${error.message}`);
-  if (!testMode) dialog.showErrorBox('Cobblemon Launcher', error.message);
+    if (!testMode) dialog.showErrorBox('Cobblemon Launcher', sanitizeLogMessage(error.message));
   app.exit(1);
 });

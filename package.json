@@ -1,7 +1,7 @@
 {
   "name": "cobblemon-friends-launcher",
   "productName": "Cobblemon Launcher",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "Launcher privé pour Cobblemon Academy 2.0, entre amis.",
   "author": "Cobblemon entre amis",
@@ -33,7 +33,7 @@
     "asar": true,
     "npmRebuild": false,
     "directories": {
-      "output": "release/0.3.0"
+      "output": "release/0.3.1"
     },
     "files": [
       "dist-electron/**/*",

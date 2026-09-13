@@ -63,12 +63,13 @@ async function refresh(fillForm=true) {
   $('pack-sidebar').textContent=current.pack.name.toUpperCase();
   $('runtime-label').textContent=`MINECRAFT ${current.pack.minecraftVersion} · FABRIC ${current.pack.fabricLoaderVersion} · JAVA 21`;
   $('ram-label').textContent=`${current.settings.ramGb} Go`;
+  $('launcher-version').textContent=`v${current.version}`;
+  $('server-configured').textContent=current.serverConfigured ? 'Serveur configuré' : 'Configuration en attente';
+  $('server-help').textContent=current.serverConfigured ? 'Cliquez sur Jouer ensemble pour nous rejoindre. Tout est déjà prêt.' : 'Contactez l’organisateur du launcher pour activer la connexion.';
   if(fillForm) {
     selectedRam=current.settings.ramGb;
     renderMemory(current.totalRamGb);
     $('ram-help').textContent=`Votre ordinateur dispose de ${current.totalRamGb} Go. 6 à 8 Go conviennent pour ce pack ; gardez de la mémoire pour Windows.`;
-    $('server-host').value=current.settings.serverHost;
-    $('server-port').value=current.settings.serverPort;
   }
   renderAccount(current.auth); renderButtons();
 }
@@ -76,12 +77,11 @@ async function checkServer() {
   $('refresh-server').disabled=true;
   $('server-label').textContent='Vérification…';
   const result=await invoke('server-status');
-  $('server-label').textContent=result.state === 'online' ? `En ligne · ${result.onlinePlayers ?? '?'} joueur(s)` : result.state === 'offline' ? 'Hors ligne ou injoignable' : 'Adresse à renseigner';
-  $('server-label').title=current?.settings.serverHost || 'Ajoutez l’adresse dans les réglages.';
+  $('server-label').textContent=result.state === 'online' ? `En ligne · ${result.onlinePlayers ?? '?'} joueur(s)` : result.state === 'offline' ? 'Hors ligne ou injoignable' : 'Configuration en attente';
   $('refresh-server').disabled=false;
 }
 async function login(method='browser') {
-  if(!current?.settings.microsoftClientId) {
+  if(!current?.microsoftConfigured) {
     view('settings');
     notice({ok:false,message:'La connexion Microsoft n’est pas disponible. Contactez l’organisateur du launcher.'}); return;
   }
@@ -101,7 +101,7 @@ $('play-button').addEventListener('click',async()=>{
 });
 $('settings-form').addEventListener('submit',async event=>{
   event.preventDefault();
-  notice(await invoke('save-settings',{serverHost:$('server-host').value,serverPort:Number($('server-port').value),ramGb:selectedRam}));
+  notice(await invoke('save-settings',{ramGb:selectedRam}));
   await refresh(false); await checkServer();
 });
 $('repair').addEventListener('click',async()=>{view('play');$('progress-wrap').hidden=false;notice(await invoke('install'));await refresh(false);});

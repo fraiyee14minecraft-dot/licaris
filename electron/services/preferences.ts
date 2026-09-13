@@ -5,6 +5,13 @@ import net from 'node:net';
 import { getSettingsFile } from './installPaths';
 import { launcherRuntimeConfig, setServer } from '../config';
 export interface Preferences {ramGb: number; serverHost: string; serverPort: number; microsoftClientId: string}
+// Only these values belong in the player interface. Connection details stay in the main process.
+export function getPlayerSettings(settings: Preferences) {
+  return {settings:{ramGb:settings.ramGb}, serverConfigured:!!settings.serverHost, microsoftConfigured:!!settings.microsoftClientId};
+}
+export function savePlayerPreferences(current: Preferences, input: any): Promise<Preferences> {
+  return savePreferences({...current, ramGb:input?.ramGb});
+}
 export function validatePreferences(input: any): Preferences {
   const host = String(input?.serverHost ?? '').trim().replace(/^\[|\]$/g, '');
   const port = Number(input?.serverPort);

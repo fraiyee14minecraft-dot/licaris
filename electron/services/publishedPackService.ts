@@ -126,12 +126,25 @@ export async function installPublishedPack(progress:Progress):Promise<void>{
  }));if(failure)throw failure;
  const archive=path.join(getLauncherDataDir(),'cache',`${manifest.archive.sha256}.zip`);
  const changedOverrides=[];
- for(const f of manifest.overrideFiles){const target=safePath(instance,f.path);const info=await refuseLinks(instance,target,checked);const sha=info?await hashFile(target,info.size):null;observed.set(f.path,{exists:!!info,sha});if(sha!==f.sha256)changedOverrides.push(f);}
- if(changedOverrides.length){
-  progress('Téléchargement des configurations et datapacks…',45);await download(manifest.archive,archive);
-  await extractOverrides(archive,stage,(n,total)=>progress(`Préparation des ressources : ${n} fichiers`,50+30*n/total),true);
-  for(const f of manifest.overrideFiles){const staged=safePath(stage,f.path);if(!await exists(staged)||await hashFile(staged,f.size)!==f.sha256)throw new Error(`Ressource invalide : ${f.path}`);}
+ const totalOverrides=manifest.overrideFiles.length;
+ progress(`Vérification des configurations et datapacks : 0/${totalOverrides}`,43);
+ for(let i=0;i<totalOverrides;i++){
+  const f=manifest.overrideFiles[i],target=safePath(instance,f.path);
+  const info=await refuseLinks(instance,target,checked);const sha=info?await hashFile(target,info.size):null;
+  observed.set(f.path,{exists:!!info,sha});if(sha!==f.sha256)changedOverrides.push(f);
+  if(i%100===0||i+1===totalOverrides)progress(`Vérification des configurations et datapacks : ${i+1}/${totalOverrides}`,43+7*(i+1)/totalOverrides);
  }
+ if(changedOverrides.length){
+  progress('Téléchargement des configurations et datapacks…',50);await download(manifest.archive,archive);
+  await extractOverrides(archive,stage,(n,total)=>progress(`Préparation des ressources : ${n} fichiers`,53+27*n/total),true);
+  progress(`Validation des ressources : 0/${totalOverrides}`,80);
+  for(let i=0;i<totalOverrides;i++){
+   const f=manifest.overrideFiles[i],staged=safePath(stage,f.path);
+   if(!await exists(staged)||await hashFile(staged,f.size)!==f.sha256)throw new Error(`Ressource invalide : ${f.path}`);
+   if(i%100===0||i+1===totalOverrides)progress(`Validation des ressources : ${i+1}/${totalOverrides}`,80+9*(i+1)/totalOverrides);
+  }
+ }
+ progress('Préparation de la mise à jour…',89);
  await applyPreparedPack(manifest,instance,stage,progress,observed);
  await writeFile(path.join(instance,'.launcher-pack-installed.json'),JSON.stringify({version:manifest.version,revision:manifest.revision,installedAt:new Date().toISOString()}));
  progress('Modpack Licaris à jour.',100);
