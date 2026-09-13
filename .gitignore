@@ -1,0 +1,22 @@
+node_modules/
+dist-electron/
+release/
+downloads/
+.test-data/
+*.log
+*.env
+
+Serveur/
+.env
+.env.*
+publisher.env
+*.clixml
+
+Modpack à publier/
+Sauvegardes publication/
+.publication/
+.publisher-tools/
+Publier*.exe
+
+launcher-config.json
+Documentation locale/

@@ -1,0 +1,2034 @@
+{
+  "schemaVersion": 1,
+  "id": "academy-2",
+  "label": "Academy 2.0",
+  "edition": "2.0",
+  "name": "Cobblemon Academy 2.0",
+  "version": "2.6.0",
+  "minecraftVersion": "1.21.1",
+  "fabricLoaderVersion": "0.18.1",
+  "source": "https://www.curseforge.com/minecraft/modpacks/cobblemon-academy-2-0",
+  "archive": {
+    "url": "https://edge.forgecdn.net/files/8338/233/Cobblemon%20Academy%202.0-2.6.0.zip",
+    "size": 203866938,
+    "sha256": "36878d3c4744b23377404c71cb9286234aba0d79ddc90c905737a8bb63da92fd"
+  },
+  "files": [
+    {
+      "projectId": 975120,
+      "fileId": 5855528,
+      "path": "mods/cwb-fabric-3.0.0+mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5855/528/cwb-fabric-3.0.0%2Bmc1.21.jar",
+      "size": 81288,
+      "sha256": "5a04b0616632f74ca2f0406d8b73bca8639b8f8f67836621d19502d7e5d660cc",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders/files/5855528"
+    },
+    {
+      "projectId": 580555,
+      "fileId": 6420930,
+      "path": "mods/emi-1.1.22+1.21.1+fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6420/930/emi-1.1.22%2B1.21.1%2Bfabric.jar",
+      "size": 1025303,
+      "sha256": "6da00a8d13cad6e55abaa3032d80ff4d1d1520146b683f1ca7c029e01718fe05",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/emi/files/6420930"
+    },
+    {
+      "projectId": 610492,
+      "fileId": 7144812,
+      "path": "mods/another_furniture-fabric-4.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7144/812/another_furniture-fabric-4.0.1.jar",
+      "size": 2398739,
+      "sha256": "adfb1e3b88afe536d3cedac2d585192561c562de4e0a3295afba947567a0763b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/another-furniture/files/7144812"
+    },
+    {
+      "projectId": 1144644,
+      "fileId": 6749668,
+      "path": "mods/cobblemon_knowlogy-fabric-1.5.0-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6749/668/cobblemon_knowlogy-fabric-1.5.0-1.21.1.jar",
+      "size": 6037214,
+      "sha256": "cfe6a9d5c528fa2fadf8a1083e07382cf13c568ffffdef8a67cd6ec775a447dc",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-knowlogy/files/6749668"
+    },
+    {
+      "projectId": 1245655,
+      "fileId": 6712416,
+      "path": "mods/tlib-1.3.0-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6712/416/tlib-1.3.0-1.21.1.jar",
+      "size": 222050,
+      "sha256": "348e614960de1b484cc58e1433aa388fe56d9e2b22de99bb537463f3ace9a635",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/tlib/files/6712416"
+    },
+    {
+      "projectId": 250832,
+      "fileId": 5552108,
+      "path": "mods/elevatorid-fabric-1.21-1.11.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5552/108/elevatorid-fabric-1.21-1.11.1.jar",
+      "size": 185086,
+      "sha256": "71e2cd195d980dff01e22f94c1e8a6c78d8da123399761e7b009f87edf4ceed9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/openblocks-elevator/files/5552108"
+    },
+    {
+      "projectId": 499980,
+      "fileId": 6818414,
+      "path": "mods/moonlight-1.21-2.20.7-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6818/414/moonlight-1.21-2.20.7-fabric.jar",
+      "size": 1175712,
+      "sha256": "6f97d90f0b42d2785863b94de088b8767b0bdad6a966f66acaf715d6ce0f226d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/selene/files/6818414"
+    },
+    {
+      "projectId": 980715,
+      "fileId": 6352780,
+      "path": "mods/NBTcopy-FABRIC-1.20.1-1.0.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6352/780/NBTcopy-FABRIC-1.20.1-1.0.4.jar",
+      "size": 9138,
+      "sha256": "08a2ff22a3f256fcdb93e9abdf5ee77da3b8cb209f0a79b1e8a4b16cf051a01b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/nbt-copy/files/6352780"
+    },
+    {
+      "projectId": 272515,
+      "fileId": 5850588,
+      "path": "mods/BetterAdvancements-Fabric-1.21.1-0.4.3.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5850/588/BetterAdvancements-Fabric-1.21.1-0.4.3.21.jar",
+      "size": 100151,
+      "sha256": "7542d8f2f280fad5698f114ab28c28300e52bdcf80622f3c104b96434162fcf5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/better-advancements/files/5850588"
+    },
+    {
+      "projectId": 538214,
+      "fileId": 6330032,
+      "path": "mods/handcrafted-fabric-1.21.1-4.0.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6330/32/handcrafted-fabric-1.21.1-4.0.3.jar",
+      "size": 7127377,
+      "sha256": "9609c27e2eeaed4c633ade2d68ad980cfbed0442a10239846a67e9c62bc1b230",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/handcrafted/files/6330032"
+    },
+    {
+      "projectId": 915902,
+      "fileId": 6653768,
+      "path": "mods/EuphoriaPatcher-1.6.5-r5.5.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6653/768/EuphoriaPatcher-1.6.5-r5.5.1-fabric.jar",
+      "size": 2060861,
+      "sha256": "8c54a994a344e736f98ec63f72ad6443b4b051ddeb6e58f7ecfe6a706ae67de6",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/euphoria-patches/files/6653768"
+    },
+    {
+      "projectId": 448233,
+      "fileId": 6780236,
+      "path": "mods/entityculling-fabric-1.8.2-mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6780/236/entityculling-fabric-1.8.2-mc1.21.jar",
+      "size": 469193,
+      "sha256": "8649c93be0ce20655742adb24bac097a9aeec50b8c1bc8ed78bfe1da7636e8fa",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/entityculling/files/6780236"
+    },
+    {
+      "projectId": 1337167,
+      "fileId": 7238575,
+      "path": "mods/moogs_structures-1.1.0-1.21-1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7238/575/moogs_structures-1.1.0-1.21-1.21.1-fabric.jar",
+      "size": 238468,
+      "sha256": "3db3a72f2fecf96ae394a2957604ee97fb073f4145321aaaea90cd0cd6693643",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/moogs-structure-lib/files/7238575"
+    },
+    {
+      "projectId": 225608,
+      "fileId": 5830452,
+      "path": "mods/worldedit-mod-7.3.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5830/452/worldedit-mod-7.3.8.jar",
+      "size": 6222854,
+      "sha256": "5e7752c97876d87411e3760bcc573cc431f43c453722e6959fa7fe54db1b01ca",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/worldedit/files/5830452"
+    },
+    {
+      "projectId": 835861,
+      "fileId": 5424645,
+      "path": "mods/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5424/645/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
+      "size": 29943,
+      "sha256": "5cdeb21113f8055c9d3f47daf579b0672145f628a04c1c719aa77c703dbbf16c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/item-obliterator/files/5424645"
+    },
+    {
+      "projectId": 306612,
+      "fileId": 7081224,
+      "path": "mods/fabric-api-0.116.7+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7081/224/fabric-api-0.116.7%2B1.21.1.jar",
+      "size": 2424884,
+      "sha256": "08018cc48c97415a38016a00dbd5a2c7a460ba6b7a051690a8cb3dbb5e8482a4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files/7081224"
+    },
+    {
+      "projectId": 421377,
+      "fileId": 6258834,
+      "path": "mods/TreeChop-1.21.1-fabric-0.19.3a.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6258/834/TreeChop-1.21.1-fabric-0.19.3a.jar",
+      "size": 500211,
+      "sha256": "0dc097bc1a6f327b32b1c1bafadfa42b2a840280ab9b7808cc36df3f822cae55",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/treechop/files/6258834"
+    },
+    {
+      "projectId": 350727,
+      "fileId": 5907272,
+      "path": "mods/xercapaint-1.21.1-1.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5907/272/xercapaint-1.21.1-1.0.1.jar",
+      "size": 400450,
+      "sha256": "c901dd88eff15a66fe3255bcf2fa9f1848d855e38941b158c00b764fba6c2c34",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/joy-of-painting/files/5907272"
+    },
+    {
+      "projectId": 944409,
+      "fileId": 6749574,
+      "path": "mods/knowlogy-fabric-0.9.1-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6749/574/knowlogy-fabric-0.9.1-1.21.1.jar",
+      "size": 6110584,
+      "sha256": "35737c0c002efacfcf27a98a26795200682167be993766c8fcdd7c997d43b6ca",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/knowlogy/files/6749574"
+    },
+    {
+      "projectId": 659110,
+      "fileId": 6273884,
+      "path": "mods/regions_unexplored-fabric-1.21.1-0.5.6.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6273/884/regions_unexplored-fabric-1.21.1-0.5.6.1.jar",
+      "size": 5458803,
+      "sha256": "568fc411eede4e077178986734c988cc98cb6438deddc8ef2943a9a9b8bf9470",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/regions-unexplored/files/6273884"
+    },
+    {
+      "projectId": 585548,
+      "fileId": 7205398,
+      "path": "mods/BHMenu-Fabric-1.21-2.5.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7205/398/BHMenu-Fabric-1.21-2.5.3.jar",
+      "size": 186075,
+      "sha256": "d1430e0b8d661b1b7085e1146053057852049f12fa0f6bf87197c41a1264dd56",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/bisecthosting-server-integration-menu-fabric/files/7205398"
+    },
+    {
+      "projectId": 547694,
+      "fileId": 6024297,
+      "path": "mods/defaultoptions-fabric-1.21.1-21.1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6024/297/defaultoptions-fabric-1.21.1-21.1.2.jar",
+      "size": 92152,
+      "sha256": "6989dae7d325e29938ade6ab81fd4edff8962b51677ee5412a19c501729bfff3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/default-options-fabric/files/6024297"
+    },
+    {
+      "projectId": 580714,
+      "fileId": 6427377,
+      "path": "mods/sparkle-3.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6427/377/sparkle-3.1.0.jar",
+      "size": 16940,
+      "sha256": "a6e909531e3ceaa5619b5e80311619f53ab0aab36b28240b8e466f9715153382",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sparkle/files/6427377"
+    },
+    {
+      "projectId": 326652,
+      "fileId": 6114706,
+      "path": "mods/cupboard-fabric-1.21-2.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6114/706/cupboard-fabric-1.21-2.9.jar",
+      "size": 23781,
+      "sha256": "3a68c395d12e5313246d1576c9ca8815d4d8b4adedaf4236d7b8b4a48fdd82f7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cupboard/files/6114706"
+    },
+    {
+      "projectId": 32274,
+      "fileId": 6550376,
+      "path": "mods/journeymap-fabric-1.21.1-6.0.0-beta.47.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6550/376/journeymap-fabric-1.21.1-6.0.0-beta.47.jar",
+      "size": 3503348,
+      "sha256": "847ac470216f46e9d3f1757e4eee752c0b62675bc23ca8b1c60a040fcf61e30a",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/journeymap/files/6550376"
+    },
+    {
+      "projectId": 1035665,
+      "fileId": 5676987,
+      "path": "mods/constructionwand-1.0.6+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5676/987/constructionwand-1.0.6%2B1.21.1.jar",
+      "size": 832834,
+      "sha256": "dc9f7ce2e469f926e3fafb3522360ba207603c54aac2ff41cad2e9b84ec56f92",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/construction-wand-fabric/files/5676987"
+    },
+    {
+      "projectId": 912326,
+      "fileId": 6744815,
+      "path": "mods/enchantmentdisabler-3.3.2+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6744/815/enchantmentdisabler-3.3.2%2B1.21.1.jar",
+      "size": 751458,
+      "sha256": "893686c8b6753dcf694191fac081cc72c5d089a83a7d3f3e13a79246e2c7da77",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/enchantmentdisabler/files/6744815"
+    },
+    {
+      "projectId": 454372,
+      "fileId": 6076743,
+      "path": "mods/supermartijn642corelib-1.1.18a-fabric-mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6076/743/supermartijn642corelib-1.1.18a-fabric-mc1.21.jar",
+      "size": 572596,
+      "sha256": "bca290bd764a218cd6cfa9ed6c4ef92dd9d0fd1855c5d58371e70e2abc4e837f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib/files/6076743"
+    },
+    {
+      "projectId": 250419,
+      "fileId": 6910373,
+      "path": "mods/enchdesc-fabric-1.21.1-21.1.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6910/373/enchdesc-fabric-1.21.1-21.1.8.jar",
+      "size": 83425,
+      "sha256": "acf2e24da1f4e6f0c7c3ce8ad6e2d466a317099b8af5acbf2d4d852873f0b125",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions/files/6910373"
+    },
+    {
+      "projectId": 686911,
+      "fileId": 6745746,
+      "path": "mods/ImmediatelyFast-Fabric-1.6.6+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6745/746/ImmediatelyFast-Fabric-1.6.6%2B1.21.1.jar",
+      "size": 228315,
+      "sha256": "0d72eb4e380ff683ebb92058357a73ef2d94f1244c3f26940d4729c94dd31ed5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/immediatelyfast/files/6745746"
+    },
+    {
+      "projectId": 634062,
+      "fileId": 5885733,
+      "path": "mods/NoChatReports-FABRIC-1.21.1-v2.9.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5885/733/NoChatReports-FABRIC-1.21.1-v2.9.1.jar",
+      "size": 309410,
+      "sha256": "413c3952cbbf641b492bb2e47763ed7e48d1d72db0863d9d2274a74ce5269849",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/no-chat-reports/files/5885733"
+    },
+    {
+      "projectId": 495476,
+      "fileId": 7140308,
+      "path": "mods/PuzzlesLib-v21.1.39-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7140/308/PuzzlesLib-v21.1.39-1.21.1-Fabric.jar",
+      "size": 1129192,
+      "sha256": "67e9b96383a76cb8f011562d67cbd408cca7d85cb199db61cec1704869414fe2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib/files/7140308"
+    },
+    {
+      "projectId": 1091695,
+      "fileId": 6668275,
+      "path": "mods/scoreboardtweaks-1.3.4+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6668/275/scoreboardtweaks-1.3.4%2B1.21.1-fabric.jar",
+      "size": 115553,
+      "sha256": "b6376e458885a31595af4214c866b7c74d6c4036df6d830edb2b7ed55b9ff1ae",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/scoreboard-tweaks/files/6668275"
+    },
+    {
+      "projectId": 1104882,
+      "fileId": 6533722,
+      "path": "mods/txnilib-fabric-1.0.24-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6533/722/txnilib-fabric-1.0.24-1.21.1.jar",
+      "size": 1303092,
+      "sha256": "814ea0db4bddf0bbc7beb316490e5f709e067203bbe1b8780ef3b2dde267ccc3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/txnilib/files/6533722"
+    },
+    {
+      "projectId": 502516,
+      "fileId": 6023035,
+      "path": "mods/craftingtweaks-fabric-1.21.1-21.1.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6023/35/craftingtweaks-fabric-1.21.1-21.1.5.jar",
+      "size": 247914,
+      "sha256": "2c4aec04433ac4da2e2e71d164a33d5435eda98a5c400aacdb91ffe736e6426e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-fabric/files/6023035"
+    },
+    {
+      "projectId": 250398,
+      "fileId": 6368974,
+      "path": "mods/Controlling-fabric-1.21.1-19.0.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6368/974/Controlling-fabric-1.21.1-19.0.5.jar",
+      "size": 83679,
+      "sha256": "c0150c5bfbc77f27b92f24a5a9c2edc462eba8c8f912635757c5deb3a0a93f8d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/controlling/files/6368974"
+    },
+    {
+      "projectId": 1344151,
+      "fileId": 6980616,
+      "path": "mods/subtleskybox-fabric-0.2.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6980/616/subtleskybox-fabric-0.2.0.jar",
+      "size": 17105,
+      "sha256": "305c93d958a302f805985f62a323dfef06ead9cd0bac9ef69f3b9250b4b76e0c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/subtle-skybox/files/6980616"
+    },
+    {
+      "projectId": 348521,
+      "fileId": 5729125,
+      "path": "mods/cloth-config-15.0.140-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5729/125/cloth-config-15.0.140-fabric.jar",
+      "size": 1157166,
+      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cloth-config/files/5729125"
+    },
+    {
+      "projectId": 401648,
+      "fileId": 5873256,
+      "path": "mods/BetterF3-11.0.3-Fabric-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5873/256/BetterF3-11.0.3-Fabric-1.21.1.jar",
+      "size": 1810710,
+      "sha256": "e0e4bb25fbe23b16b7574474ee9fde5cdc9757d05885bc43978f4ea5e8e258ad",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/betterf3/files/5873256"
+    },
+    {
+      "projectId": 421649,
+      "fileId": 6715461,
+      "path": "mods/YungsApi-1.21.1-Fabric-5.1.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6715/461/YungsApi-1.21.1-Fabric-5.1.6.jar",
+      "size": 1257492,
+      "sha256": "36fb903a1ebcf1511745be2da9e5144f1d2465bff7a5c17beffd347399acd1ba",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/yungs-api-fabric/files/6715461"
+    },
+    {
+      "projectId": 416797,
+      "fileId": 5430434,
+      "path": "mods/konkrete_fabric_1.9.9_MC_1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5430/434/konkrete_fabric_1.9.9_MC_1.21.jar",
+      "size": 786695,
+      "sha256": "06e912f99d59bf81c0676f1db936150ad4443d5674f59b3c55604540ba620841",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/konkrete-fabric/files/5430434"
+    },
+    {
+      "projectId": 342584,
+      "fileId": 6429221,
+      "path": "mods/collective-1.21.1-8.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6429/221/collective-1.21.1-8.3.jar",
+      "size": 934732,
+      "sha256": "611e6a1cb42cfd69097041b46c2febccf027182c0d792559e5ba4cb353ae1318",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/collective/files/6429221"
+    },
+    {
+      "projectId": 776337,
+      "fileId": 7150035,
+      "path": "mods/laserbridges-1.21.1-fabric-5.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7150/35/laserbridges-1.21.1-fabric-5.3.jar",
+      "size": 198040,
+      "sha256": "32078e37f613af8dc6ea92886e5e22de153d9064c70de7b406e07f9df2cfe87c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/laser-bridges-doors/files/7150035"
+    },
+    {
+      "projectId": 720811,
+      "fileId": 7361160,
+      "path": "mods/chunksfadein-fabric-3.0.15-1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7361/160/chunksfadein-fabric-3.0.15-1.21.jar",
+      "size": 447029,
+      "sha256": "afac78294674006a8b88068fbfb7f1c81cd67985a7685236ade7f3af69c54373",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chunks-fade-in/files/7361160"
+    },
+    {
+      "projectId": 415681,
+      "fileId": 6614893,
+      "path": "mods/connectiblechains-2.5.4+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6614/893/connectiblechains-2.5.4%2B1.21.1.jar",
+      "size": 500077,
+      "sha256": "8240847e71d501995d60b7c7f5cfc47da8dcaf9f8cc3375b7d2e257f2078d95f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/connectiblechains/files/6614893"
+    },
+    {
+      "projectId": 632420,
+      "fileId": 7082965,
+      "path": "mods/dynamiccrosshaircompat-4.4+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7082/965/dynamiccrosshaircompat-4.4%2B1.21.1-fabric.jar",
+      "size": 219313,
+      "sha256": "3c2c26d602ca2f1825184edb974629d5b85a47cb5a2a475cb774d8f06080763d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/dynamic-crosshair-compat/files/7082965"
+    },
+    {
+      "projectId": 682564,
+      "fileId": 5732770,
+      "path": "mods/StrawStatues-v21.1.0-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5732/770/StrawStatues-v21.1.0-1.21.1-Fabric.jar",
+      "size": 306136,
+      "sha256": "d8950c543139e6cd36a687d8f294ed93626608b7857465ef257a7ec55b7e387d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/straw-statues/files/5732770"
+    },
+    {
+      "projectId": 632622,
+      "fileId": 6420141,
+      "path": "mods/HopoBetterUnderwaterRuins-[1.21.1-1.21.3]-1.2.1b.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6420/141/HopoBetterUnderwaterRuins-%5B1.21.1-1.21.3%5D-1.2.1b.jar",
+      "size": 686447,
+      "sha256": "818206b8a031fa16169428681cbebafbd20270b7b34331b5b20e15af34664563",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/hopo-better-underwater-ruins/files/6420141"
+    },
+    {
+      "projectId": 393442,
+      "fileId": 6818841,
+      "path": "mods/lambdynamiclights-4.1.5+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6818/841/lambdynamiclights-4.1.5%2B1.21.1.jar",
+      "size": 1196680,
+      "sha256": "239bff93185d9b2d447c75fa8532c10f2cd642aa1caf7fdc8ff78e3a2429ff98",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights/files/6818841"
+    },
+    {
+      "projectId": 638881,
+      "fileId": 4159802,
+      "path": "mods/chalk-colorful-addon-2.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4159/802/chalk-colorful-addon-2.1.1.jar",
+      "size": 60640,
+      "sha256": "bf184e44ceb222e0831912acc2e26a17b7358e93162b60776dd646cf3780bbef",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chalk-fabric-colorful-addon/files/4159802"
+    },
+    {
+      "projectId": 548155,
+      "fileId": 5957579,
+      "path": "mods/vanity-fabric-1.21.1-5.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5957/579/vanity-fabric-1.21.1-5.0.2.jar",
+      "size": 721939,
+      "sha256": "ed2d003d01c09bba5d5404717cf7009a7ccddc0e8f2e778917e80060e1c3c4b0",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/vanity/files/5957579"
+    },
+    {
+      "projectId": 242195,
+      "fileId": 7336065,
+      "path": "mods/darkutils-fabric-1.21.1-21.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7336/65/darkutils-fabric-1.21.1-21.1.1.jar",
+      "size": 207845,
+      "sha256": "217453663e4382af4e3300c54fff2c4e9cc1f682e1783c6649e27885cf7b07c8",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/dark-utilities/files/7336065"
+    },
+    {
+      "projectId": 308769,
+      "fileId": 6888730,
+      "path": "mods/fabric-language-kotlin-1.13.5+kotlin.2.2.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6888/730/fabric-language-kotlin-1.13.5%2Bkotlin.2.2.10.jar",
+      "size": 7422276,
+      "sha256": "c1a8fbb4e4ef6a7211cdef70431795a4e6d453fe5713fb12c1e6279d64aaad84",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin/files/6888730"
+    },
+    {
+      "projectId": 1261726,
+      "fileId": 7543377,
+      "path": "mods/playerxp-fabric-1.0.5+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7543/377/playerxp-fabric-1.0.5%2B1.21.1.jar",
+      "size": 10081,
+      "sha256": "5a6f10405e997a14fa797bea41287f880401cd537395a79d523e4ca9c0132fb6",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-playerxp/files/7543377"
+    },
+    {
+      "projectId": 1431831,
+      "fileId": 7491249,
+      "path": "mods/catchindicator-fabric-1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7491/249/catchindicator-fabric-1.2.jar",
+      "size": 275564,
+      "sha256": "d1c9b5c94a85ec6a161a8c1cc1faa0a7afc8bed14f3fc19ac57b849f36f190c3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/catch-indicator/files/7491249"
+    },
+    {
+      "projectId": 1087551,
+      "fileId": 6637574,
+      "path": "mods/structurify-fabric-1.0.13+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6637/574/structurify-fabric-1.0.13%2Bmc1.21.1.jar",
+      "size": 623180,
+      "sha256": "952436c34720f00ac10299554ba3e642bdbd547117b70d795302ed2f4f3881f5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/structurify/files/6637574"
+    },
+    {
+      "projectId": 416089,
+      "fileId": 6787197,
+      "path": "mods/voicechat-fabric-1.21.1-2.5.35.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6787/197/voicechat-fabric-1.21.1-2.5.35.jar",
+      "size": 7298706,
+      "sha256": "0928fd224c041af6c1474d62eab79f9a3579e0f7f9714f9cc07c116cb2bee964",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat/files/6787197"
+    },
+    {
+      "projectId": 1070751,
+      "fileId": 6884280,
+      "path": "mods/Oh-The-Biomes-Weve-Gone-Fabric-2.4.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6884/280/Oh-The-Biomes-Weve-Gone-Fabric-2.4.6.jar",
+      "size": 20726662,
+      "sha256": "d964cd6b09ea2c8b76bea0b03f2179634f7a2205afee33cc70a4d79629f4dc45",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-weve-gone/files/6884280"
+    },
+    {
+      "projectId": 532610,
+      "fileId": 6446006,
+      "path": "mods/owo-lib-0.12.15.4+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6446/6/owo-lib-0.12.15.4%2B1.21.jar",
+      "size": 1183559,
+      "sha256": "825180ce17bc012fb450653b14df9f32479dcdd073fc3f133bb47462f5a63cec",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/owo-lib/files/6446006"
+    },
+    {
+      "projectId": 341284,
+      "fileId": 5534317,
+      "path": "mods/trinkets-3.10.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5534/317/trinkets-3.10.0.jar",
+      "size": 272944,
+      "sha256": "349fd2aa8930b232050ee5304db55e4ef738b017971afe7c84acd589a95fda2f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/trinkets/files/5534317"
+    },
+    {
+      "projectId": 790626,
+      "fileId": 7200210,
+      "path": "mods/modernfix-fabric-5.25.1+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7200/210/modernfix-fabric-5.25.1%2Bmc1.21.1.jar",
+      "size": 471258,
+      "sha256": "3ce5a9ce75066961b7fa5382692bb1387cc3536cc984b064ab7d70b97f3c674c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/modernfix/files/7200210"
+    },
+    {
+      "projectId": 961802,
+      "fileId": 6334925,
+      "path": "mods/scholar-fabric-1.21.1-1.1.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6334/925/scholar-fabric-1.21.1-1.1.4.jar",
+      "size": 428371,
+      "sha256": "103e63aeee1f5bfd1167bedc8081a4d6c960b80a5d74bfb653810c6101935fe0",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/scholar/files/6334925"
+    },
+    {
+      "projectId": 396826,
+      "fileId": 7397760,
+      "path": "mods/toms_storage_fabric-1.21-2.2.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7397/760/toms_storage_fabric-1.21-2.2.4.jar",
+      "size": 1961542,
+      "sha256": "77405846333e1a6af2266cd9af1503ce8c22a4212dca1c66412e56236f300e32",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/toms-storage-fabric/files/7397760"
+    },
+    {
+      "projectId": 1300858,
+      "fileId": 7060325,
+      "path": "mods/MoreSparkles-1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7060/325/MoreSparkles-1.1.jar",
+      "size": 1899092,
+      "sha256": "771681f5c275ddd98645d43d486bee3bd2aa2a643a9cfc01b04d8c8f8511281e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-more-sparkles/files/7060325"
+    },
+    {
+      "projectId": 985426,
+      "fileId": 5577327,
+      "path": "mods/particle_core-0.2.4+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5577/327/particle_core-0.2.4%2B1.21.jar",
+      "size": 92949,
+      "sha256": "8e8501761ade869d2924ee6b405c961d897e249bd999a20131964bc7a2ea50c5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/particle-core/files/5577327"
+    },
+    {
+      "projectId": 1162880,
+      "fileId": 6749904,
+      "path": "mods/tomsstorage_knowlogy-fabric-1.1.1-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6749/904/tomsstorage_knowlogy-fabric-1.1.1-1.21.1.jar",
+      "size": 421404,
+      "sha256": "9df80c3d29d816559d936982fd643a63708a9183ae51de2f2638c3b55809ee4d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/toms-storage-knowlogy/files/6749904"
+    },
+    {
+      "projectId": 574741,
+      "fileId": 6667175,
+      "path": "mods/Zoomify-2.14.4+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6667/175/Zoomify-2.14.4%2B1.21.1.jar",
+      "size": 807825,
+      "sha256": "8e129989a3f2fd835b8767a9fd6ad86e505c4353253638b4aca76df3d7c0c3d9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/zoomify/files/6667175"
+    },
+    {
+      "projectId": 577705,
+      "fileId": 5551517,
+      "path": "mods/playerladder-fabric-1.21-0.7.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5551/517/playerladder-fabric-1.21-0.7.1.jar",
+      "size": 32480,
+      "sha256": "adde49438f0c6a7f935a5f58649f9bc204e05afb79cf6f4be2ce630883837f9b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/player-ladder/files/5551517"
+    },
+    {
+      "projectId": 1093171,
+      "fileId": 6663237,
+      "path": "mods/titletweaks-1.1.5+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6663/237/titletweaks-1.1.5%2B1.21.1-fabric.jar",
+      "size": 117807,
+      "sha256": "7a9dc2366a0a32c420e1e49be1d9d9e2576c6176be723ff57d779e67ef4283ac",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/title-tweaks/files/6663237"
+    },
+    {
+      "projectId": 317134,
+      "fileId": 6634587,
+      "path": "mods/globalpacks-fabric-1.21.1-21.0.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6634/587/globalpacks-fabric-1.21.1-21.0.6.jar",
+      "size": 394707,
+      "sha256": "391d960afb1d8f0b63ccfb677970512d68642102b6928a4830ebcd6d3fdba2cc",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/globalpacks/files/6634587"
+    },
+    {
+      "projectId": 993166,
+      "fileId": 7199751,
+      "path": "mods/FarmersDelight-1.21.1-3.2.2+refabricated.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7199/751/FarmersDelight-1.21.1-3.2.2%2Brefabricated.jar",
+      "size": 3129714,
+      "sha256": "5c69dd8c95c66f78f6f5c3a7c28fa9d92a8ef149ec4b68e46588321fef78d143",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight-refabricated/files/7199751"
+    },
+    {
+      "projectId": 1305645,
+      "fileId": 6770889,
+      "path": "mods/dimworldborder-fabric-1.21.1-1.0.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6770/889/dimworldborder-fabric-1.21.1-1.0.5.jar",
+      "size": 27317,
+      "sha256": "7e4c63853cac79bc4396d5f06d927d0ea5992c489ec120e21a65a53cf3505b10",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/dimworldborder/files/6770889"
+    },
+    {
+      "projectId": 314579,
+      "fileId": 6518852,
+      "path": "mods/crawl-0.14.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6518/852/crawl-0.14.9.jar",
+      "size": 36975,
+      "sha256": "1268c824566638e58d6402c13bf165d14b1de827c574170ff1ed9f73f9daa3d6",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/crawl/files/6518852"
+    },
+    {
+      "projectId": 388172,
+      "fileId": 6659009,
+      "path": "mods/geckolib-fabric-1.21.1-4.7.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6659/9/geckolib-fabric-1.21.1-4.7.6.jar",
+      "size": 624091,
+      "sha256": "e5eff76945ee6788f30e10eaf12825af1441e73c4befbe3d9f90a9e2fc4699d1",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/geckolib/files/6659009"
+    },
+    {
+      "projectId": 276951,
+      "fileId": 6559907,
+      "path": "mods/comforts-fabric-9.0.4+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6559/907/comforts-fabric-9.0.4%2B1.21.1.jar",
+      "size": 914358,
+      "sha256": "f636de45d6acb4c079f3413f071d6663437dad36ae556b771ec58a631b244962",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/comforts/files/6559907"
+    },
+    {
+      "projectId": 367706,
+      "fileId": 7256739,
+      "path": "mods/fancymenu_fabric_3.8.1_MC_1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7256/739/fancymenu_fabric_3.8.1_MC_1.21.1.jar",
+      "size": 4522643,
+      "sha256": "32f21b601ce12c7c511752d207a73b077cb19b8e24b0eb3d6e0440a299bc5743",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fancymenu/files/7256739"
+    },
+    {
+      "projectId": 1208338,
+      "fileId": 6364582,
+      "path": "mods/templates-mod-2.5.1+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6364/582/templates-mod-2.5.1%2B1.21.1.jar",
+      "size": 208299,
+      "sha256": "10ca391b78c8f54e2a5ee433aa3b35446f506f492c9d58f7d35ecbd50f04539b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/templates-2/files/6364582"
+    },
+    {
+      "projectId": 832644,
+      "fileId": 5733967,
+      "path": "mods/ResourcePackOverrides-v21.1.0-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5733/967/ResourcePackOverrides-v21.1.0-1.21.1-Fabric.jar",
+      "size": 80827,
+      "sha256": "5db1e3d3f07947ceb893ccd823a7660f62f8f794e2bf9a5b721a3c3d32dcbc59",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/resource-pack-overrides/files/5733967"
+    },
+    {
+      "projectId": 648781,
+      "fileId": 5852114,
+      "path": "mods/reacharound+1.21-1.3.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5852/114/reacharound%2B1.21-1.3.1.jar",
+      "size": 26590,
+      "sha256": "aa840ffa659df669878699030c1adc0a000987236dc2ec30f5895504b1f276d4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/reacharound/files/5852114"
+    },
+    {
+      "projectId": 570073,
+      "fileId": 5973189,
+      "path": "mods/resourcefullib-fabric-1.21-3.0.12.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5973/189/resourcefullib-fabric-1.21-3.0.12.jar",
+      "size": 485586,
+      "sha256": "93064c5aff85bf5e6385470f311fd1c7de172f58b02fefb1d2920db76f8cd8b5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/resourceful-lib/files/5973189"
+    },
+    {
+      "projectId": 1295053,
+      "fileId": 7363541,
+      "path": "mods/cobblemon_spawn_alerts-fabric-1.11.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7363/541/cobblemon_spawn_alerts-fabric-1.11.2.jar",
+      "size": 1347474,
+      "sha256": "bc9382bf6630b28dce052c295f6271e3ee6f3643cfe71369c10c631a2ee8a47b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-spawn-alerts/files/7363541"
+    },
+    {
+      "projectId": 558998,
+      "fileId": 5663507,
+      "path": "mods/rechiseled-1.1.6b-fabric-mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5663/507/rechiseled-1.1.6b-fabric-mc1.21.jar",
+      "size": 3585470,
+      "sha256": "5d6b9ec2424ac152b380e4007a6f91699b1b7aceee868bfa8b1bd7862f682deb",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/rechiseled/files/5663507"
+    },
+    {
+      "projectId": 1167848,
+      "fileId": 6110177,
+      "path": "mods/distraction_free_recipes-fabric-1.2.1-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6110/177/distraction_free_recipes-fabric-1.2.1-1.21.1.jar",
+      "size": 659626,
+      "sha256": "82a3a3113fe4aeef66bdb640c160e5cee59a72bb780431c7bab3f0a1b4c01398",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/distraction-free-recipes/files/6110177"
+    },
+    {
+      "projectId": 1024881,
+      "fileId": 6030538,
+      "path": "resourcepacks/Cobblemon Classic Grass Pack v2.0 MC1.21.1.zip",
+      "url": "https://mediafilez.forgecdn.net/files/6030/538/Cobblemon%20Classic%20Grass%20Pack%20v2.0%20MC1.21.1.zip",
+      "size": 7418,
+      "sha256": "4386b800db3f7710c23f5ead9c911c9f265831a02e74c704f7cc29fcd9070880",
+      "source": "https://www.curseforge.com/minecraft/texture-packs/cobblemon-classic-grass-pack/files/6030538"
+    },
+    {
+      "projectId": 438332,
+      "fileId": 5546988,
+      "path": "mods/supermartijn642configlib-1.1.8-fabric-mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5546/988/supermartijn642configlib-1.1.8-fabric-mc1.21.jar",
+      "size": 206993,
+      "sha256": "63a29f2acf4be2c5ca89a81a046c1100111ad2865d9638f638e27ca161e7211c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib/files/5546988"
+    },
+    {
+      "projectId": 813557,
+      "fileId": 5957921,
+      "path": "mods/NBTac-FABRIC-1.21.1-1.3.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5957/921/NBTac-FABRIC-1.21.1-1.3.10.jar",
+      "size": 256797,
+      "sha256": "711f8c26157fde8cf37d183d873105424b5eaef2340b1b58b41d164201c8d3a9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/nbt-autocomplete/files/5957921"
+    },
+    {
+      "projectId": 509575,
+      "fileId": 6697123,
+      "path": "mods/observable-5.4.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6697/123/observable-5.4.4.jar",
+      "size": 386692,
+      "sha256": "738ba288b0e5630f0c1bccaf04ba181205cbf98fb421c9d8a782e75d5f7e356e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/observable/files/6697123"
+    },
+    {
+      "projectId": 1203401,
+      "fileId": 6727690,
+      "path": "mods/jinxedlib-fabric-1.21.1-1.0.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6727/690/jinxedlib-fabric-1.21.1-1.0.4.jar",
+      "size": 60026,
+      "sha256": "1249a380057fbc8ed045421494a00e6b5d2fd73584732470ad1a664fa91f5712",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/jinxedlib/files/6727690"
+    },
+    {
+      "projectId": 1023882,
+      "fileId": 6832558,
+      "path": "mods/exposure_catalog-fabric-1.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6832/558/exposure_catalog-fabric-1.1.1.jar",
+      "size": 160868,
+      "sha256": "8a4e8769a74d24cdf3964bffa85d7dccf1820f387de68b6d5f4c7833cc4ad0fc",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/exposure-catalog/files/6832558"
+    },
+    {
+      "projectId": 315811,
+      "fileId": 7204308,
+      "path": "mods/shulkerboxtooltip-fabric-5.1.8+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7204/308/shulkerboxtooltip-fabric-5.1.8%2B1.21.1.jar",
+      "size": 377692,
+      "sha256": "5d397ed1eabc7b6b77e2ca09565c6a01427dc7984fb39a46f560c286c1ab8961",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/shulkerboxtooltip/files/7204308"
+    },
+    {
+      "projectId": 892382,
+      "fileId": 7257822,
+      "path": "mods/MoogsEndStructures-1.21-2.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7257/822/MoogsEndStructures-1.21-2.0.0.jar",
+      "size": 2458609,
+      "sha256": "5201904062fa5f164cab51360b03ed40e80b18a68acfd5949ec9c24510ccc342",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/moogs-end-structures/files/7257822"
+    },
+    {
+      "projectId": 575305,
+      "fileId": 5623810,
+      "path": "mods/FauxCustomEntityData-fabric-1.21.1-13.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5623/810/FauxCustomEntityData-fabric-1.21.1-13.0.1.jar",
+      "size": 15966,
+      "sha256": "788bc26585ab393c5b956e7a163d73643fa80c8b89b29bb266e8537b23b163ee",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/faux-custom-entity-data/files/5623810"
+    },
+    {
+      "projectId": 921022,
+      "fileId": 5486498,
+      "path": "mods/wwoo-2.3.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5486/498/wwoo-2.3.4.jar",
+      "size": 2217959,
+      "sha256": "de4ef02f438b5dc680ed90ae14ef003da295f774e58c34390d19552cee0d25b9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/william-wythers-overhauled-overworld/files/5486498"
+    },
+    {
+      "projectId": 1134625,
+      "fileId": 5879312,
+      "path": "mods/Slideshow-fabric-1.21.1-1.0.3-Enhancement-1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5879/312/Slideshow-fabric-1.21.1-1.0.3-Enhancement-1.jar",
+      "size": 2928348,
+      "sha256": "264e2ac321a192c45d4a0f5e7e52cc2b11cb41a709d14e1e03f307e541b6f5ec",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/slideshow-fabric/files/5879312"
+    },
+    {
+      "projectId": 394468,
+      "fileId": 6382649,
+      "path": "mods/sodium-fabric-0.6.13+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6382/649/sodium-fabric-0.6.13%2Bmc1.21.1.jar",
+      "size": 1297761,
+      "sha256": "e04599514d88e41765f710eeba59e3814909833396bc11b977f48fc2e7e50353",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sodium/files/6382649"
+    },
+    {
+      "projectId": 858542,
+      "fileId": 5831690,
+      "path": "mods/Searchables-fabric-1.21.1-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5831/690/Searchables-fabric-1.21.1-1.0.2.jar",
+      "size": 79531,
+      "sha256": "0b58a40a41db4a4af4ef84475b0ea330be3b18fdcac2eca68ede46d9f4df3d76",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/searchables/files/5831690"
+    },
+    {
+      "projectId": 410902,
+      "fileId": 5798771,
+      "path": "mods/wraith-waystones-3.3.4+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5798/771/wraith-waystones-3.3.4%2Bmc1.21.1.jar",
+      "size": 445684,
+      "sha256": "8bd5c0a7208d9ed7ea7b0bb973a55b96fae6f91f61bb7d09b6b06c4101aa7bc9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fabric-waystones/files/5798771"
+    },
+    {
+      "projectId": 417510,
+      "fileId": 6835273,
+      "path": "mods/fallingleaves-1.17.1+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6835/273/fallingleaves-1.17.1%2B1.21.1.jar",
+      "size": 170056,
+      "sha256": "67e2071d6c25e2638573e6ee91a146b77e38d77edddbb26f45006ab878ebca77",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/falling-leaves-fabric/files/6835273"
+    },
+    {
+      "projectId": 542478,
+      "fileId": 6400658,
+      "path": "mods/LegendaryTooltips-1.21.1-fabric-1.5.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6400/658/LegendaryTooltips-1.21.1-fabric-1.5.5.jar",
+      "size": 86697,
+      "sha256": "b026c93b3a52201468c7fdf24e144fc06154a27e50344c0a3f651d50710cd8d4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/legendary-tooltips-fabric/files/6400658"
+    },
+    {
+      "projectId": 397292,
+      "fileId": 6013347,
+      "path": "mods/desiredservers-fabric-1.21.1-1.6.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6013/347/desiredservers-fabric-1.21.1-1.6.0.jar",
+      "size": 18589,
+      "sha256": "f8548988d9e7649e180146fa0e359db71e0f6502e5f93d3d634550eb15de3d02",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/desired-servers/files/6013347"
+    },
+    {
+      "projectId": 1203668,
+      "fileId": 6507632,
+      "path": "mods/Data_Anchor-fabric-1.21.1-2.0.0.12.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6507/632/Data_Anchor-fabric-1.21.1-2.0.0.12.jar",
+      "size": 120291,
+      "sha256": "9284be6e8bc0dfb10d5aec688bda59aa6081fbb1fdde0940cbfd5c1e897794a2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/data-anchor/files/6507632"
+    },
+    {
+      "projectId": 959184,
+      "fileId": 7315804,
+      "path": "mods/SimpleTMs-fabric-2.3.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7315/804/SimpleTMs-fabric-2.3.2.jar",
+      "size": 817711,
+      "sha256": "f4d292bcf44fc99f6905ee36301dba43a3643f5ccb31590f2a664bc6bfb765d2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/simpletms-tms-and-trs-for-cobblemon/files/7315804"
+    },
+    {
+      "projectId": 667299,
+      "fileId": 6662859,
+      "path": "mods/yet_another_config_lib_v3-3.7.1+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6662/859/yet_another_config_lib_v3-3.7.1%2B1.21.1-fabric.jar",
+      "size": 1123593,
+      "sha256": "914f999e53a81cb37358ad9521422ddeeb293d399f0e4f1a6db3d946c1d80ad2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/yacl/files/6662859"
+    },
+    {
+      "projectId": 809311,
+      "fileId": 5725767,
+      "path": "mods/beautify-1.3.0+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5725/767/beautify-1.3.0%2B1.21.1.jar",
+      "size": 836013,
+      "sha256": "147418a19d461dd15f6c6d933a82f642289f3c390d1b17a30166c0b127022e20",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/beautify-refabricated/files/5725767"
+    },
+    {
+      "projectId": 590990,
+      "fileId": 6294126,
+      "path": "mods/TravelersTitles-1.21.1-Fabric-5.1.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6294/126/TravelersTitles-1.21.1-Fabric-5.1.3.jar",
+      "size": 349651,
+      "sha256": "d89c1c377c0d33d8073696073b1af3e9472f418c2d700f607ce7b632939618b7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/travelers-titles-fabric/files/6294126"
+    },
+    {
+      "projectId": 586157,
+      "fileId": 5772684,
+      "path": "mods/Necronomicon-Fabric-1.6.0+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5772/684/Necronomicon-Fabric-1.6.0%2B1.21.jar",
+      "size": 37055,
+      "sha256": "ca1c56e86cb1d7e0aa47e6841edcbef665aaec895e366c1fe0a980c4363f29e2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/necronomicon/files/5772684"
+    },
+    {
+      "projectId": 419699,
+      "fileId": 5786326,
+      "path": "mods/architectury-13.0.8-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5786/326/architectury-13.0.8-fabric.jar",
+      "size": 600915,
+      "sha256": "10cbbb6f5f96a2f1853b0cc68428424cec8903409517b299ff02350756b6399d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/5786326"
+    },
+    {
+      "projectId": 1111802,
+      "fileId": 5776223,
+      "path": "mods/Stfu-1.2.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5776/223/Stfu-1.2.2.jar",
+      "size": 60750,
+      "sha256": "50a0de0d6dec16b99caaac139676d6fd2d3aca412835ed77aed0363a10885cfa",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/shuttfup/files/5776223"
+    },
+    {
+      "projectId": 261251,
+      "fileId": 6172734,
+      "path": "mods/bwncr-fabric-1.21.1-3.20.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6172/734/bwncr-fabric-1.21.1-3.20.3.jar",
+      "size": 31382,
+      "sha256": "2351eecb58748bb6a392feae5a2906a3a20d33a0276e06ae2e21761a276f4984",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/bad-wither-no-cookie-reloaded/files/6172734"
+    },
+    {
+      "projectId": 543661,
+      "fileId": 6177796,
+      "path": "mods/StylishEffects-v21.1.1-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6177/796/StylishEffects-v21.1.1-1.21.1-Fabric.jar",
+      "size": 118716,
+      "sha256": "d9869d7e2fcbacf747081ff16bd48d694279f4e00ae040cecfdbe8ecb518c0de",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/stylish-effects/files/6177796"
+    },
+    {
+      "projectId": 421897,
+      "fileId": 6015282,
+      "path": "mods/particle-rain-3.0.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6015/282/particle-rain-3.0.5.jar",
+      "size": 585885,
+      "sha256": "4cc0ff16a6782ec4630ec4145b1999e86af58db1c253f75effb75e7d2569d851",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/particle-rain/files/6015282"
+    },
+    {
+      "projectId": 860898,
+      "fileId": 6397623,
+      "path": "resourcepacks/Cobblemon Interface v1.4.1.zip",
+      "url": "https://mediafilez.forgecdn.net/files/6397/623/Cobblemon%20Interface%20v1.4.1.zip",
+      "size": 14079240,
+      "sha256": "7688d2cdd0691a823b7970bf6056feb71ee61a4a08628403c3e52eea473385fe",
+      "source": "https://www.curseforge.com/minecraft/texture-packs/cobblemon-interface/files/6397623"
+    },
+    {
+      "projectId": 409301,
+      "fileId": 5661558,
+      "path": "mods/bobby-5.2.4+mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5661/558/bobby-5.2.4%2Bmc1.21.jar",
+      "size": 863192,
+      "sha256": "abf66c25c5738f15528ed8a2787e9df4ce73cd84258fba5264fb049d9e591655",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/bobby/files/5661558"
+    },
+    {
+      "projectId": 256717,
+      "fileId": 5623729,
+      "path": "mods/Clumps-fabric-1.21.1-19.0.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5623/729/Clumps-fabric-1.21.1-19.0.0.1.jar",
+      "size": 20723,
+      "sha256": "49e406cb2872e24a2d2dbe461b93f0c8fbee1748d14c2a941e54f785e3a1e1a7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/clumps/files/5623729"
+    },
+    {
+      "projectId": 1207005,
+      "fileId": 6566397,
+      "path": "mods/exposure_polaroid-fabric-1.21.1-1.1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6566/397/exposure_polaroid-fabric-1.21.1-1.1.2.jar",
+      "size": 178197,
+      "sha256": "76f5b64c32681e39dba46af0e609ffea183d07052cf7b327ec4d5268723ed539",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/exposure-polaroid/files/6566397"
+    },
+    {
+      "projectId": 1184736,
+      "fileId": 6902469,
+      "path": "mods/minecraft-cursor-fabric-3.10.0+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6902/469/minecraft-cursor-fabric-3.10.0%2B1.21.1.jar",
+      "size": 276201,
+      "sha256": "6300d6c5a8f1d5f9fe8da000562d7186c1c5d946c1cbd89354a4c89b810fe1b7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/minecraft-cursor/files/6902469"
+    },
+    {
+      "projectId": 623800,
+      "fileId": 7082928,
+      "path": "mods/dynamiccrosshair-9.10+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7082/928/dynamiccrosshair-9.10%2B1.21.1-fabric.jar",
+      "size": 513914,
+      "sha256": "962a58083336b6ecb27041cfe2635999177c2c034120576837114ee86fe44895",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/dynamic-crosshair/files/7082928"
+    },
+    {
+      "projectId": 945149,
+      "fileId": 6986547,
+      "path": "mods/Glassential-renewed-fabric-1.21.1-3.2.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6986/547/Glassential-renewed-fabric-1.21.1-3.2.5.jar",
+      "size": 465699,
+      "sha256": "fd3340d915d3b06526a53053725371e4c5d218781abc8709be04fbbabd54c345",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/glassential-renewed/files/6986547"
+    },
+    {
+      "projectId": 615134,
+      "fileId": 6067144,
+      "path": "mods/badpackets-fabric-0.8.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6067/144/badpackets-fabric-0.8.2.jar",
+      "size": 55638,
+      "sha256": "55ea0b01c54ad4fd769963649beb20a1971a6c820c9a258acdf43ca353d904d8",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/badpackets/files/6067144"
+    },
+    {
+      "projectId": 547434,
+      "fileId": 6798213,
+      "path": "mods/ForgeConfigAPIPort-v21.1.4-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6798/213/ForgeConfigAPIPort-v21.1.4-1.21.1-Fabric.jar",
+      "size": 632675,
+      "sha256": "2be62a8c237c2b3fbd9dff4177aac72b31049fe25fce8f3358f2ed2b1c245c8f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port/files/6798213"
+    },
+    {
+      "projectId": 243190,
+      "fileId": 7308651,
+      "path": "mods/ShoulderSurfing-Fabric-1.21.1-4.17.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7308/651/ShoulderSurfing-Fabric-1.21.1-4.17.1.jar",
+      "size": 267743,
+      "sha256": "35175eabf5e6cbc7f675a82a33b42a8d55e165332f518840878c9bfa6eb4847d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/shoulder-surfing-reloaded/files/7308651"
+    },
+    {
+      "projectId": 396234,
+      "fileId": 7115344,
+      "path": "mods/pigpen-fabric-1.21.1-21.1.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7115/344/pigpen-fabric-1.21.1-21.1.4.jar",
+      "size": 41986,
+      "sha256": "a81036cb0a3841b431c7b4190fc96e64b5e0c9c524b6f7b066fb2954caa44677",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/pig-pen-cipher/files/7115344"
+    },
+    {
+      "projectId": 279429,
+      "fileId": 5487187,
+      "path": "mods/autorun-1.21.X-0.6.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5487/187/autorun-1.21.X-0.6.0.jar",
+      "size": 1018945,
+      "sha256": "e5141db08e7befff5d53866b871be1587b92649bf5a699adfdc4015e7a8e460f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/autorun-fabric/files/5487187"
+    },
+    {
+      "projectId": 841890,
+      "fileId": 6669523,
+      "path": "mods/athena-fabric-1.21-4.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6669/523/athena-fabric-1.21-4.0.2.jar",
+      "size": 82788,
+      "sha256": "998c92dc8e01999f3e6870c94102aa73d755dc56f17a7d36c67f79178f836ffb",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/athena/files/6669523"
+    },
+    {
+      "projectId": 1233458,
+      "fileId": 6432272,
+      "path": "mods/itemzoomer-1.1.0-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6432/272/itemzoomer-1.1.0-1.21.1.jar",
+      "size": 214520,
+      "sha256": "28371c56e34a2c73ffecf4b12cce657a4c1e90cd6b3b1cfffa23b70a5909a5eb",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/itemzoomer/files/6432272"
+    },
+    {
+      "projectId": 1133629,
+      "fileId": 6275256,
+      "path": "mods/farmers-cutting-regions-unexplored-1.21.1-1.1a-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6275/256/farmers-cutting-regions-unexplored-1.21.1-1.1a-fabric.jar",
+      "size": 114646,
+      "sha256": "27d38f4941e0860765029534778af0cd7b3aaeb901fb6ab20d386e8c2346b871",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/farmers-cutting-regions-unexplored/files/6275256"
+    },
+    {
+      "projectId": 525447,
+      "fileId": 6508945,
+      "path": "mods/jmi-fabric-1.21.1-1.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6508/945/jmi-fabric-1.21.1-1.9.jar",
+      "size": 309698,
+      "sha256": "55fd7df4257d2bff9b1814bbaeab589a67f31a547ebd0fd30bdee298142c1c1d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/journeymap-integration/files/6508945"
+    },
+    {
+      "projectId": 962544,
+      "fileId": 6607559,
+      "path": "mods/Oh-The-Trees-Youll-Grow-fabric-1.21.1-5.0.14.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6607/559/Oh-The-Trees-Youll-Grow-fabric-1.21.1-5.0.14.jar",
+      "size": 123284,
+      "sha256": "481a1ce75d5f3dc45639aee443bec6073e9816af4e9d305e4dd303bf1a3e485e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/oh-the-trees-youll-grow/files/6607559"
+    },
+    {
+      "projectId": 695238,
+      "fileId": 6186421,
+      "path": "mods/biomespawnpoint-1.21.1-2.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6186/421/biomespawnpoint-1.21.1-2.4.jar",
+      "size": 48170,
+      "sha256": "095ad84f4366ccb82809c1b466d63d8b6f6ebe9acd8e20e734725a01f5190e40",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/biome-spawn-point/files/6186421"
+    },
+    {
+      "projectId": 1339737,
+      "fileId": 7238616,
+      "path": "mods/MoogsTemplesReimagined-1.21-1.0.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7238/616/MoogsTemplesReimagined-1.21-1.0.3.jar",
+      "size": 7962607,
+      "sha256": "f2c2cabc87a48f2c517de9b431c3cbf6597d0c3b65cbb11f463050d7345eae4b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mtr-moogs-temples-reimagined/files/7238616"
+    },
+    {
+      "projectId": 60089,
+      "fileId": 5437294,
+      "path": "mods/MouseTweaks-fabric-mc1.21-2.26.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5437/294/MouseTweaks-fabric-mc1.21-2.26.jar",
+      "size": 75984,
+      "sha256": "3e9fa4800fafef616fbf1545d62f5898f55c83fbd4126ce2b48b5e0077243fc0",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks/files/5437294"
+    },
+    {
+      "projectId": 909375,
+      "fileId": 5426238,
+      "path": "mods/wits-1.3.0+1.21-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5426/238/wits-1.3.0%2B1.21-fabric.jar",
+      "size": 11993,
+      "sha256": "06058383fdbb80fe618d4183ea7858ed76e207de5148c7677da973283e4040dd",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/wits/files/5426238"
+    },
+    {
+      "projectId": 511770,
+      "fileId": 7248430,
+      "path": "mods/drippyloadingscreen_fabric_3.1.0_MC_1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7248/430/drippyloadingscreen_fabric_3.1.0_MC_1.21.1.jar",
+      "size": 280510,
+      "sha256": "ccb334ce059355587cfab3e3c9c10f65357f69121a8ca4c99dcf47f069b27be7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/drippy-loading-screen/files/7248430"
+    },
+    {
+      "projectId": 938643,
+      "fileId": 5430438,
+      "path": "mods/melody_fabric_1.0.10_MC_1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5430/438/melody_fabric_1.0.10_MC_1.21.jar",
+      "size": 188035,
+      "sha256": "223ab859b9cc246d8d6e5cec5e734f97be3aac545de6cda7743750262428ed83",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/melody/files/5430438"
+    },
+    {
+      "projectId": 656977,
+      "fileId": 7233132,
+      "path": "mods/MoogsVoyagerStructures-1.21-5.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7233/132/MoogsVoyagerStructures-1.21-5.0.2.jar",
+      "size": 2672383,
+      "sha256": "3f9d89259c58434f4119052d7cc7a434c0faa5c23409b6af5bd0996f3b8dd3ac",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures/files/7233132"
+    },
+    {
+      "projectId": 925889,
+      "fileId": 6803823,
+      "path": "mods/sounds-2.4.13.1+lts+1.21.1+fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6803/823/sounds-2.4.13.1%2Blts%2B1.21.1%2Bfabric.jar",
+      "size": 8769474,
+      "sha256": "d3871ae9fade6659394249c34d60fbc093f59a757e518fdd8f39448615a22d17",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sound/files/6803823"
+    },
+    {
+      "projectId": 1091700,
+      "fileId": 5796451,
+      "path": "mods/nametagtweaks-1.3.5+1.21-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5796/451/nametagtweaks-1.3.5%2B1.21-fabric.jar",
+      "size": 20736,
+      "sha256": "67f0e6d9c443069ecf66678a726843a69dc5872c49e9c100cb7d12e6e942cd70",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/nametag-tweaks/files/5796451"
+    },
+    {
+      "projectId": 1048375,
+      "fileId": 5609603,
+      "path": "mods/letsparkour-1.21.1-1.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5609/603/letsparkour-1.21.1-1.8.jar",
+      "size": 158037,
+      "sha256": "54542c8ed66f30c126ac90cde3b891cd7bdf24871ca9d65fc31463c876da5d9d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lets-parkour/files/5609603"
+    },
+    {
+      "projectId": 440979,
+      "fileId": 6613429,
+      "path": "mods/wthit-fabric-12.5.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6613/429/wthit-fabric-12.5.4.jar",
+      "size": 824592,
+      "sha256": "44222dd9c2b7d21d5db848d56077c649a7e94cd70645b775bc5bf47c8f2a8fd3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/wthit/files/6613429"
+    },
+    {
+      "projectId": 1421286,
+      "fileId": 8320067,
+      "path": "mods/Abes-Hutts-Cobblemon-1.21.1.1.7.3-1.0.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/8320/67/Abes-Hutts-Cobblemon-1.21.1.1.7.3-1.0.5.jar",
+      "size": 146902592,
+      "sha256": "dc8c72beee009e0e5303ab3e0bb4e8bbdfde2e556c99eb2fe6c3a8f036437c22",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/abes-hutts-cobblemon/files/8320067"
+    },
+    {
+      "projectId": 976014,
+      "fileId": 7248475,
+      "path": "mods/cobblenav-fabric-2.2.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7248/475/cobblenav-fabric-2.2.5.jar",
+      "size": 780131,
+      "sha256": "3fd669b03f152ab9f5ed3da71b25ea6b95944876367e6e289948bf8a1f159333",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-pokenav/files/7248475"
+    },
+    {
+      "projectId": 1330130,
+      "fileId": 8337926,
+      "path": "mods/academy-mc1.21.1-v2.4.1+build.550-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/8337/926/academy-mc1.21.1-v2.4.1%2Bbuild.550-fabric.jar",
+      "size": 5654276,
+      "sha256": "d88960d616f2f97f3ebf03a4e69c35650239acdffcd35ee8722197caa6a73654",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-academy-integration/files/8337926"
+    },
+    {
+      "projectId": 1196570,
+      "fileId": 7306130,
+      "path": "mods/Rad Gyms [Cobblemon]-0.3.1-stable.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7306/130/Rad%20Gyms%20%5BCobblemon%5D-0.3.1-stable.jar",
+      "size": 862308,
+      "sha256": "ee3414adb85607d098b2399885f1e7abb1d3e67ea8f67de8f24c111df701055a",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/rad-gyms-cobblemon/files/7306130"
+    },
+    {
+      "projectId": 1191845,
+      "fileId": 6148843,
+      "path": "mods/redirected-fabric-1.0.0-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6148/843/redirected-fabric-1.0.0-1.21.1.jar",
+      "size": 213687,
+      "sha256": "f66b6c58e5eb217b9473b9002577601754b8a157e37394ba892051cea9fd3453",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/redirected/files/6148843"
+    },
+    {
+      "projectId": 1040210,
+      "fileId": 7132460,
+      "path": "mods/MoogsSoaringStructures-1.21-2.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7132/460/MoogsSoaringStructures-1.21-2.0.0.jar",
+      "size": 3052534,
+      "sha256": "98c23e014226b84283739e9814b2e6a864d2edb40e2c61e81dd781d943981eb8",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mss-moogs-soaring-structures/files/7132460"
+    },
+    {
+      "projectId": 1583936,
+      "fileId": 8297947,
+      "path": "mods/xercapaint-1.21.1-1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/8297/947/xercapaint-1.21.1-1.1.0.jar",
+      "size": 429551,
+      "sha256": "7445cc6179dfaae81c911a3a4accdd875d5d5736a22748bec861079efa284d70",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/delta-painting-edits/files/8297947"
+    },
+    {
+      "projectId": 532730,
+      "fileId": 6106239,
+      "path": "mods/libraryferret-fabric-1.21.1-4.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6106/239/libraryferret-fabric-1.21.1-4.0.0.jar",
+      "size": 140971,
+      "sha256": "eacfd85f92f8894f4f0222bcfb0a056e067e5a37ff9106aeab70d6d8ff9b73ff",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-fabric/files/6106239"
+    },
+    {
+      "projectId": 1126493,
+      "fileId": 7115341,
+      "path": "mods/nyctography-fabric-1.21.1-21.1.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7115/341/nyctography-fabric-1.21.1-21.1.6.jar",
+      "size": 58114,
+      "sha256": "98697abcefeb5671bdda0112dd14b3814c5076b2a06b7d34b865be3ecbba3c73",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/nyctography/files/7115341"
+    },
+    {
+      "projectId": 912121,
+      "fileId": 5559269,
+      "path": "mods/fasterrandom-5.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5559/269/fasterrandom-5.1.0.jar",
+      "size": 20697,
+      "sha256": "40b326e9c98610b54be67751e618193e671cc907240d94a57085259b10cedf08",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/faster-random/files/5559269"
+    },
+    {
+      "projectId": 397809,
+      "fileId": 6941988,
+      "path": "mods/emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6941/988/emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
+      "size": 863362,
+      "sha256": "633a77711f650dbf0bd071a43c086b7946d6e117b28ac1a414d038ea7b339f7c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/emotecraft/files/6941988"
+    },
+    {
+      "projectId": 852663,
+      "fileId": 5731745,
+      "path": "mods/Stoneworks-v21.1.0-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5731/745/Stoneworks-v21.1.0-1.21.1-Fabric.jar",
+      "size": 1993392,
+      "sha256": "461fa8d46e14c72e08bd0a263f2578beff810c5860ce1a313fb189a79d69f0b3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/stoneworks/files/5731745"
+    },
+    {
+      "projectId": 238222,
+      "fileId": 6614390,
+      "path": "mods/jei-1.21.1-fabric-19.21.2.313.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6614/390/jei-1.21.1-fabric-19.21.2.313.jar",
+      "size": 1481367,
+      "sha256": "e07ee903abae89c182452d992d271da2213e9f3e82e68e554697d510235b69cc",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/6614390"
+    },
+    {
+      "projectId": 1515577,
+      "fileId": 8153908,
+      "path": "mods/cosmetics-1.1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/8153/908/cosmetics-1.1.2.jar",
+      "size": 291132,
+      "sha256": "9e908f4ba52a63c98538c2b3ca14732dc7c71cf2419a418afa92ef4cbb63c847",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/academy-cosmetics/files/8153908"
+    },
+    {
+      "projectId": 1360604,
+      "fileId": 7076963,
+      "path": "mods/stohuns_vanity_collection-1.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7076/963/stohuns_vanity_collection-1.0.0.jar",
+      "size": 179841,
+      "sha256": "7b0e5cbbdaac2600facd1df6a3aa24b896953753c4f3b6b99dc59c7dc0afb0ce",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/stohuns-vanity-collection/files/7076963"
+    },
+    {
+      "projectId": 916747,
+      "fileId": 6011406,
+      "path": "mods/OctoLib-FABRIC-0.5.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6011/406/OctoLib-FABRIC-0.5.0.1.jar",
+      "size": 423202,
+      "sha256": "82568837432b7a622715d58720f2a892bffd000a43b6ccf440073f445b9b38a7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/octo-lib/files/6011406"
+    },
+    {
+      "projectId": 693313,
+      "fileId": 6808254,
+      "path": "mods/Corgilib-Fabric-1.21.1-5.0.0.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6808/254/Corgilib-Fabric-1.21.1-5.0.0.7.jar",
+      "size": 691375,
+      "sha256": "0b3780598ffb042a05ab3730472636d06d0f57f2158e7cfc243b5861c62b11ae",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/corgilib/files/6808254"
+    },
+    {
+      "projectId": 958094,
+      "fileId": 6886934,
+      "path": "mods/polytone-1.21-3.5.5-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6886/934/polytone-1.21-3.5.5-fabric.jar",
+      "size": 820271,
+      "sha256": "65a915b4b635dff0477338150079e0486710768fae7106efa15af671d5dd5b6c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/polytone/files/6886934"
+    },
+    {
+      "projectId": 248787,
+      "fileId": 5864741,
+      "path": "mods/appleskin-fabric-mc1.21-3.0.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5864/741/appleskin-fabric-mc1.21-3.0.6.jar",
+      "size": 1082585,
+      "sha256": "9a19cec1294b1bc708392a08e6926dcb85d7378ec5ad909a4b6fcb8bc3bfeaa2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/appleskin/files/5864741"
+    },
+    {
+      "projectId": 1238099,
+      "fileId": 6713557,
+      "path": "mods/immersive-hotbar-1.0.4-1.21-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6713/557/immersive-hotbar-1.0.4-1.21-1.21.1.jar",
+      "size": 205249,
+      "sha256": "41cb8434ee2674a54f961f95e61894194dae6c0af884a613e4f364ff8bedb8ea",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/immersive-hotbar/files/6713557"
+    },
+    {
+      "projectId": 825733,
+      "fileId": 7273189,
+      "path": "mods/Luckys-Cozyhome-Refurnished-1.1.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7273/189/Luckys-Cozyhome-Refurnished-1.1.20.jar",
+      "size": 3121070,
+      "sha256": "0915e3e54c12fe40622cab94005418d32cbde011fa9c2d7c27756eb7d5313a66",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cozy-home/files/7273189"
+    },
+    {
+      "projectId": 308702,
+      "fileId": 5810603,
+      "path": "mods/modmenu-11.0.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5810/603/modmenu-11.0.3.jar",
+      "size": 973066,
+      "sha256": "a45a12807a29f0e5b23b87cd380fd6fe8589ffe4a665cadce234168a4dabe428",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/modmenu/files/5810603"
+    },
+    {
+      "projectId": 433175,
+      "fileId": 6383251,
+      "path": "mods/Chunky-Fabric-1.4.23.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6383/251/Chunky-Fabric-1.4.23.jar",
+      "size": 342979,
+      "sha256": "3412b170247dde7351e0945d857e713bedf6fae05ab300aa74d06ffbde0ca07e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator/files/6383251"
+    },
+    {
+      "projectId": 551890,
+      "fileId": 5863957,
+      "path": "mods/polymer-bundled-0.9.18+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5863/957/polymer-bundled-0.9.18%2B1.21.1.jar",
+      "size": 1704626,
+      "sha256": "d9e41c374ca9d5a038412fea45156905a50cf1bc13a237db16c3164cffc28fa5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/polymer/files/5863957"
+    },
+    {
+      "projectId": 535541,
+      "fileId": 5704038,
+      "path": "mods/chalk-2.2.5+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5704/38/chalk-2.2.5%2B1.21.1.jar",
+      "size": 209104,
+      "sha256": "d8a49b5a81bc67ee5e395a678ab95fd50469653d38e00ea03f54b33c68f41502",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chalk-fabric/files/5704038"
+    },
+    {
+      "projectId": 447673,
+      "fileId": 5913375,
+      "path": "mods/sodium-extra-fabric-0.6.0+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5913/375/sodium-extra-fabric-0.6.0%2Bmc1.21.1.jar",
+      "size": 373661,
+      "sha256": "1a7434e444c851d82efbe3d5a8fd2dbb142e9bdf0012d7c6a0e4741c641b1a2d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra/files/5913375"
+    },
+    {
+      "projectId": 859365,
+      "fileId": 6691985,
+      "path": "mods/totw_modded-fabric-1.21-1.0.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6691/985/totw_modded-fabric-1.21-1.0.8.jar",
+      "size": 294718,
+      "sha256": "19e99e28dceab841e092e4c0027e15422035047b80d5f8f2022985717f317a1f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild-modded/files/6691985"
+    },
+    {
+      "projectId": 689467,
+      "fileId": 6940441,
+      "path": "mods/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6940/441/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar",
+      "size": 47253,
+      "sha256": "3285a55983d9c02b82d5707ab1e1fe942a81a5b7ea8c845e753ecdcd4ed5b1ab",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/packet-fixer/files/6940441"
+    },
+    {
+      "projectId": 871755,
+      "fileId": 7033926,
+      "path": "mods/exposure-fabric-1.21.1-1.9.11.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7033/926/exposure-fabric-1.21.1-1.9.11.jar",
+      "size": 1967969,
+      "sha256": "313159f5acd8de36bd79e53f39c7e8d0bb0919f4d5b809b094a46345e1136038",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/exposure/files/7033926"
+    },
+    {
+      "projectId": 328163,
+      "fileId": 5428682,
+      "path": "mods/sit-1.21-28.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5428/682/sit-1.21-28.jar",
+      "size": 64552,
+      "sha256": "984ec2f1eb986a2178d3891897897222108f1c1253e32358b90f30cfcdb64289",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sit-fabric/files/5428682"
+    },
+    {
+      "projectId": 1005914,
+      "fileId": 6843479,
+      "path": "mods/fzzy_config-0.7.2+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6843/479/fzzy_config-0.7.2%2B1.21.jar",
+      "size": 2260199,
+      "sha256": "0f11722ae5b57217cbddb93e17fafbf891c84e0ce346643deb6cb4c5a04edfad",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fzzy-config/files/6843479"
+    },
+    {
+      "projectId": 284324,
+      "fileId": 6630127,
+      "path": "mods/Emojiful-Fabric-1.21-5.2.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6630/127/Emojiful-Fabric-1.21-5.2.1.jar",
+      "size": 298430,
+      "sha256": "1827af3c83d5d89509f804ea0f4f5e1ae00135fa35e17a9e5daa7532e0e8b4a5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/emojiful/files/6630127"
+    },
+    {
+      "projectId": 556795,
+      "fileId": 5829751,
+      "path": "mods/advancementframes-1.21-2.2.9-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5829/751/advancementframes-1.21-2.2.9-fabric.jar",
+      "size": 214444,
+      "sha256": "b7012a3884ac90641833c20f980de399b7065d196cff3975a736ba9804b3b02d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/advancement-frames/files/5829751"
+    },
+    {
+      "projectId": 1094819,
+      "fileId": 6274102,
+      "path": "mods/farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6274/102/farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-fabric.jar",
+      "size": 102393,
+      "sha256": "19ff460305ca4c0453641d8270c33b235a0c3a9dc49e532e89b97e8771a1fc5a",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/farmers-cutting-oh-the-biomes-weve-gone/files/6274102"
+    },
+    {
+      "projectId": 500273,
+      "fileId": 6798195,
+      "path": "mods/VisualWorkbench-v21.1.1-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6798/195/VisualWorkbench-v21.1.1-1.21.1-Fabric.jar",
+      "size": 80510,
+      "sha256": "198e9b3e7a86718354319dadeb26df71cd4d55163f21b826baeb4ccafff54a1d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/visual-workbench/files/6798195"
+    },
+    {
+      "projectId": 1060896,
+      "fileId": 6512892,
+      "path": "mods/the_ruler-1.3-1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6512/892/the_ruler-1.3-1.21.1-fabric.jar",
+      "size": 24296,
+      "sha256": "82d67ca49246deece157a527ea33d3d1dae1b682581a7c720b43655e8757facf",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/the-ruler/files/6512892"
+    },
+    {
+      "projectId": 962916,
+      "fileId": 6107175,
+      "path": "mods/lavender-0.1.15+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6107/175/lavender-0.1.15%2B1.21.jar",
+      "size": 539500,
+      "sha256": "ad46db048ef9241bf00281ceaf52699c5733b00b9d36bdb7a2ab6274fe9fac4a",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lavender-api/files/6107175"
+    },
+    {
+      "projectId": 1236675,
+      "fileId": 7273767,
+      "path": "mods/fireworkcapsules-fabric-1.1.0+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7273/767/fireworkcapsules-fabric-1.1.0%2B1.21.1.jar",
+      "size": 292452,
+      "sha256": "0d6032bee0463f057f7e509721df355ee7d24875b165541cc6d596a57e1863ea",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-firework-capsules/files/7273767"
+    },
+    {
+      "projectId": 964608,
+      "fileId": 6726991,
+      "path": "mods/ATi Structures V1.4.2 (1.21+).jar",
+      "url": "https://mediafilez.forgecdn.net/files/6726/991/ATi%20Structures%20V1.4.2%20%281.21%2B%29.jar",
+      "size": 3187102,
+      "sha256": "4fcbec03aa17596bb51c7023329d9f202f20e143aead94ddef3258fed847e80b",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ati-structures/files/6726991"
+    },
+    {
+      "projectId": 615106,
+      "fileId": 6354237,
+      "path": "mods/lootr-fabric-1.21-1.10.35.91.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6354/237/lootr-fabric-1.21-1.10.35.91.jar",
+      "size": 608878,
+      "sha256": "f7f87bc006bbc232fafee451085083f7470d973dc1efbce3ec1f317901356c0e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lootr-fabric/files/6354237"
+    },
+    {
+      "projectId": 988504,
+      "fileId": 7191857,
+      "path": "mods/dye_depot-2.0.2-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7191/857/dye_depot-2.0.2-fabric.jar",
+      "size": 1874930,
+      "sha256": "83df144b2a5081f339201fdab279a000579ffa747d1b8b299a4980ad652a7da4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/dye-depot/files/7191857"
+    },
+    {
+      "projectId": 1158094,
+      "fileId": 6533870,
+      "path": "mods/deimos-1.21.1-fabric-2.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6533/870/deimos-1.21.1-fabric-2.2.jar",
+      "size": 48066,
+      "sha256": "ed129608f5650d021d99e435f96afd475a2eda8f1f225c7adeeb432ef8435c50",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/deimos-fabric-forge-neoforge/files/6533870"
+    },
+    {
+      "projectId": 1083776,
+      "fileId": 5628324,
+      "path": "mods/wakes-0.2.2-1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5628/324/wakes-0.2.2-1.21.jar",
+      "size": 421245,
+      "sha256": "d9a32b819d2052870b0ff091b93b9e79ab42cec96251d67935a3dca9bbbd9817",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/satin-free-wakes/files/5628324"
+    },
+    {
+      "projectId": 686435,
+      "fileId": 5731932,
+      "path": "mods/LeavesBeGone-v21.1.0-1.21.1-Fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5731/932/LeavesBeGone-v21.1.0-1.21.1-Fabric.jar",
+      "size": 56078,
+      "sha256": "a803b7b796313a21c7a68cd47cb75b546ccaa849aadf404e4b3a215a44ff011f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/leaves-be-gone/files/5731932"
+    },
+    {
+      "projectId": 979317,
+      "fileId": 6931969,
+      "path": "mods/sophisticatedcore-1.21.1-1.2.9.19.161.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6931/969/sophisticatedcore-1.21.1-1.2.9.19.161.jar",
+      "size": 2995888,
+      "sha256": "a1a64e9d63522b12df8ce8c235dabb5947bcfc0c93244052824a77287d1f3e4e",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core-unofficial-fabric-port/files/6931969"
+    },
+    {
+      "projectId": 252848,
+      "fileId": 5756913,
+      "path": "mods/NaturesCompass-1.21.1-2.2.7-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5756/913/NaturesCompass-1.21.1-2.2.7-fabric.jar",
+      "size": 223976,
+      "sha256": "4383eca064bd5d2442a65009f92e507aa196ba083cf7e07fde1d5a11a192fc39",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/natures-compass/files/5756913"
+    },
+    {
+      "projectId": 930207,
+      "fileId": 5650499,
+      "path": "mods/noisium-fabric-2.3.0+mc1.21-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5650/499/noisium-fabric-2.3.0%2Bmc1.21-1.21.1.jar",
+      "size": 216183,
+      "sha256": "c32c163861e936b7786995ebe1209eb7a4c6e7bb493e7cc75747ddac3340cf85",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/noisium/files/5650499"
+    },
+    {
+      "projectId": 979326,
+      "fileId": 6844431,
+      "path": "mods/sophisticatedstorage-1.21.1-1.3.7.6.127.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6844/431/sophisticatedstorage-1.21.1-1.3.7.6.127.jar",
+      "size": 1668144,
+      "sha256": "0290e996596a4d18fc63138abc4e0446b38382233d5a61f47b8f4106e9da59fe",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage-unofficial-fabric-port/files/6844431"
+    },
+    {
+      "projectId": 967466,
+      "fileId": 7228566,
+      "path": "mods/MoogsNetherStructures-1.21-2.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7228/566/MoogsNetherStructures-1.21-2.0.1.jar",
+      "size": 1323082,
+      "sha256": "81b95588c54221d4cdd19818c4096545147eba0674f3af29e57c8900d526bc74",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mns-moogs-nether-structures/files/7228566"
+    },
+    {
+      "projectId": 1266524,
+      "fileId": 6959717,
+      "path": "mods/exposure_expanded-fabric-1.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6959/717/exposure_expanded-fabric-1.0.1.jar",
+      "size": 771400,
+      "sha256": "fc95f7314a7ee483fcf684c51af06e343cfd8cd30b1cd3eddd679a18f974eb53",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/exposure-expanded/files/6959717"
+    },
+    {
+      "projectId": 361579,
+      "fileId": 5759670,
+      "path": "mods/spark-1.10.109-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5759/670/spark-1.10.109-fabric.jar",
+      "size": 3609981,
+      "sha256": "fafc121ac53dab1c32e74b7a1cae47d54435ba4cbeeda1180dc96675a7757047",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/spark/files/5759670"
+    },
+    {
+      "projectId": 551894,
+      "fileId": 5711702,
+      "path": "mods/BetterCompatibilityChecker-fabric-21.1.0+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5711/702/BetterCompatibilityChecker-fabric-21.1.0%2Bmc1.21.1.jar",
+      "size": 28309,
+      "sha256": "558613643f124ebe94efb3d5f2903f35738195208ac947abe1a149e3aab83570",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/better-compatibility-checker/files/5711702"
+    },
+    {
+      "projectId": 1034791,
+      "fileId": 7370668,
+      "path": "mods/arts_and_crafts-fabric-1.21.1-1.5.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7370/668/arts_and_crafts-fabric-1.21.1-1.5.3.jar",
+      "size": 5136558,
+      "sha256": "2c258deea1f56920d57571b25446a8c02772bc77577ba9fa352478977b32aaa2",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/artsandcrafts/files/7370668"
+    },
+    {
+      "projectId": 955399,
+      "fileId": 5660741,
+      "path": "mods/GlitchCore-fabric-1.21.1-2.1.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5660/741/GlitchCore-fabric-1.21.1-2.1.0.0.jar",
+      "size": 329188,
+      "sha256": "8ded94d33f1f1bdae9a845c35c3e4358528d71e2c45ad5642acfa9280e53fb47",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/glitchcore/files/5660741"
+    },
+    {
+      "projectId": 533097,
+      "fileId": 7176425,
+      "path": "mods/c2me-fabric-mc1.21.1-0.3.0+alpha.0.362.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7176/425/c2me-fabric-mc1.21.1-0.3.0%2Balpha.0.362.jar",
+      "size": 4701117,
+      "sha256": "e1f47def8294fbbd75270e17cbc1bfcfed295049c7daca3d52dd73af2749b296",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/c2me/files/7176425"
+    },
+    {
+      "projectId": 1049891,
+      "fileId": 6435237,
+      "path": "mods/clientsort-fabric-1.3.3+1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6435/237/clientsort-fabric-1.3.3%2B1.21.jar",
+      "size": 114223,
+      "sha256": "4006b994e9bc3640b0017cb62fe4589a49030870581967872ba3086a55e54448",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/clientsort/files/6435237"
+    },
+    {
+      "projectId": 734339,
+      "fileId": 6686926,
+      "path": "mods/Ping-Wheel-1.10.3-fabric-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6686/926/Ping-Wheel-1.10.3-fabric-1.21.1.jar",
+      "size": 118455,
+      "sha256": "cb8cabcbd76b1e3f2f30910213034c2898eb04b27d3bdf57fa6841d62386bd1d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ping-wheel/files/6686926"
+    },
+    {
+      "projectId": 393563,
+      "fileId": 6772408,
+      "path": "mods/blur-fabric-5.2.2+1.21.1+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6772/408/blur-fabric-5.2.2%2B1.21.1%2B1.21.1.jar",
+      "size": 102687,
+      "sha256": "9808137147e9e83c323431532c034368a67bee69a981b31e044bb053718806e9",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/blur-fabric/files/6772408"
+    },
+    {
+      "projectId": 854949,
+      "fileId": 6916613,
+      "path": "mods/fusion-1.2.11-fabric-mc1.21.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6916/613/fusion-1.2.11-fabric-mc1.21.jar",
+      "size": 515564,
+      "sha256": "17ebe8d064373a433496794eba3fa3e05929cc6eaad8a326d58ba2c9f0f6744c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fusion-connected-textures/files/6916613"
+    },
+    {
+      "projectId": 394363,
+      "fileId": 5854810,
+      "path": "mods/player-roles-1.6.13.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5854/810/player-roles-1.6.13.jar",
+      "size": 141247,
+      "sha256": "aea16a88281f467d8b38aa95a68f4a4159e7fd59c3fffb016d7a1aeec72d899c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/player-roles/files/5854810"
+    },
+    {
+      "projectId": 1021685,
+      "fileId": 6023317,
+      "path": "mods/ImmersiveUI-FABRIC-0.3.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6023/317/ImmersiveUI-FABRIC-0.3.0.jar",
+      "size": 218816,
+      "sha256": "63312b9118cf411e49ba81d2cb009357dbcc9a1eea52678984d49fb2a2867d54",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/immersive-ui/files/6023317"
+    },
+    {
+      "projectId": 1091949,
+      "fileId": 6877626,
+      "path": "mods/tabtweaks-1.5.9+1.21.1-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6877/626/tabtweaks-1.5.9%2B1.21.1-fabric.jar",
+      "size": 123970,
+      "sha256": "855819a70d70ced3147d26ee5af692e91e7b897e1a3515880fa5eadbc36593c1",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/tab-tweaks/files/6877626"
+    },
+    {
+      "projectId": 1023333,
+      "fileId": 6926465,
+      "path": "mods/chatplus-fabric-2.7.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6926/465/chatplus-fabric-2.7.0.jar",
+      "size": 26890142,
+      "sha256": "a5c875e4241820d844aae4e97d60e9d8bf2fdf47547ec6290d56aaa1d8b8dff0",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chat-plus/files/6926465"
+    },
+    {
+      "projectId": 655619,
+      "fileId": 4589736,
+      "path": "mods/better_climbing-fabric-3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4589/736/better_climbing-fabric-3.jar",
+      "size": 12179,
+      "sha256": "5a5edf3769d375bb04782cd42364bf86beff74fc253676bdb86065420cf27379",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/better-climbing/files/4589736"
+    },
+    {
+      "projectId": 1083202,
+      "fileId": 6726135,
+      "path": "mods/BEB-Fabric-1.21-5.0.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6726/135/BEB-Fabric-1.21-5.0.0.jar",
+      "size": 1315824,
+      "sha256": "d55b07488dfbc5c7f675624398b0de266d45c09271b496883b551275e38928bd",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/beautiful-enchanted-books/files/6726135"
+    },
+    {
+      "projectId": 669659,
+      "fileId": 6803125,
+      "path": "mods/mru-1.0.19+LTS+1.21.1+fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6803/125/mru-1.0.19%2BLTS%2B1.21.1%2Bfabric.jar",
+      "size": 244663,
+      "sha256": "466a5d7cba09f17165614541bdc3aca0a6c587c4e6df5328af4788c58c7e39a3",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mru/files/6803125"
+    },
+    {
+      "projectId": 665526,
+      "fileId": 6372978,
+      "path": "mods/Prism-1.21.1-fabric-1.0.11.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6372/978/Prism-1.21.1-fabric-1.0.11.jar",
+      "size": 61661,
+      "sha256": "244504f9730a6581e674b4e40ed399c5b08aa240a24aec49147338024eccbad7",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/prism-fabric/files/6372978"
+    },
+    {
+      "projectId": 539382,
+      "fileId": 6423860,
+      "path": "mods/Iceberg-1.21.1-fabric-1.3.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6423/860/Iceberg-1.21.1-fabric-1.3.2.jar",
+      "size": 413302,
+      "sha256": "9214790af6fb75c19ef6b95e0e47999addf018e8c7a1630a5118c4252e6d8d36",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/iceberg-fabric/files/6423860"
+    },
+    {
+      "projectId": 459857,
+      "fileId": 5850342,
+      "path": "mods/ferritecore-7.0.2-hotfix-fabric.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5850/342/ferritecore-7.0.2-hotfix-fabric.jar",
+      "size": 120709,
+      "sha256": "e3fae8e321474a35e94f9bb09eafd0440ce0fe98f4aebbc067e392889700a4fa",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric/files/5850342"
+    },
+    {
+      "projectId": 1152792,
+      "fileId": 7296312,
+      "path": "mods/rctapi-fabric-1.21.1-0.14.3-beta.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7296/312/rctapi-fabric-1.21.1-0.14.3-beta.jar",
+      "size": 206897,
+      "sha256": "aa045c9bc785fc78f0b4a51748c68198dfc34ecd8546b7e696886615eeea1e2f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/radical-cobblemon-trainers-api/files/7296312"
+    },
+    {
+      "projectId": 1023259,
+      "fileId": 6546238,
+      "path": "mods/prickle-fabric-1.21.1-21.1.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6546/238/prickle-fabric-1.21.1-21.1.8.jar",
+      "size": 86155,
+      "sha256": "0298071d0c28a7417b713b89e35f8a8ccb8b0afb83f75bb786deca0d7b56945a",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/prickle/files/6546238"
+    },
+    {
+      "projectId": 634005,
+      "fileId": 6253922,
+      "path": "mods/sootychimneys-fabric-1.3.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6253/922/sootychimneys-fabric-1.3.2.jar",
+      "size": 166034,
+      "sha256": "a9b020bd3b5e7fb5eb7be39e5929bc429f1858325ae87a8db1411491683e966d",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sooty-chimneys/files/6253922"
+    },
+    {
+      "projectId": 1395542,
+      "fileId": 7411107,
+      "path": "mods/CobblemonTrialsEdition-fabric-1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7411/107/CobblemonTrialsEdition-fabric-1.1.0.jar",
+      "size": 215919,
+      "sha256": "2c318a1a4208d6bba8a9403f676d1063851ab380f290e9f90f3232001b4eddda",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cobblemon-trials-edition/files/7411107"
+    },
+    {
+      "projectId": 393149,
+      "fileId": 7115351,
+      "path": "mods/runelic-fabric-1.21.1-21.1.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7115/351/runelic-fabric-1.21.1-21.1.5.jar",
+      "size": 71000,
+      "sha256": "bea530405c484523bdd810f8b9852909525237e5c668aefb0b56a2715f89457f",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/runelic/files/7115351"
+    },
+    {
+      "projectId": 388800,
+      "fileId": 6794587,
+      "path": "mods/polymorph-fabric-1.1.0+1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6794/587/polymorph-fabric-1.1.0%2B1.21.1.jar",
+      "size": 320928,
+      "sha256": "bc47b33c864b463167998680c296f513e6d06b42de6db03db0f274ae1f2ee671",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/polymorph/files/6794587"
+    },
+    {
+      "projectId": 892086,
+      "fileId": 5501783,
+      "path": "mods/chatanimation-1.0.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5501/783/chatanimation-1.0.6.jar",
+      "size": 553941,
+      "sha256": "5269c1cdd7ef8bd04821e400120188caa385979ab4b4932af197a8a4f17b5c22",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chatanimation/files/5501783"
+    },
+    {
+      "projectId": 565956,
+      "fileId": 6054948,
+      "path": "mods/TerraBlender-fabric-1.21.1-4.1.0.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6054/948/TerraBlender-fabric-1.21.1-4.1.0.8.jar",
+      "size": 337989,
+      "sha256": "5f2d25306abfed8c6c6291e8904ae1a9f6a8ab4f1bf5f3a21f7e263a5bf217a6",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/terrablender-fabric/files/6054948"
+    },
+    {
+      "projectId": 500525,
+      "fileId": 6841887,
+      "path": "mods/balm-fabric-1.21.1-21.0.49.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6841/887/balm-fabric-1.21.1-21.0.49.jar",
+      "size": 622171,
+      "sha256": "77f161086601119b855e5b79c89dff4be24d41773d16ced28fd0d2fcd722cc34",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/balm-fabric/files/6841887"
+    },
+    {
+      "projectId": 438447,
+      "fileId": 7093305,
+      "path": "mods/Enhanced-Celestials-Fabric-1.21.1-6.0.2.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7093/305/Enhanced-Celestials-Fabric-1.21.1-6.0.2.5.jar",
+      "size": 1606879,
+      "sha256": "0a92350b76f84a2bf62a04da0dbf646f7f5c21d6dc76d1a6b4eceb44178171a4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials/files/7093305"
+    },
+    {
+      "projectId": 455508,
+      "fileId": 6213635,
+      "path": "mods/iris-fabric-1.8.8+mc1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6213/635/iris-fabric-1.8.8%2Bmc1.21.1.jar",
+      "size": 2690177,
+      "sha256": "b5ad39a6cb113ca0a1765f06689f9f4b29ccd0c81247de90b06c42f5da1092f5",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/6213635"
+    },
+    {
+      "projectId": 1171658,
+      "fileId": 6721760,
+      "path": "mods/effectual-1.1.0-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6721/760/effectual-1.1.0-1.21.1.jar",
+      "size": 313945,
+      "sha256": "e58110d036e8fb64fdf5750500efa7b33c1a5774a337e046399767f4ca472c39",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/effectual/files/6721760"
+    },
+    {
+      "projectId": 1320088,
+      "fileId": 6872236,
+      "path": "mods/no-more-popups-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6872/236/no-more-popups-1.0.2.jar",
+      "size": 16232,
+      "sha256": "23e13cff47eb7755ff25d6aadc989ccc49c629a276a14dfd45ef137c347c2f49",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/no-more-popups/files/6872236"
+    },
+    {
+      "projectId": 1326436,
+      "fileId": 7302349,
+      "path": "mods/fancytoasts-fabric-1.21.1-1.4.5.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7302/349/fancytoasts-fabric-1.21.1-1.4.5.1.jar",
+      "size": 250316,
+      "sha256": "e5a955c3718d7fdac0f839836bfca3d30f746dc48e4182272b9d7236567a261c",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/fancy-toasts/files/7302349"
+    },
+    {
+      "projectId": 714019,
+      "fileId": 6103351,
+      "path": "mods/shutter-2.1.2-fabric-1.21.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6103/351/shutter-2.1.2-fabric-1.21.1.jar",
+      "size": 913767,
+      "sha256": "c26d70f1274b4ae822f9919157563406c52f5aff17dc130d231c7e0c7bcee915",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lauchs-shutters/files/6103351"
+    },
+    {
+      "projectId": 228525,
+      "fileId": 7335847,
+      "path": "mods/bookshelf-fabric-1.21.1-21.1.80.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7335/847/bookshelf-fabric-1.21.1-21.1.80.jar",
+      "size": 330260,
+      "sha256": "7525f64eb5584b149e499eadcbb8e584d462ce992e72d31cb535af7aaf0931f4",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/bookshelf/files/7335847"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Cobblemon Launcher</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="titlebar"><span>COBBLEMON <b>ENTRE AMIS</b></span><div><button id="window-minimize" aria-label="Réduire">−</button><button id="window-close" aria-label="Fermer">×</button></div></div>
+  <aside class="sidebar">
+    <div class="brand"><span class="ball" aria-hidden="true"></span><div>COBBLEMON<small>ENTRE AMIS</small></div></div>
+    <span class="section-label">VOTRE PETIT COIN</span>
+    <nav aria-label="Navigation principale">
+      <button class="nav active" data-view="play" aria-current="page"><span>◈</span> Jouer <span class="nav-arrow">↗</span></button>
+      <button class="nav" data-view="settings"><span>⚙</span> Réglages</button>
+      <button class="nav" data-view="logs"><span>≡</span> Journal</button>
+    </nav>
+    <div class="sidebar-note"><span class="mini-spark">✳</span><p>Une aventure à partager.<br>À votre rythme.</p><span class="tiny" id="pack-sidebar">COBBLEMON ACADEMY · 2.0</span></div>
+    <button class="sidebar-link" id="pack-link">Découvrir le modpack <span>↗</span></button>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Launcher privé <small>v0.3.0</small></div>
+  </aside>
+  <main>
+    <header><div class="breadcrumb">Votre espace <span>/</span> <strong id="page-title">Jouer</strong></div><button id="account" class="account"><span class="account-icon">☺</span><span id="account-label">Connexion Microsoft</span><span>↗</span></button></header>
+    <section id="view-play" class="view">
+      <div class="intro"><div><span class="eyebrow">ON SE RETROUVE EN JEU ?</span><h1>L’aventure vous attend.</h1></div><span class="edition">ACADEMY <b id="pack-edition">2.0</b></span></div>
+      <div class="hero">
+        <div class="hero-shade"></div>
+        <span class="hero-tag"><span></span> VOTRE PROCHAINE ESCALE</span>
+        <div class="hero-copy"><div class="hero-kicker">COBBLEMON ACADEMY</div><h2>Un monde à explorer.<br>Des amis à retrouver.</h2><p>Attrapez, construisez, partez à l’aventure.<br>Le reste peut attendre.</p></div>
+        <div class="hero-caption"><span>01 /</span> Votre aventure commence ici <span>✳</span></div>
+      </div>
+      <div class="facts">
+        <div><span class="fact-icon">◇</span><p>Le modpack<strong><span id="pack-name">Academy 2.0</span> <em id="pack-version">2.6.0</em></strong></p></div>
+        <div><span class="fact-icon">◉</span><p>Votre serveur<strong id="server-label">Adresse à renseigner</strong></p><button class="icon-button" id="refresh-server" title="Actualiser l’état du serveur" aria-label="Actualiser l’état du serveur">↻</button></div>
+        <div><span class="fact-icon">▤</span><p>Mémoire allouée<strong id="ram-label">8 Go</strong></p><button class="icon-button" id="edit-settings" title="Modifier les réglages" aria-label="Modifier les réglages">↗</button></div>
+      </div>
+      <div class="launch-box">
+        <div class="launch-text"><span class="section-label dark" id="install-label">PREMIÈRE ESCALE</span><h3 id="launch-heading">Préparez votre aventure.</h3><p id="launch-help">Le launcher installe Minecraft, Fabric, Java et le modpack.</p></div>
+        <button id="play-button" class="primary">Installer le modpack <span>↓</span></button>
+      </div>
+      <div id="progress-wrap" class="progress-wrap" hidden><div><span id="progress-message">Préparation…</span><span id="progress-value">0 %</span></div><progress id="progress" max="100" value="0"></progress></div>
+      <footer><span id="runtime-label">MINECRAFT 1.21.1 · FABRIC 0.18.1 · JAVA 21</span><button id="game-folder">Ouvrir le dossier du jeu ↗</button></footer>
+    </section>
+    <section id="view-settings" class="view" hidden>
+      <div class="intro"><div><span class="eyebrow">COMME À LA MAISON</span><h1>Vos réglages.</h1></div></div>
+      <form id="settings-form">
+        <div class="settings-card account-card"><div class="card-heading"><div><span class="eyebrow">VOTRE IDENTITÉ EN JEU</span><h2>Compte Microsoft</h2></div><span class="account-badge" id="account-state">Non connecté</span></div><p id="account-detail">Connectez le compte qui possède Minecraft Java Edition.</p><div class="account-actions"><button class="secondary" id="switch-account" type="button">Choisir un compte Microsoft</button><button class="text-button danger" id="logout" type="button">Se déconnecter</button><button class="text-button" id="device-login" type="button">Connexion avec un code</button></div></div>
+        <div class="settings-grid">
+          <div class="settings-card"><span class="eyebrow">LE POINT DE RENDEZ-VOUS</span><h2>Votre serveur</h2><p>Déjà configuré pour rejoindre les amis.</p><div class="form-row"><label class="wide">Adresse Minecraft<input id="server-host" autocomplete="off"></label><label>Port<input id="server-port" type="number" min="1" max="65535" value="25565" required></label></div></div>
+          <div class="settings-card"><div class="card-heading"><div><span class="eyebrow">LE CONFORT DE JEU</span><h2>Mémoire du jeu</h2></div><output id="ram-selected">8 Go</output></div><p id="ram-help">Gardez de la mémoire pour Windows.</p><fieldset class="ram-choices" id="ram-choices"><legend class="sr-only">Mémoire allouée</legend></fieldset><p class="small">Conseillé : 8 Go si votre ordinateur le permet.</p></div>
+        </div>
+        <div class="form-actions"><button class="primary" type="submit">Enregistrer les réglages <span>✓</span></button><button class="secondary" id="repair" type="button">Vérifier les fichiers</button></div>
+      </form>
+    </section>
+    <section id="view-logs" class="view" hidden><div class="intro"><div><span class="eyebrow">SOUS LE CAPOT</span><h1>Le journal.</h1></div><button class="secondary" id="logs-folder">Ouvrir les fichiers ↗</button></div><p class="muted">Les étapes d’installation et les messages de Minecraft apparaissent ici.</p><pre id="log-content" tabindex="0">Aucun message pour le moment.</pre></section>
+    <button class="secondary" id="launcher-update" hidden>Installer la mise à jour du launcher</button>
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+  </main>
+</body>
+</html>
