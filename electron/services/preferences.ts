@@ -4,24 +4,26 @@ import os from 'node:os';
 import net from 'node:net';
 import { getSettingsFile } from './installPaths';
 import { launcherRuntimeConfig, setServer } from '../config';
-export interface Preferences {ramGb: number; serverHost: string; serverPort: number; microsoftClientId: string}
+export interface Preferences {ramGb: number; serverHost: string; serverPort: number; microsoftClientId: string; launchBehavior?:'keep'|'minimize'|'close'}
 // Only these values belong in the player interface. Connection details stay in the main process.
 export function getPlayerSettings(settings: Preferences) {
-  return {settings:{ramGb:settings.ramGb}, serverConfigured:!!settings.serverHost, microsoftConfigured:!!settings.microsoftClientId};
+  return {settings:{ramGb:settings.ramGb,launchBehavior:settings.launchBehavior??'keep'}, serverConfigured:!!settings.serverHost, microsoftConfigured:!!settings.microsoftClientId};
 }
 export function savePlayerPreferences(current: Preferences, input: any): Promise<Preferences> {
-  return savePreferences({...current, ramGb:input?.ramGb});
+  return savePreferences({...current, ramGb:input?.ramGb,launchBehavior:input?.launchBehavior??current.launchBehavior??'keep'});
 }
 export function validatePreferences(input: any): Preferences {
   const host = String(input?.serverHost ?? '').trim().replace(/^\[|\]$/g, '');
   const port = Number(input?.serverPort);
   const ram = Number(input?.ramGb);
   const id = String(input?.microsoftClientId ?? '').trim();
+  const launchBehavior=input?.launchBehavior??'keep';
+  if(!['keep','minimize','close'].includes(launchBehavior))throw new Error('Comportement au lancement invalide.');
   if (host && !net.isIP(host) && !/^(?=.{1,253}$)[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$/i.test(host)) throw new Error('Saisis un hôte sans protocole ni port.');
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Le port doit être compris entre 1 et 65535.');
   if (![4,6,8,10,12,16].includes(ram) || ram > Math.floor(os.totalmem() / 1024 ** 3) - 2) throw new Error('Choisis une quantité de RAM qui laisse au moins 2 Go à Windows.');
   if (id && !/^[a-z0-9-]{8,64}$/i.test(id)) throw new Error('Identifiant d’application Microsoft invalide.');
-  return {ramGb:ram, serverHost:host, serverPort:port, microsoftClientId:id};
+  return {ramGb:ram, serverHost:host, serverPort:port, microsoftClientId:id,launchBehavior};
 }
 export function applyPreferences(settings: Preferences): void {
   launcherRuntimeConfig.microsoftClientId = settings.microsoftClientId;

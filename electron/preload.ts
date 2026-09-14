@@ -1,5 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron';
-const allowed = new Set(['state','ui-ready','logs','save-settings','login','logout','switch-account','window-minimize','window-close','install-launcher-update','install','play','server-status','open-folder','open-pack']);
+const allowed = new Set(['state','ui-ready','logs','save-settings','login','logout','switch-account','window-minimize','window-close','install-launcher-update','install','play','server-status','open-folder','open-pack','repair','client-mods','set-client-mod','account-avatar','skins','import-skin','apply-skin','delete-skin','shaders','install-shader','select-shader','copy-diagnostics','open-link']);
 const events = new Set(['progress','busy','auth','log','running','notice','launcher-update']);
 contextBridge.exposeInMainWorld('cobblemon', {
   invoke: (channel: string, input?: unknown) => {

@@ -1,0 +1,1319 @@
+{
+  "schemaVersion": 1,
+  "modsFingerprint": "57d15c410f690793913911fe77705edbfb0fcdbdc3fa38fcf287e1020a9bccb0",
+  "entries": [
+    {
+      "id": "autorun",
+      "name": "AutoRun",
+      "description": "Marcher et sprinter sans maintenir une touche.",
+      "path": "mods/autorun-1.21.X-0.6.0.jar",
+      "sha256": "e5141db08e7befff5d53866b871be1587b92649bf5a699adfdc4015e7a8e460f",
+      "requiredBy": []
+    },
+    {
+      "id": "bwncr",
+      "name": "Bad Wither No Cookie Reloaded",
+      "description": "Réduire les sons globaux du Wither et du dragon.",
+      "path": "mods/bwncr-fabric-1.21.1-3.20.3.jar",
+      "sha256": "2351eecb58748bb6a392feae5a2906a3a20d33a0276e06ae2e21761a276f4984",
+      "requiredBy": []
+    },
+    {
+      "id": "betterf3",
+      "name": "BetterF3",
+      "description": "Un écran F3 plus lisible et personnalisable.",
+      "path": "mods/BetterF3-11.0.3-Fabric-1.21.1.jar",
+      "sha256": "e0e4bb25fbe23b16b7574474ee9fde5cdc9757d05885bc43978f4ea5e8e258ad",
+      "requiredBy": []
+    },
+    {
+      "id": "bhmenu",
+      "name": "BHMenu-Fabric",
+      "description": "BisectHosting Server Menu",
+      "path": "mods/BHMenu-Fabric-1.21-2.5.3.jar",
+      "sha256": "d1430e0b8d661b1b7085e1146053057852049f12fa0f6bf87197c41a1264dd56",
+      "requiredBy": []
+    },
+    {
+      "id": "blur",
+      "name": "Blur+",
+      "description": "Flouter l’arrière-plan des menus.",
+      "path": "mods/blur-fabric-5.2.2+1.21.1+1.21.1.jar",
+      "sha256": "9808137147e9e83c323431532c034368a67bee69a981b31e044bb053718806e9",
+      "requiredBy": []
+    },
+    {
+      "id": "bobby",
+      "name": "Bobby",
+      "description": "Afficher les chunks déjà visités au-delà de la distance du serveur.",
+      "path": "mods/bobby-5.2.4+mc1.21.jar",
+      "sha256": "abf66c25c5738f15528ed8a2787e9df4ce73cd84258fba5264fb049d9e591655",
+      "requiredBy": []
+    },
+    {
+      "id": "catchindicator",
+      "name": "Catch Indicator",
+      "description": "Afficher les indications de capture des Pokémon.",
+      "path": "mods/catchindicator-fabric-1.2.jar",
+      "sha256": "d1c9b5c94a85ec6a161a8c1cc1faa0a7afc8bed14f3fc19ac57b849f36f190c3",
+      "requiredBy": []
+    },
+    {
+      "id": "chatplus",
+      "name": "ChatPlus",
+      "description": "Personnaliser l’affichage du chat.",
+      "path": "mods/chatplus-fabric-2.7.0.jar",
+      "sha256": "a5c875e4241820d844aae4e97d60e9d8bf2fdf47547ec6290d56aaa1d8b8dff0",
+      "requiredBy": []
+    },
+    {
+      "id": "chunksfadein",
+      "name": "Chunks Fade In",
+      "description": "Faire apparaître les chunks progressivement.",
+      "path": "mods/chunksfadein-fabric-3.0.15-1.21.jar",
+      "sha256": "afac78294674006a8b88068fbfb7f1c81cd67985a7685236ade7f3af69c54373",
+      "requiredBy": [
+        "Fabric API",
+        "Mod Menu",
+        "Reacharound"
+      ]
+    },
+    {
+      "id": "controlling",
+      "name": "Controlling",
+      "description": "Rechercher les commandes et repérer les conflits de touches.",
+      "path": "mods/Controlling-fabric-1.21.1-19.0.5.jar",
+      "sha256": "c0150c5bfbc77f27b92f24a5a9c2edc462eba8c8f912635757c5deb3a0a93f8d",
+      "requiredBy": []
+    },
+    {
+      "id": "cubes-without-borders",
+      "name": "Cubes Without Borders",
+      "description": "Jouer en plein écran sans bordures.",
+      "path": "mods/cwb-fabric-3.0.0+mc1.21.jar",
+      "sha256": "5a04b0616632f74ca2f0406d8b73bca8639b8f8f67836621d19502d7e5d660cc",
+      "requiredBy": []
+    },
+    {
+      "id": "desiredservers",
+      "name": "Desired Servers",
+      "description": "Featured Servers Deus Ex. Thank You Jake Evans for the original mod and the GPLv3 license.",
+      "path": "mods/desiredservers-fabric-1.21.1-1.6.0.jar",
+      "sha256": "f8548988d9e7649e180146fa0e359db71e0f6502e5f93d3d634550eb15de3d02",
+      "requiredBy": []
+    },
+    {
+      "id": "distraction_free_recipes",
+      "name": "Distraction Free Recipes (EMI)",
+      "description": "Simplifier l’affichage des recettes EMI.",
+      "path": "mods/distraction_free_recipes-fabric-1.2.1-1.21.1.jar",
+      "sha256": "82a3a3113fe4aeef66bdb640c160e5cee59a72bb780431c7bab3f0a1b4c01398",
+      "requiredBy": []
+    },
+    {
+      "id": "effectual",
+      "name": "Effectual",
+      "description": "Personnaliser les effets visuels.",
+      "path": "mods/effectual-1.1.0-1.21.1.jar",
+      "sha256": "e58110d036e8fb64fdf5750500efa7b33c1a5774a337e046399767f4ca472c39",
+      "requiredBy": []
+    },
+    {
+      "id": "enchdesc",
+      "name": "EnchantmentDescriptions",
+      "description": "Afficher les descriptions des enchantements.",
+      "path": "mods/enchdesc-fabric-1.21.1-21.1.8.jar",
+      "sha256": "acf2e24da1f4e6f0c7c3ce8ad6e2d466a317099b8af5acbf2d4d852873f0b125",
+      "requiredBy": []
+    },
+    {
+      "id": "euphoria_patcher",
+      "name": "Euphoria Patcher",
+      "description": "A mod that applies the Euphoria Patches add-on to Complementary Shaders.\nReport issues on discord!",
+      "path": "mods/EuphoriaPatcher-1.6.5-r5.5.1-fabric.jar",
+      "sha256": "8c54a994a344e736f98ec63f72ad6443b4b051ddeb6e58f7ecfe6a706ae67de6",
+      "requiredBy": []
+    },
+    {
+      "id": "fallingleaves",
+      "name": "Falling Leaves",
+      "description": "Ajouter des feuilles qui tombent des arbres.",
+      "path": "mods/fallingleaves-1.17.1+1.21.1.jar",
+      "sha256": "67e2071d6c25e2638573e6ee91a146b77e38d77edddbb26f45006ab878ebca77",
+      "requiredBy": []
+    },
+    {
+      "id": "fancytoasts",
+      "name": "FancyToasts",
+      "description": "Personnaliser les petites notifications à l’écran.",
+      "path": "mods/fancytoasts-fabric-1.21.1-1.4.5.1.jar",
+      "sha256": "e5a955c3718d7fdac0f839836bfca3d30f746dc48e4182272b9d7236567a261c",
+      "requiredBy": []
+    },
+    {
+      "id": "immersive-hotbar",
+      "name": "Immersive Hotbar",
+      "description": "Personnaliser la barre d’accès rapide.",
+      "path": "mods/immersive-hotbar-1.0.4-1.21-1.21.1.jar",
+      "sha256": "41cb8434ee2674a54f961f95e61894194dae6c0af884a613e4f364ff8bedb8ea",
+      "requiredBy": []
+    },
+    {
+      "id": "iris",
+      "name": "Iris",
+      "description": "Permettre l’utilisation des shaders. À garder actif si vous jouez avec un shader.",
+      "path": "mods/iris-fabric-1.8.8+mc1.21.1.jar",
+      "sha256": "b5ad39a6cb113ca0a1765f06689f9f4b29ccd0c81247de90b06c42f5da1092f5",
+      "requiredBy": []
+    },
+    {
+      "id": "itemzoomer",
+      "name": "Item Zoomer",
+      "description": "Agrandir l’aperçu d’un objet.",
+      "path": "mods/itemzoomer-1.1.0-1.21.1.jar",
+      "sha256": "28371c56e34a2c73ffecf4b12cce657a4c1e90cd6b3b1cfffa23b70a5909a5eb",
+      "requiredBy": []
+    },
+    {
+      "id": "lambdynlights",
+      "name": "LambDynamicLights",
+      "description": "Éclairer autour des objets lumineux tenus en main.",
+      "path": "mods/lambdynamiclights-4.1.5+1.21.1.jar",
+      "sha256": "239bff93185d9b2d447c75fa8532c10f2cd642aa1caf7fdc8ff78e3a2429ff98",
+      "requiredBy": []
+    },
+    {
+      "id": "legendarytooltips",
+      "name": "Legendary Tooltips",
+      "description": "Décorer les infobulles des objets.",
+      "path": "mods/LegendaryTooltips-1.21.1-fabric-1.5.5.jar",
+      "sha256": "b026c93b3a52201468c7fdf24e144fc06154a27e50344c0a3f651d50710cd8d4",
+      "requiredBy": []
+    },
+    {
+      "id": "minecraft-cursor",
+      "name": "Minecraft Cursor",
+      "description": "Utiliser un curseur dans le style de Minecraft.",
+      "path": "mods/minecraft-cursor-fabric-3.10.0+1.21.1.jar",
+      "sha256": "6300d6c5a8f1d5f9fe8da000562d7186c1c5d946c1cbd89354a4c89b810fe1b7",
+      "requiredBy": []
+    },
+    {
+      "id": "modmenu",
+      "name": "Mod Menu",
+      "description": "Adds a mod menu to view the list of mods you have installed.",
+      "path": "mods/modmenu-11.0.3.jar",
+      "sha256": "a45a12807a29f0e5b23b87cd380fd6fe8589ffe4a665cadce234168a4dabe428",
+      "requiredBy": [
+        "Item Zoomer",
+        "Structurify"
+      ]
+    },
+    {
+      "id": "mousetweaks",
+      "name": "Mouse Tweaks",
+      "description": "Faciliter le déplacement des objets dans les inventaires.",
+      "path": "mods/MouseTweaks-fabric-mc1.21-2.26.jar",
+      "sha256": "3e9fa4800fafef616fbf1545d62f5898f55c83fbd4126ce2b48b5e0077243fc0",
+      "requiredBy": []
+    },
+    {
+      "id": "nametagtweaks",
+      "name": "Nametag Tweaks",
+      "description": "Personnaliser les noms affichés au-dessus des entités.",
+      "path": "mods/nametagtweaks-1.3.5+1.21-fabric.jar",
+      "sha256": "67f0e6d9c443069ecf66678a726843a69dc5872c49e9c100cb7d12e6e942cd70",
+      "requiredBy": []
+    },
+    {
+      "id": "nbt_ac",
+      "name": "NBT Autocomplete",
+      "description": "Compléter les données NBT dans les commandes.",
+      "path": "mods/NBTac-FABRIC-1.21.1-1.3.10.jar",
+      "sha256": "711f8c26157fde8cf37d183d873105424b5eaef2340b1b58b41d164201c8d3a9",
+      "requiredBy": []
+    },
+    {
+      "id": "particle_core",
+      "name": "Particle Core",
+      "description": "Particle optimizations. Particle culling, rendering optimization, and configurable disabling of particles.",
+      "path": "mods/particle_core-0.2.4+1.21.jar",
+      "sha256": "8e8501761ade869d2924ee6b405c961d897e249bd999a20131964bc7a2ea50c5",
+      "requiredBy": []
+    },
+    {
+      "id": "particlerain",
+      "name": "Particle Rain",
+      "description": "Enrichir visuellement la pluie et la neige.",
+      "path": "mods/particle-rain-3.0.5.jar",
+      "sha256": "4cc0ff16a6782ec4630ec4145b1999e86af58db1c253f75effb75e7d2569d851",
+      "requiredBy": []
+    },
+    {
+      "id": "polytone",
+      "name": "Polytone",
+      "description": "Your Resource Packs Best Friend",
+      "path": "mods/polytone-1.21-3.5.5-fabric.jar",
+      "sha256": "65a915b4b635dff0477338150079e0486710768fae7106efa15af671d5dd5b6c",
+      "requiredBy": []
+    },
+    {
+      "id": "prism",
+      "name": "Prism",
+      "description": "A library all about color! Provides lots of color-related functionality for dependent mods.",
+      "path": "mods/Prism-1.21.1-fabric-1.0.11.jar",
+      "sha256": "244504f9730a6581e674b4e40ed399c5b08aa240a24aec49147338024eccbad7",
+      "requiredBy": [
+        "Legendary Tooltips"
+      ]
+    },
+    {
+      "id": "resourcepackoverrides",
+      "name": "Resource Pack Overrides",
+      "description": "Ensures important resource packs stay always active and helps clean up the pack selection screen.",
+      "path": "mods/ResourcePackOverrides-v21.1.0-1.21.1-Fabric.jar",
+      "sha256": "5db1e3d3f07947ceb893ccd823a7660f62f8f794e2bf9a5b721a3c3d32dcbc59",
+      "requiredBy": []
+    },
+    {
+      "id": "scoreboardtweaks",
+      "name": "Scoreboard Tweaks",
+      "description": "Personnaliser le tableau de scores.",
+      "path": "mods/scoreboardtweaks-1.3.4+1.21.1-fabric.jar",
+      "sha256": "b6376e458885a31595af4214c866b7c74d6c4036df6d830edb2b7ed55b9ff1ae",
+      "requiredBy": []
+    },
+    {
+      "id": "searchables",
+      "name": "Searchables",
+      "description": "A library mod to facilitate adding search bars with auto complete and search types.",
+      "path": "mods/Searchables-fabric-1.21.1-1.0.2.jar",
+      "sha256": "0b58a40a41db4a4af4ef84475b0ea330be3b18fdcac2eca68ede46d9f4df3d76",
+      "requiredBy": [
+        "Controlling"
+      ]
+    },
+    {
+      "id": "shouldersurfing",
+      "name": "Shoulder Surfing Reloaded",
+      "description": "Jouer avec une caméra à la troisième personne décalée.",
+      "path": "mods/ShoulderSurfing-Fabric-1.21.1-4.17.1.jar",
+      "sha256": "35175eabf5e6cbc7f675a82a33b42a8d55e165332f518840878c9bfa6eb4847d",
+      "requiredBy": []
+    },
+    {
+      "id": "sodium",
+      "name": "Sodium",
+      "description": "Sodium is a powerful rendering engine for Minecraft which greatly improves frame rates and micro-stutter, while fixing many graphical issues",
+      "path": "mods/sodium-fabric-0.6.13+mc1.21.1.jar",
+      "sha256": "e04599514d88e41765f710eeba59e3814909833396bc11b977f48fc2e7e50353",
+      "requiredBy": [
+        "Chunks Fade In",
+        "Iris",
+        "Sodium Extra"
+      ]
+    },
+    {
+      "id": "sodium-extra",
+      "name": "Sodium Extra",
+      "description": "Ajouter des réglages graphiques supplémentaires.",
+      "path": "mods/sodium-extra-fabric-0.6.0+mc1.21.1.jar",
+      "sha256": "1a7434e444c851d82efbe3d5a8fd2dbb142e9bdf0012d7c6a0e4741c641b1a2d",
+      "requiredBy": []
+    },
+    {
+      "id": "sounds",
+      "name": "Sounds",
+      "description": "Ajouter des sons aux interactions et aux menus.",
+      "path": "mods/sounds-2.4.13.1+lts+1.21.1+fabric.jar",
+      "sha256": "d3871ae9fade6659394249c34d60fbc093f59a757e518fdd8f39448615a22d17",
+      "requiredBy": []
+    },
+    {
+      "id": "stfu",
+      "name": "Stfu",
+      "description": "Masquer certaines notifications sonores.",
+      "path": "mods/Stfu-1.2.2.jar",
+      "sha256": "50a0de0d6dec16b99caaac139676d6fd2d3aca412835ed77aed0363a10885cfa",
+      "requiredBy": []
+    },
+    {
+      "id": "stylisheffects",
+      "name": "Stylish Effects",
+      "description": "Personnaliser les indicateurs d’effets de potion.",
+      "path": "mods/StylishEffects-v21.1.1-1.21.1-Fabric.jar",
+      "sha256": "d9869d7e2fcbacf747081ff16bd48d694279f4e00ae040cecfdbe8ecb518c0de",
+      "requiredBy": []
+    },
+    {
+      "id": "tabtweaks",
+      "name": "Tab Tweaks",
+      "description": "Personnaliser la liste des joueurs.",
+      "path": "mods/tabtweaks-1.5.9+1.21.1-fabric.jar",
+      "sha256": "855819a70d70ced3147d26ee5af692e91e7b897e1a3515880fa5eadbc36593c1",
+      "requiredBy": []
+    },
+    {
+      "id": "titletweaks",
+      "name": "Title Tweaks",
+      "description": "Personnaliser les titres affichés à l’écran.",
+      "path": "mods/titletweaks-1.1.5+1.21.1-fabric.jar",
+      "sha256": "7a9dc2366a0a32c420e1e49be1d9d9e2576c6176be723ff57d779e67ef4283ac",
+      "requiredBy": []
+    },
+    {
+      "id": "travelerstitles",
+      "name": "Traveler's Titles",
+      "description": "Afficher le nom des biomes et dimensions visités.",
+      "path": "mods/TravelersTitles-1.21.1-Fabric-5.1.3.jar",
+      "sha256": "d89c1c377c0d33d8073696073b1af3e9472f418c2d700f607ce7b632939618b7",
+      "requiredBy": []
+    },
+    {
+      "id": "wakes",
+      "name": "Wakes",
+      "description": "Afficher des remous et des sillages dans l’eau.",
+      "path": "mods/wakes-0.2.2-1.21.jar",
+      "sha256": "d9a32b819d2052870b0ff091b93b9e79ab42cec96251d67935a3dca9bbbd9817",
+      "requiredBy": []
+    },
+    {
+      "id": "zoomify",
+      "name": "Zoomify",
+      "description": "Utiliser un zoom personnalisable.",
+      "path": "mods/Zoomify-2.14.4+1.21.1.jar",
+      "sha256": "8e129989a3f2fd835b8767a9fd6ad86e505c4353253638b4aca76df3d7c0c3d9",
+      "requiredBy": []
+    }
+  ],
+  "mods": [
+    {
+      "path": "mods/Abes-Hutts-Cobblemon-1.21.1.1.7.3-1.0.5.jar",
+      "sha256": "dc8c72beee009e0e5303ab3e0bb4e8bbdfde2e556c99eb2fe6c3a8f036437c22"
+    },
+    {
+      "path": "mods/academy-mc1.21.1-v2.4.1+build.550-fabric.jar",
+      "sha256": "d88960d616f2f97f3ebf03a4e69c35650239acdffcd35ee8722197caa6a73654"
+    },
+    {
+      "path": "mods/accessories-fabric-1.1.0-beta.53+1.21.1.jar",
+      "sha256": "51e6f6d52cb2523199ad36e5bc04802230f86904c35ac3dbf36e59c86b2c30d1"
+    },
+    {
+      "path": "mods/advancementframes-1.21-2.2.9-fabric.jar",
+      "sha256": "b7012a3884ac90641833c20f980de399b7065d196cff3975a736ba9804b3b02d"
+    },
+    {
+      "path": "mods/another_furniture-fabric-4.0.1.jar",
+      "sha256": "adfb1e3b88afe536d3cedac2d585192561c562de4e0a3295afba947567a0763b"
+    },
+    {
+      "path": "mods/appleskin-fabric-mc1.21-3.0.6.jar",
+      "sha256": "9a19cec1294b1bc708392a08e6926dcb85d7378ec5ad909a4b6fcb8bc3bfeaa2"
+    },
+    {
+      "path": "mods/architectury-13.0.8-fabric.jar",
+      "sha256": "10cbbb6f5f96a2f1853b0cc68428424cec8903409517b299ff02350756b6399d"
+    },
+    {
+      "path": "mods/arts_and_crafts-fabric-1.21.1-1.5.3.jar",
+      "sha256": "2c258deea1f56920d57571b25446a8c02772bc77577ba9fa352478977b32aaa2"
+    },
+    {
+      "path": "mods/athena-fabric-1.21-4.0.2.jar",
+      "sha256": "998c92dc8e01999f3e6870c94102aa73d755dc56f17a7d36c67f79178f836ffb"
+    },
+    {
+      "path": "mods/ATi Structures V1.4.2 (1.21+).jar",
+      "sha256": "4fcbec03aa17596bb51c7023329d9f202f20e143aead94ddef3258fed847e80b"
+    },
+    {
+      "path": "mods/autorun-1.21.X-0.6.0.jar",
+      "sha256": "e5141db08e7befff5d53866b871be1587b92649bf5a699adfdc4015e7a8e460f"
+    },
+    {
+      "path": "mods/badpackets-fabric-0.8.2.jar",
+      "sha256": "55ea0b01c54ad4fd769963649beb20a1971a6c820c9a258acdf43ca353d904d8"
+    },
+    {
+      "path": "mods/balm-fabric-1.21.1-21.0.49.jar",
+      "sha256": "77f161086601119b855e5b79c89dff4be24d41773d16ced28fd0d2fcd722cc34"
+    },
+    {
+      "path": "mods/beautify-1.3.0+1.21.1.jar",
+      "sha256": "147418a19d461dd15f6c6d933a82f642289f3c390d1b17a30166c0b127022e20"
+    },
+    {
+      "path": "mods/BEB-Fabric-1.21-5.0.0.jar",
+      "sha256": "d55b07488dfbc5c7f675624398b0de266d45c09271b496883b551275e38928bd"
+    },
+    {
+      "path": "mods/better_climbing-fabric-3.jar",
+      "sha256": "5a5edf3769d375bb04782cd42364bf86beff74fc253676bdb86065420cf27379"
+    },
+    {
+      "path": "mods/BetterAdvancements-Fabric-1.21.1-0.4.3.21.jar",
+      "sha256": "7542d8f2f280fad5698f114ab28c28300e52bdcf80622f3c104b96434162fcf5"
+    },
+    {
+      "path": "mods/BetterCompatibilityChecker-fabric-21.1.0+mc1.21.1.jar",
+      "sha256": "558613643f124ebe94efb3d5f2903f35738195208ac947abe1a149e3aab83570"
+    },
+    {
+      "path": "mods/BetterF3-11.0.3-Fabric-1.21.1.jar",
+      "sha256": "e0e4bb25fbe23b16b7574474ee9fde5cdc9757d05885bc43978f4ea5e8e258ad"
+    },
+    {
+      "path": "mods/BHMenu-Fabric-1.21-2.5.3.jar",
+      "sha256": "d1430e0b8d661b1b7085e1146053057852049f12fa0f6bf87197c41a1264dd56"
+    },
+    {
+      "path": "mods/biomespawnpoint-1.21.1-2.4.jar",
+      "sha256": "095ad84f4366ccb82809c1b466d63d8b6f6ebe9acd8e20e734725a01f5190e40"
+    },
+    {
+      "path": "mods/blur-fabric-5.2.2+1.21.1+1.21.1.jar",
+      "sha256": "9808137147e9e83c323431532c034368a67bee69a981b31e044bb053718806e9"
+    },
+    {
+      "path": "mods/bobby-5.2.4+mc1.21.jar",
+      "sha256": "abf66c25c5738f15528ed8a2787e9df4ce73cd84258fba5264fb049d9e591655"
+    },
+    {
+      "path": "mods/bookshelf-fabric-1.21.1-21.1.80.jar",
+      "sha256": "7525f64eb5584b149e499eadcbb8e584d462ce992e72d31cb535af7aaf0931f4"
+    },
+    {
+      "path": "mods/bwncr-fabric-1.21.1-3.20.3.jar",
+      "sha256": "2351eecb58748bb6a392feae5a2906a3a20d33a0276e06ae2e21761a276f4984"
+    },
+    {
+      "path": "mods/c2me-fabric-mc1.21.1-0.3.0+alpha.0.362.jar",
+      "sha256": "e1f47def8294fbbd75270e17cbc1bfcfed295049c7daca3d52dd73af2749b296"
+    },
+    {
+      "path": "mods/catchindicator-fabric-1.2.jar",
+      "sha256": "d1c9b5c94a85ec6a161a8c1cc1faa0a7afc8bed14f3fc19ac57b849f36f190c3"
+    },
+    {
+      "path": "mods/chalk-2.2.5+1.21.1.jar",
+      "sha256": "d8a49b5a81bc67ee5e395a678ab95fd50469653d38e00ea03f54b33c68f41502"
+    },
+    {
+      "path": "mods/chalk-colorful-addon-2.1.1.jar",
+      "sha256": "bf184e44ceb222e0831912acc2e26a17b7358e93162b60776dd646cf3780bbef"
+    },
+    {
+      "path": "mods/chatanimation-1.0.6.jar",
+      "sha256": "5269c1cdd7ef8bd04821e400120188caa385979ab4b4932af197a8a4f17b5c22"
+    },
+    {
+      "path": "mods/chatplus-fabric-2.7.0.jar",
+      "sha256": "a5c875e4241820d844aae4e97d60e9d8bf2fdf47547ec6290d56aaa1d8b8dff0"
+    },
+    {
+      "path": "mods/chipped-fabric-1.21.1-4.0.2.jar",
+      "sha256": "1721c94365fd8d2d3c3fdcac7efbfd7e605daa7dfb8adc4c126c5bbde2820c79"
+    },
+    {
+      "path": "mods/chunksfadein-fabric-3.0.15-1.21.jar",
+      "sha256": "afac78294674006a8b88068fbfb7f1c81cd67985a7685236ade7f3af69c54373"
+    },
+    {
+      "path": "mods/Chunky-Fabric-1.4.23.jar",
+      "sha256": "3412b170247dde7351e0945d857e713bedf6fae05ab300aa74d06ffbde0ca07e"
+    },
+    {
+      "path": "mods/clientsort-fabric-1.3.3+1.21.jar",
+      "sha256": "4006b994e9bc3640b0017cb62fe4589a49030870581967872ba3086a55e54448"
+    },
+    {
+      "path": "mods/cloth-config-15.0.140-fabric.jar",
+      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
+    },
+    {
+      "path": "mods/Clumps-fabric-1.21.1-19.0.0.1.jar",
+      "sha256": "49e406cb2872e24a2d2dbe461b93f0c8fbee1748d14c2a941e54f785e3a1e1a7"
+    },
+    {
+      "path": "mods/CobbleDollars-fabric-2.0.0+Beta-6.1+1.21.1.jar",
+      "sha256": "a007523e2dd8c6f47edc914d33d26ad0a860a0124038e1ec6303a593a919c1b4"
+    },
+    {
+      "path": "mods/cobblemon-economy-0.0.17.jar",
+      "sha256": "ee163479a15a8a8549b876f35e54bc0287a542f014a23384d023a47a86b80a08"
+    },
+    {
+      "path": "mods/cobblemon_knowlogy-fabric-1.5.0-1.21.1.jar",
+      "sha256": "cfe6a9d5c528fa2fadf8a1083e07382cf13c568ffffdef8a67cd6ec775a447dc"
+    },
+    {
+      "path": "mods/cobblemon_spawn_alerts-fabric-1.11.2.jar",
+      "sha256": "bc9382bf6630b28dce052c295f6271e3ee6f3643cfe71369c10c631a2ee8a47b"
+    },
+    {
+      "path": "mods/CobblemonTrialsEdition-fabric-1.1.0.jar",
+      "sha256": "2c318a1a4208d6bba8a9403f676d1063851ab380f290e9f90f3232001b4eddda"
+    },
+    {
+      "path": "mods/cobblenav-fabric-2.2.5.jar",
+      "sha256": "3fd669b03f152ab9f5ed3da71b25ea6b95944876367e6e289948bf8a1f159333"
+    },
+    {
+      "path": "mods/collective-1.21.1-8.3.jar",
+      "sha256": "611e6a1cb42cfd69097041b46c2febccf027182c0d792559e5ba4cb353ae1318"
+    },
+    {
+      "path": "mods/comforts-fabric-9.0.4+1.21.1.jar",
+      "sha256": "f636de45d6acb4c079f3413f071d6663437dad36ae556b771ec58a631b244962"
+    },
+    {
+      "path": "mods/connectiblechains-2.5.4+1.21.1.jar",
+      "sha256": "8240847e71d501995d60b7c7f5cfc47da8dcaf9f8cc3375b7d2e257f2078d95f"
+    },
+    {
+      "path": "mods/constructionwand-1.0.6+1.21.1.jar",
+      "sha256": "dc9f7ce2e469f926e3fafb3522360ba207603c54aac2ff41cad2e9b84ec56f92"
+    },
+    {
+      "path": "mods/Controlling-fabric-1.21.1-19.0.5.jar",
+      "sha256": "c0150c5bfbc77f27b92f24a5a9c2edc462eba8c8f912635757c5deb3a0a93f8d"
+    },
+    {
+      "path": "mods/Corgilib-Fabric-1.21.1-5.0.0.7.jar",
+      "sha256": "0b3780598ffb042a05ab3730472636d06d0f57f2158e7cfc243b5861c62b11ae"
+    },
+    {
+      "path": "mods/cosmetics-1.1.2.jar",
+      "sha256": "9e908f4ba52a63c98538c2b3ca14732dc7c71cf2419a418afa92ef4cbb63c847"
+    },
+    {
+      "path": "mods/craftingtweaks-fabric-1.21.1-21.1.5.jar",
+      "sha256": "2c4aec04433ac4da2e2e71d164a33d5435eda98a5c400aacdb91ffe736e6426e"
+    },
+    {
+      "path": "mods/crawl-0.14.9.jar",
+      "sha256": "1268c824566638e58d6402c13bf165d14b1de827c574170ff1ed9f73f9daa3d6"
+    },
+    {
+      "path": "mods/cupboard-fabric-1.21-2.9.jar",
+      "sha256": "3a68c395d12e5313246d1576c9ca8815d4d8b4adedaf4236d7b8b4a48fdd82f7"
+    },
+    {
+      "path": "mods/cwb-fabric-3.0.0+mc1.21.jar",
+      "sha256": "5a04b0616632f74ca2f0406d8b73bca8639b8f8f67836621d19502d7e5d660cc"
+    },
+    {
+      "path": "mods/darkutils-fabric-1.21.1-21.1.1.jar",
+      "sha256": "217453663e4382af4e3300c54fff2c4e9cc1f682e1783c6649e27885cf7b07c8"
+    },
+    {
+      "path": "mods/Data_Anchor-fabric-1.21.1-2.0.0.12.jar",
+      "sha256": "9284be6e8bc0dfb10d5aec688bda59aa6081fbb1fdde0940cbfd5c1e897794a2"
+    },
+    {
+      "path": "mods/defaultoptions-fabric-1.21.1-21.1.2.jar",
+      "sha256": "6989dae7d325e29938ade6ab81fd4edff8962b51677ee5412a19c501729bfff3"
+    },
+    {
+      "path": "mods/deimos-1.21.1-fabric-2.2.jar",
+      "sha256": "ed129608f5650d021d99e435f96afd475a2eda8f1f225c7adeeb432ef8435c50"
+    },
+    {
+      "path": "mods/desiredservers-fabric-1.21.1-1.6.0.jar",
+      "sha256": "f8548988d9e7649e180146fa0e359db71e0f6502e5f93d3d634550eb15de3d02"
+    },
+    {
+      "path": "mods/dimworldborder-fabric-1.21.1-1.0.5.jar",
+      "sha256": "7e4c63853cac79bc4396d5f06d927d0ea5992c489ec120e21a65a53cf3505b10"
+    },
+    {
+      "path": "mods/distraction_free_recipes-fabric-1.2.1-1.21.1.jar",
+      "sha256": "82a3a3113fe4aeef66bdb640c160e5cee59a72bb780431c7bab3f0a1b4c01398"
+    },
+    {
+      "path": "mods/drippyloadingscreen_fabric_3.1.0_MC_1.21.1.jar",
+      "sha256": "ccb334ce059355587cfab3e3c9c10f65357f69121a8ca4c99dcf47f069b27be7"
+    },
+    {
+      "path": "mods/dye_depot-2.0.2-fabric.jar",
+      "sha256": "83df144b2a5081f339201fdab279a000579ffa747d1b8b299a4980ad652a7da4"
+    },
+    {
+      "path": "mods/dynamiccrosshair-9.10+1.21.1-fabric.jar",
+      "sha256": "962a58083336b6ecb27041cfe2635999177c2c034120576837114ee86fe44895"
+    },
+    {
+      "path": "mods/dynamiccrosshaircompat-4.4+1.21.1-fabric.jar",
+      "sha256": "3c2c26d602ca2f1825184edb974629d5b85a47cb5a2a475cb774d8f06080763d"
+    },
+    {
+      "path": "mods/effectual-1.1.0-1.21.1.jar",
+      "sha256": "e58110d036e8fb64fdf5750500efa7b33c1a5774a337e046399767f4ca472c39"
+    },
+    {
+      "path": "mods/elevatorid-fabric-1.21-1.11.1.jar",
+      "sha256": "71e2cd195d980dff01e22f94c1e8a6c78d8da123399761e7b009f87edf4ceed9"
+    },
+    {
+      "path": "mods/emi-1.1.22+1.21.1+fabric.jar",
+      "sha256": "6da00a8d13cad6e55abaa3032d80ff4d1d1520146b683f1ca7c029e01718fe05"
+    },
+    {
+      "path": "mods/Emojiful-Fabric-1.21-5.2.1.jar",
+      "sha256": "1827af3c83d5d89509f804ea0f4f5e1ae00135fa35e17a9e5daa7532e0e8b4a5"
+    },
+    {
+      "path": "mods/emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
+      "sha256": "633a77711f650dbf0bd071a43c086b7946d6e117b28ac1a414d038ea7b339f7c"
+    },
+    {
+      "path": "mods/enchantmentdisabler-3.3.2+1.21.1.jar",
+      "sha256": "893686c8b6753dcf694191fac081cc72c5d089a83a7d3f3e13a79246e2c7da77"
+    },
+    {
+      "path": "mods/enchdesc-fabric-1.21.1-21.1.8.jar",
+      "sha256": "acf2e24da1f4e6f0c7c3ce8ad6e2d466a317099b8af5acbf2d4d852873f0b125"
+    },
+    {
+      "path": "mods/Enhanced-Celestials-Fabric-1.21.1-6.0.2.5.jar",
+      "sha256": "0a92350b76f84a2bf62a04da0dbf646f7f5c21d6dc76d1a6b4eceb44178171a4"
+    },
+    {
+      "path": "mods/entityculling-fabric-1.8.2-mc1.21.jar",
+      "sha256": "8649c93be0ce20655742adb24bac097a9aeec50b8c1bc8ed78bfe1da7636e8fa"
+    },
+    {
+      "path": "mods/EuphoriaPatcher-1.6.5-r5.5.1-fabric.jar",
+      "sha256": "8c54a994a344e736f98ec63f72ad6443b4b051ddeb6e58f7ecfe6a706ae67de6"
+    },
+    {
+      "path": "mods/exposure-fabric-1.21.1-1.9.11.jar",
+      "sha256": "313159f5acd8de36bd79e53f39c7e8d0bb0919f4d5b809b094a46345e1136038"
+    },
+    {
+      "path": "mods/exposure_catalog-fabric-1.1.1.jar",
+      "sha256": "8a4e8769a74d24cdf3964bffa85d7dccf1820f387de68b6d5f4c7833cc4ad0fc"
+    },
+    {
+      "path": "mods/exposure_expanded-fabric-1.0.1.jar",
+      "sha256": "fc95f7314a7ee483fcf684c51af06e343cfd8cd30b1cd3eddd679a18f974eb53"
+    },
+    {
+      "path": "mods/exposure_polaroid-fabric-1.21.1-1.1.2.jar",
+      "sha256": "76f5b64c32681e39dba46af0e609ffea183d07052cf7b327ec4d5268723ed539"
+    },
+    {
+      "path": "mods/fabric-api-0.116.7+1.21.1.jar",
+      "sha256": "08018cc48c97415a38016a00dbd5a2c7a460ba6b7a051690a8cb3dbb5e8482a4"
+    },
+    {
+      "path": "mods/fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar",
+      "sha256": "62c2773380fae0ce5cd01e6cfbdc34f6a2d42fd0734e5996e261bf7d8bf12ce3"
+    },
+    {
+      "path": "mods/fallingleaves-1.17.1+1.21.1.jar",
+      "sha256": "67e2071d6c25e2638573e6ee91a146b77e38d77edddbb26f45006ab878ebca77"
+    },
+    {
+      "path": "mods/fancymenu_fabric_3.8.1_MC_1.21.1.jar",
+      "sha256": "32f21b601ce12c7c511752d207a73b077cb19b8e24b0eb3d6e0440a299bc5743"
+    },
+    {
+      "path": "mods/fancytoasts-fabric-1.21.1-1.4.5.1.jar",
+      "sha256": "e5a955c3718d7fdac0f839836bfca3d30f746dc48e4182272b9d7236567a261c"
+    },
+    {
+      "path": "mods/farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-fabric.jar",
+      "sha256": "19ff460305ca4c0453641d8270c33b235a0c3a9dc49e532e89b97e8771a1fc5a"
+    },
+    {
+      "path": "mods/farmers-cutting-regions-unexplored-1.21.1-1.1a-fabric.jar",
+      "sha256": "27d38f4941e0860765029534778af0cd7b3aaeb901fb6ab20d386e8c2346b871"
+    },
+    {
+      "path": "mods/FarmersDelight-1.21.1-3.2.2+refabricated.jar",
+      "sha256": "5c69dd8c95c66f78f6f5c3a7c28fa9d92a8ef149ec4b68e46588321fef78d143"
+    },
+    {
+      "path": "mods/fasterrandom-5.1.0.jar",
+      "sha256": "40b326e9c98610b54be67751e618193e671cc907240d94a57085259b10cedf08"
+    },
+    {
+      "path": "mods/FauxCustomEntityData-fabric-1.21.1-13.0.1.jar",
+      "sha256": "788bc26585ab393c5b956e7a163d73643fa80c8b89b29bb266e8537b23b163ee"
+    },
+    {
+      "path": "mods/ferritecore-7.0.2-hotfix-fabric.jar",
+      "sha256": "e3fae8e321474a35e94f9bb09eafd0440ce0fe98f4aebbc067e392889700a4fa"
+    },
+    {
+      "path": "mods/fireworkcapsules-fabric-1.1.0+1.21.1.jar",
+      "sha256": "0d6032bee0463f057f7e509721df355ee7d24875b165541cc6d596a57e1863ea"
+    },
+    {
+      "path": "mods/ForgeConfigAPIPort-v21.1.4-1.21.1-Fabric.jar",
+      "sha256": "2be62a8c237c2b3fbd9dff4177aac72b31049fe25fce8f3358f2ed2b1c245c8f"
+    },
+    {
+      "path": "mods/ftb-essentials-fabric-2101.1.10.jar",
+      "sha256": "9e85afd6a77ed7aaae770d6d3e019fcc753c0e286aa6328558b03bf0c66ca12e"
+    },
+    {
+      "path": "mods/ftb-library-fabric-2101.1.35.jar",
+      "sha256": "73d0e241ac9465d9d1a1edc4c1691a9664d2f0890316df1ae6d4c9128c98c99b"
+    },
+    {
+      "path": "mods/fusion-1.2.11-fabric-mc1.21.jar",
+      "sha256": "17ebe8d064373a433496794eba3fa3e05929cc6eaad8a326d58ba2c9f0f6744c"
+    },
+    {
+      "path": "mods/fzzy_config-0.7.2+1.21.jar",
+      "sha256": "0f11722ae5b57217cbddb93e17fafbf891c84e0ce346643deb6cb4c5a04edfad"
+    },
+    {
+      "path": "mods/geckolib-fabric-1.21.1-4.7.6.jar",
+      "sha256": "e5eff76945ee6788f30e10eaf12825af1441e73c4befbe3d9f90a9e2fc4699d1"
+    },
+    {
+      "path": "mods/Glassential-renewed-fabric-1.21.1-3.2.5.jar",
+      "sha256": "fd3340d915d3b06526a53053725371e4c5d218781abc8709be04fbbabd54c345"
+    },
+    {
+      "path": "mods/GlitchCore-fabric-1.21.1-2.1.0.0.jar",
+      "sha256": "8ded94d33f1f1bdae9a845c35c3e4358528d71e2c45ad5642acfa9280e53fb47"
+    },
+    {
+      "path": "mods/globalpacks-fabric-1.21.1-21.0.6.jar",
+      "sha256": "391d960afb1d8f0b63ccfb677970512d68642102b6928a4830ebcd6d3fdba2cc"
+    },
+    {
+      "path": "mods/handcrafted-fabric-1.21.1-4.0.3.jar",
+      "sha256": "9609c27e2eeaed4c633ade2d68ad980cfbed0442a10239846a67e9c62bc1b230"
+    },
+    {
+      "path": "mods/HopoBetterUnderwaterRuins-[1.21.1-1.21.3]-1.2.1b.jar",
+      "sha256": "818206b8a031fa16169428681cbebafbd20270b7b34331b5b20e15af34664563"
+    },
+    {
+      "path": "mods/Iceberg-1.21.1-fabric-1.3.2.jar",
+      "sha256": "9214790af6fb75c19ef6b95e0e47999addf018e8c7a1630a5118c4252e6d8d36"
+    },
+    {
+      "path": "mods/immersive-hotbar-1.0.4-1.21-1.21.1.jar",
+      "sha256": "41cb8434ee2674a54f961f95e61894194dae6c0af884a613e4f364ff8bedb8ea"
+    },
+    {
+      "path": "mods/ImmersiveUI-FABRIC-0.3.0.jar",
+      "sha256": "63312b9118cf411e49ba81d2cb009357dbcc9a1eea52678984d49fb2a2867d54"
+    },
+    {
+      "path": "mods/iris-fabric-1.8.8+mc1.21.1.jar",
+      "sha256": "b5ad39a6cb113ca0a1765f06689f9f4b29ccd0c81247de90b06c42f5da1092f5"
+    },
+    {
+      "path": "mods/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
+      "sha256": "5cdeb21113f8055c9d3f47daf579b0672145f628a04c1c719aa77c703dbbf16c"
+    },
+    {
+      "path": "mods/itemzoomer-1.1.0-1.21.1.jar",
+      "sha256": "28371c56e34a2c73ffecf4b12cce657a4c1e90cd6b3b1cfffa23b70a5909a5eb"
+    },
+    {
+      "path": "mods/jei-1.21.1-fabric-19.21.2.313.jar",
+      "sha256": "e07ee903abae89c182452d992d271da2213e9f3e82e68e554697d510235b69cc"
+    },
+    {
+      "path": "mods/jinxedlib-fabric-1.21.1-1.0.4.jar",
+      "sha256": "1249a380057fbc8ed045421494a00e6b5d2fd73584732470ad1a664fa91f5712"
+    },
+    {
+      "path": "mods/jmi-fabric-1.21.1-1.9.jar",
+      "sha256": "55fd7df4257d2bff9b1814bbaeab589a67f31a547ebd0fd30bdee298142c1c1d"
+    },
+    {
+      "path": "mods/journeymap-fabric-1.21.1-6.0.0-beta.47.jar",
+      "sha256": "847ac470216f46e9d3f1757e4eee752c0b62675bc23ca8b1c60a040fcf61e30a"
+    },
+    {
+      "path": "mods/knowlogy-fabric-0.9.1-1.21.1.jar",
+      "sha256": "35737c0c002efacfcf27a98a26795200682167be993766c8fcdd7c997d43b6ca"
+    },
+    {
+      "path": "mods/konkrete_fabric_1.9.9_MC_1.21.jar",
+      "sha256": "06e912f99d59bf81c0676f1db936150ad4443d5674f59b3c55604540ba620841"
+    },
+    {
+      "path": "mods/lambdynamiclights-4.1.5+1.21.1.jar",
+      "sha256": "239bff93185d9b2d447c75fa8532c10f2cd642aa1caf7fdc8ff78e3a2429ff98"
+    },
+    {
+      "path": "mods/laserbridges-1.21.1-fabric-5.3.jar",
+      "sha256": "32078e37f613af8dc6ea92886e5e22de153d9064c70de7b406e07f9df2cfe87c"
+    },
+    {
+      "path": "mods/lavender-0.1.15+1.21.jar",
+      "sha256": "ad46db048ef9241bf00281ceaf52699c5733b00b9d36bdb7a2ab6274fe9fac4a"
+    },
+    {
+      "path": "mods/LeavesBeGone-v21.1.0-1.21.1-Fabric.jar",
+      "sha256": "a803b7b796313a21c7a68cd47cb75b546ccaa849aadf404e4b3a215a44ff011f"
+    },
+    {
+      "path": "mods/legendarymonuments-fabric-1.21.1-8.1-Love_for_All.jar",
+      "sha256": "64c04db1d9757c52d2cc805cdc242688db8c3d837a17500593c5095b666783b3"
+    },
+    {
+      "path": "mods/LegendaryTooltips-1.21.1-fabric-1.5.5.jar",
+      "sha256": "b026c93b3a52201468c7fdf24e144fc06154a27e50344c0a3f651d50710cd8d4"
+    },
+    {
+      "path": "mods/letsparkour-1.21.1-1.8.jar",
+      "sha256": "54542c8ed66f30c126ac90cde3b891cd7bdf24871ca9d65fc31463c876da5d9d"
+    },
+    {
+      "path": "mods/libraryferret-fabric-1.21.1-4.0.0.jar",
+      "sha256": "eacfd85f92f8894f4f0222bcfb0a056e067e5a37ff9106aeab70d6d8ff9b73ff"
+    },
+    {
+      "path": "mods/lithostitched-1.7.13-fabric-21.1.jar",
+      "sha256": "206c086604bcfea5b2862e90069470352cbf4b4d7088b55cdfa8f3452bedc270"
+    },
+    {
+      "path": "mods/lootr-fabric-1.21-1.10.35.91.jar",
+      "sha256": "f7f87bc006bbc232fafee451085083f7470d973dc1efbce3ec1f317901356c0e"
+    },
+    {
+      "path": "mods/Luckys-Cozyhome-Refurnished-1.1.20.jar",
+      "sha256": "0915e3e54c12fe40622cab94005418d32cbde011fa9c2d7c27756eb7d5313a66"
+    },
+    {
+      "path": "mods/mega_showdown-fabric-1.9.9+1.7.3+1.21.1.jar",
+      "sha256": "fd627eb84c67579ad6a4436da0de88b4ef2221d1e45e8ce25425e6b5039a5f17"
+    },
+    {
+      "path": "mods/melody_fabric_1.0.10_MC_1.21.jar",
+      "sha256": "223ab859b9cc246d8d6e5cec5e734f97be3aac545de6cda7743750262428ed83"
+    },
+    {
+      "path": "mods/minecraft-cursor-fabric-3.10.0+1.21.1.jar",
+      "sha256": "6300d6c5a8f1d5f9fe8da000562d7186c1c5d946c1cbd89354a4c89b810fe1b7"
+    },
+    {
+      "path": "mods/modernfix-fabric-5.25.1+mc1.21.1.jar",
+      "sha256": "3ce5a9ce75066961b7fa5382692bb1387cc3536cc984b064ab7d70b97f3c674c"
+    },
+    {
+      "path": "mods/modmenu-11.0.3.jar",
+      "sha256": "a45a12807a29f0e5b23b87cd380fd6fe8589ffe4a665cadce234168a4dabe428"
+    },
+    {
+      "path": "mods/moogs_structures-1.1.0-1.21-1.21.1-fabric.jar",
+      "sha256": "3db3a72f2fecf96ae394a2957604ee97fb073f4145321aaaea90cd0cd6693643"
+    },
+    {
+      "path": "mods/MoogsEndStructures-1.21-2.0.0.jar",
+      "sha256": "5201904062fa5f164cab51360b03ed40e80b18a68acfd5949ec9c24510ccc342"
+    },
+    {
+      "path": "mods/MoogsNetherStructures-1.21-2.0.1.jar",
+      "sha256": "81b95588c54221d4cdd19818c4096545147eba0674f3af29e57c8900d526bc74"
+    },
+    {
+      "path": "mods/MoogsSoaringStructures-1.21-2.0.0.jar",
+      "sha256": "98c23e014226b84283739e9814b2e6a864d2edb40e2c61e81dd781d943981eb8"
+    },
+    {
+      "path": "mods/MoogsTemplesReimagined-1.21-1.0.3.jar",
+      "sha256": "f2c2cabc87a48f2c517de9b431c3cbf6597d0c3b65cbb11f463050d7345eae4b"
+    },
+    {
+      "path": "mods/MoogsVoyagerStructures-1.21-5.0.2.jar",
+      "sha256": "3f9d89259c58434f4119052d7cc7a434c0faa5c23409b6af5bd0996f3b8dd3ac"
+    },
+    {
+      "path": "mods/moonlight-1.21-2.20.7-fabric.jar",
+      "sha256": "6f97d90f0b42d2785863b94de088b8767b0bdad6a966f66acaf715d6ce0f226d"
+    },
+    {
+      "path": "mods/MoreSparkles-1.1.jar",
+      "sha256": "771681f5c275ddd98645d43d486bee3bd2aa2a643a9cfc01b04d8c8f8511281e"
+    },
+    {
+      "path": "mods/MouseTweaks-fabric-mc1.21-2.26.jar",
+      "sha256": "3e9fa4800fafef616fbf1545d62f5898f55c83fbd4126ce2b48b5e0077243fc0"
+    },
+    {
+      "path": "mods/mru-1.0.19+LTS+1.21.1+fabric.jar",
+      "sha256": "466a5d7cba09f17165614541bdc3aca0a6c587c4e6df5328af4788c58c7e39a3"
+    },
+    {
+      "path": "mods/nametagtweaks-1.3.5+1.21-fabric.jar",
+      "sha256": "67f0e6d9c443069ecf66678a726843a69dc5872c49e9c100cb7d12e6e942cd70"
+    },
+    {
+      "path": "mods/NaturesCompass-1.21.1-2.2.7-fabric.jar",
+      "sha256": "4383eca064bd5d2442a65009f92e507aa196ba083cf7e07fde1d5a11a192fc39"
+    },
+    {
+      "path": "mods/NBTac-FABRIC-1.21.1-1.3.10.jar",
+      "sha256": "711f8c26157fde8cf37d183d873105424b5eaef2340b1b58b41d164201c8d3a9"
+    },
+    {
+      "path": "mods/NBTcopy-FABRIC-1.20.1-1.0.4.jar",
+      "sha256": "08a2ff22a3f256fcdb93e9abdf5ee77da3b8cb209f0a79b1e8a4b16cf051a01b"
+    },
+    {
+      "path": "mods/Necronomicon-Fabric-1.6.0+1.21.jar",
+      "sha256": "ca1c56e86cb1d7e0aa47e6841edcbef665aaec895e366c1fe0a980c4363f29e2"
+    },
+    {
+      "path": "mods/no-more-popups-1.0.2.jar",
+      "sha256": "23e13cff47eb7755ff25d6aadc989ccc49c629a276a14dfd45ef137c347c2f49"
+    },
+    {
+      "path": "mods/NoChatReports-FABRIC-1.21.1-v2.9.1.jar",
+      "sha256": "413c3952cbbf641b492bb2e47763ed7e48d1d72db0863d9d2274a74ce5269849"
+    },
+    {
+      "path": "mods/noisium-fabric-2.3.0+mc1.21-1.21.1.jar",
+      "sha256": "c32c163861e936b7786995ebe1209eb7a4c6e7bb493e7cc75747ddac3340cf85"
+    },
+    {
+      "path": "mods/nyctography-fabric-1.21.1-21.1.6.jar",
+      "sha256": "98697abcefeb5671bdda0112dd14b3814c5076b2a06b7d34b865be3ecbba3c73"
+    },
+    {
+      "path": "mods/observable-5.4.4.jar",
+      "sha256": "738ba288b0e5630f0c1bccaf04ba181205cbf98fb421c9d8a782e75d5f7e356e"
+    },
+    {
+      "path": "mods/OctoLib-FABRIC-0.5.0.1.jar",
+      "sha256": "82568837432b7a622715d58720f2a892bffd000a43b6ccf440073f445b9b38a7"
+    },
+    {
+      "path": "mods/Oh-The-Biomes-Weve-Gone-Fabric-2.4.6.jar",
+      "sha256": "d964cd6b09ea2c8b76bea0b03f2179634f7a2205afee33cc70a4d79629f4dc45"
+    },
+    {
+      "path": "mods/Oh-The-Trees-Youll-Grow-fabric-1.21.1-5.0.14.jar",
+      "sha256": "481a1ce75d5f3dc45639aee443bec6073e9816af4e9d305e4dd303bf1a3e485e"
+    },
+    {
+      "path": "mods/owo-lib-0.12.15.4+1.21.jar",
+      "sha256": "825180ce17bc012fb450653b14df9f32479dcdd073fc3f133bb47462f5a63cec"
+    },
+    {
+      "path": "mods/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar",
+      "sha256": "3285a55983d9c02b82d5707ab1e1fe942a81a5b7ea8c845e753ecdcd4ed5b1ab"
+    },
+    {
+      "path": "mods/particle-rain-3.0.5.jar",
+      "sha256": "4cc0ff16a6782ec4630ec4145b1999e86af58db1c253f75effb75e7d2569d851"
+    },
+    {
+      "path": "mods/particle_core-0.2.4+1.21.jar",
+      "sha256": "8e8501761ade869d2924ee6b405c961d897e249bd999a20131964bc7a2ea50c5"
+    },
+    {
+      "path": "mods/pigpen-fabric-1.21.1-21.1.4.jar",
+      "sha256": "a81036cb0a3841b431c7b4190fc96e64b5e0c9c524b6f7b066fb2954caa44677"
+    },
+    {
+      "path": "mods/Ping-Wheel-1.10.3-fabric-1.21.1.jar",
+      "sha256": "cb8cabcbd76b1e3f2f30910213034c2898eb04b27d3bdf57fa6841d62386bd1d"
+    },
+    {
+      "path": "mods/player-roles-1.6.13.jar",
+      "sha256": "aea16a88281f467d8b38aa95a68f4a4159e7fd59c3fffb016d7a1aeec72d899c"
+    },
+    {
+      "path": "mods/playerladder-fabric-1.21-0.7.1.jar",
+      "sha256": "adde49438f0c6a7f935a5f58649f9bc204e05afb79cf6f4be2ce630883837f9b"
+    },
+    {
+      "path": "mods/playerxp-fabric-1.0.5+1.21.1.jar",
+      "sha256": "5a6f10405e997a14fa797bea41287f880401cd537395a79d523e4ca9c0132fb6"
+    },
+    {
+      "path": "mods/pocketmorph-2.2.0.jar",
+      "sha256": "c7cf09f4b2e9972a446ba1b673b464f0b5535f2d1860f08891730dd2a8b82b9e"
+    },
+    {
+      "path": "mods/PokeSize-2.4+1.7.3.jar",
+      "sha256": "3858323588d80ba8a023ac95988556ff61ac8ea3bf06d629bbe321f1c8b957e8"
+    },
+    {
+      "path": "mods/polymer-bundled-0.9.18+1.21.1.jar",
+      "sha256": "d9e41c374ca9d5a038412fea45156905a50cf1bc13a237db16c3164cffc28fa5"
+    },
+    {
+      "path": "mods/polymorph-fabric-1.1.0+1.21.1.jar",
+      "sha256": "bc47b33c864b463167998680c296f513e6d06b42de6db03db0f274ae1f2ee671"
+    },
+    {
+      "path": "mods/polytone-1.21-3.5.5-fabric.jar",
+      "sha256": "65a915b4b635dff0477338150079e0486710768fae7106efa15af671d5dd5b6c"
+    },
+    {
+      "path": "mods/prickle-fabric-1.21.1-21.1.8.jar",
+      "sha256": "0298071d0c28a7417b713b89e35f8a8ccb8b0afb83f75bb786deca0d7b56945a"
+    },
+    {
+      "path": "mods/Prism-1.21.1-fabric-1.0.11.jar",
+      "sha256": "244504f9730a6581e674b4e40ed399c5b08aa240a24aec49147338024eccbad7"
+    },
+    {
+      "path": "mods/PuzzlesLib-v21.1.39-1.21.1-Fabric.jar",
+      "sha256": "67e9b96383a76cb8f011562d67cbd408cca7d85cb199db61cec1704869414fe2"
+    },
+    {
+      "path": "mods/Rad Gyms [Cobblemon]-0.3.1-stable.jar",
+      "sha256": "ee3414adb85607d098b2399885f1e7abb1d3e67ea8f67de8f24c111df701055a"
+    },
+    {
+      "path": "mods/rctapi-fabric-1.21.1-0.14.3-beta.jar",
+      "sha256": "aa045c9bc785fc78f0b4a51748c68198dfc34ecd8546b7e696886615eeea1e2f"
+    },
+    {
+      "path": "mods/reacharound+1.21-1.3.1.jar",
+      "sha256": "aa840ffa659df669878699030c1adc0a000987236dc2ec30f5895504b1f276d4"
+    },
+    {
+      "path": "mods/rechiseled-1.1.6b-fabric-mc1.21.jar",
+      "sha256": "5d6b9ec2424ac152b380e4007a6f91699b1b7aceee868bfa8b1bd7862f682deb"
+    },
+    {
+      "path": "mods/redirected-fabric-1.0.0-1.21.1.jar",
+      "sha256": "f66b6c58e5eb217b9473b9002577601754b8a157e37394ba892051cea9fd3453"
+    },
+    {
+      "path": "mods/regions_unexplored-fabric-1.21.1-0.5.6.1.jar",
+      "sha256": "568fc411eede4e077178986734c988cc98cb6438deddc8ef2943a9a9b8bf9470"
+    },
+    {
+      "path": "mods/resourcefullib-fabric-1.21-3.0.12.jar",
+      "sha256": "93064c5aff85bf5e6385470f311fd1c7de172f58b02fefb1d2920db76f8cd8b5"
+    },
+    {
+      "path": "mods/ResourcePackOverrides-v21.1.0-1.21.1-Fabric.jar",
+      "sha256": "5db1e3d3f07947ceb893ccd823a7660f62f8f794e2bf9a5b721a3c3d32dcbc59"
+    },
+    {
+      "path": "mods/runelic-fabric-1.21.1-21.1.5.jar",
+      "sha256": "bea530405c484523bdd810f8b9852909525237e5c668aefb0b56a2715f89457f"
+    },
+    {
+      "path": "mods/safari-dimension-0.0.14.jar",
+      "sha256": "e47536905f2083c552ffb6109a8d4b464f9f3f7283eb112a26a828f9cfa9a484"
+    },
+    {
+      "path": "mods/scholar-fabric-1.21.1-1.1.4.jar",
+      "sha256": "103e63aeee1f5bfd1167bedc8081a4d6c960b80a5d74bfb653810c6101935fe0"
+    },
+    {
+      "path": "mods/scoreboardtweaks-1.3.4+1.21.1-fabric.jar",
+      "sha256": "b6376e458885a31595af4214c866b7c74d6c4036df6d830edb2b7ed55b9ff1ae"
+    },
+    {
+      "path": "mods/Searchables-fabric-1.21.1-1.0.2.jar",
+      "sha256": "0b58a40a41db4a4af4ef84475b0ea330be3b18fdcac2eca68ede46d9f4df3d76"
+    },
+    {
+      "path": "mods/ShoulderSurfing-Fabric-1.21.1-4.17.1.jar",
+      "sha256": "35175eabf5e6cbc7f675a82a33b42a8d55e165332f518840878c9bfa6eb4847d"
+    },
+    {
+      "path": "mods/shulkerboxtooltip-fabric-5.1.8+1.21.1.jar",
+      "sha256": "5d397ed1eabc7b6b77e2ca09565c6a01427dc7984fb39a46f560c286c1ab8961"
+    },
+    {
+      "path": "mods/shutter-2.1.2-fabric-1.21.1.jar",
+      "sha256": "c26d70f1274b4ae822f9919157563406c52f5aff17dc130d231c7e0c7bcee915"
+    },
+    {
+      "path": "mods/SimpleTMs-fabric-2.3.2.jar",
+      "sha256": "f4d292bcf44fc99f6905ee36301dba43a3643f5ccb31590f2a664bc6bfb765d2"
+    },
+    {
+      "path": "mods/sit-1.21-28.jar",
+      "sha256": "984ec2f1eb986a2178d3891897897222108f1c1253e32358b90f30cfcdb64289"
+    },
+    {
+      "path": "mods/Slideshow-fabric-1.21.1-1.0.3-Enhancement-1.jar",
+      "sha256": "264e2ac321a192c45d4a0f5e7e52cc2b11cb41a709d14e1e03f307e541b6f5ec"
+    },
+    {
+      "path": "mods/sodium-extra-fabric-0.6.0+mc1.21.1.jar",
+      "sha256": "1a7434e444c851d82efbe3d5a8fd2dbb142e9bdf0012d7c6a0e4741c641b1a2d"
+    },
+    {
+      "path": "mods/sodium-fabric-0.6.13+mc1.21.1.jar",
+      "sha256": "e04599514d88e41765f710eeba59e3814909833396bc11b977f48fc2e7e50353"
+    },
+    {
+      "path": "mods/sootychimneys-fabric-1.3.2.jar",
+      "sha256": "a9b020bd3b5e7fb5eb7be39e5929bc429f1858325ae87a8db1411491683e966d"
+    },
+    {
+      "path": "mods/sophisticatedcore-1.21.1-1.2.9.19.161.jar",
+      "sha256": "a1a64e9d63522b12df8ce8c235dabb5947bcfc0c93244052824a77287d1f3e4e"
+    },
+    {
+      "path": "mods/sophisticatedstorage-1.21.1-1.3.7.6.127.jar",
+      "sha256": "0290e996596a4d18fc63138abc4e0446b38382233d5a61f47b8f4106e9da59fe"
+    },
+    {
+      "path": "mods/sounds-2.4.13.1+lts+1.21.1+fabric.jar",
+      "sha256": "d3871ae9fade6659394249c34d60fbc093f59a757e518fdd8f39448615a22d17"
+    },
+    {
+      "path": "mods/spark-1.10.109-fabric.jar",
+      "sha256": "fafc121ac53dab1c32e74b7a1cae47d54435ba4cbeeda1180dc96675a7757047"
+    },
+    {
+      "path": "mods/sparkle-3.1.0.jar",
+      "sha256": "a6e909531e3ceaa5619b5e80311619f53ab0aab36b28240b8e466f9715153382"
+    },
+    {
+      "path": "mods/Stfu-1.2.2.jar",
+      "sha256": "50a0de0d6dec16b99caaac139676d6fd2d3aca412835ed77aed0363a10885cfa"
+    },
+    {
+      "path": "mods/stohuns_vanity_collection-1.0.0.jar",
+      "sha256": "7b0e5cbbdaac2600facd1df6a3aa24b896953753c4f3b6b99dc59c7dc0afb0ce"
+    },
+    {
+      "path": "mods/Stoneworks-v21.1.0-1.21.1-Fabric.jar",
+      "sha256": "461fa8d46e14c72e08bd0a263f2578beff810c5860ce1a313fb189a79d69f0b3"
+    },
+    {
+      "path": "mods/StrawStatues-v21.1.0-1.21.1-Fabric.jar",
+      "sha256": "d8950c543139e6cd36a687d8f294ed93626608b7857465ef257a7ec55b7e387d"
+    },
+    {
+      "path": "mods/structurify-fabric-1.0.13+mc1.21.1.jar",
+      "sha256": "952436c34720f00ac10299554ba3e642bdbd547117b70d795302ed2f4f3881f5"
+    },
+    {
+      "path": "mods/StylishEffects-v21.1.1-1.21.1-Fabric.jar",
+      "sha256": "d9869d7e2fcbacf747081ff16bd48d694279f4e00ae040cecfdbe8ecb518c0de"
+    },
+    {
+      "path": "mods/subtleskybox-fabric-0.2.0.jar",
+      "sha256": "305c93d958a302f805985f62a323dfef06ead9cd0bac9ef69f3b9250b4b76e0c"
+    },
+    {
+      "path": "mods/supermartijn642configlib-1.1.8-fabric-mc1.21.jar",
+      "sha256": "63a29f2acf4be2c5ca89a81a046c1100111ad2865d9638f638e27ca161e7211c"
+    },
+    {
+      "path": "mods/supermartijn642corelib-1.1.18a-fabric-mc1.21.jar",
+      "sha256": "bca290bd764a218cd6cfa9ed6c4ef92dd9d0fd1855c5d58371e70e2abc4e837f"
+    },
+    {
+      "path": "mods/tabtweaks-1.5.9+1.21.1-fabric.jar",
+      "sha256": "855819a70d70ced3147d26ee5af692e91e7b897e1a3515880fa5eadbc36593c1"
+    },
+    {
+      "path": "mods/templates-mod-2.5.1+1.21.1.jar",
+      "sha256": "10ca391b78c8f54e2a5ee433aa3b35446f506f492c9d58f7d35ecbd50f04539b"
+    },
+    {
+      "path": "mods/TerraBlender-fabric-1.21.1-4.1.0.8.jar",
+      "sha256": "5f2d25306abfed8c6c6291e8904ae1a9f6a8ab4f1bf5f3a21f7e263a5bf217a6"
+    },
+    {
+      "path": "mods/the_ruler-1.3-1.21.1-fabric.jar",
+      "sha256": "82d67ca49246deece157a527ea33d3d1dae1b682581a7c720b43655e8757facf"
+    },
+    {
+      "path": "mods/titletweaks-1.1.5+1.21.1-fabric.jar",
+      "sha256": "7a9dc2366a0a32c420e1e49be1d9d9e2576c6176be723ff57d779e67ef4283ac"
+    },
+    {
+      "path": "mods/tlib-1.3.0-1.21.1.jar",
+      "sha256": "348e614960de1b484cc58e1433aa388fe56d9e2b22de99bb537463f3ace9a635"
+    },
+    {
+      "path": "mods/toms_storage_fabric-1.21-2.2.4.jar",
+      "sha256": "77405846333e1a6af2266cd9af1503ce8c22a4212dca1c66412e56236f300e32"
+    },
+    {
+      "path": "mods/tomsstorage_knowlogy-fabric-1.1.1-1.21.1.jar",
+      "sha256": "9df80c3d29d816559d936982fd643a63708a9183ae51de2f2638c3b55809ee4d"
+    },
+    {
+      "path": "mods/totw_modded-fabric-1.21-1.0.8.jar",
+      "sha256": "19e99e28dceab841e092e4c0027e15422035047b80d5f8f2022985717f317a1f"
+    },
+    {
+      "path": "mods/TravelersTitles-1.21.1-Fabric-5.1.3.jar",
+      "sha256": "d89c1c377c0d33d8073696073b1af3e9472f418c2d700f607ce7b632939618b7"
+    },
+    {
+      "path": "mods/TreeChop-1.21.1-fabric-0.19.3a.jar",
+      "sha256": "0dc097bc1a6f327b32b1c1bafadfa42b2a840280ab9b7808cc36df3f822cae55"
+    },
+    {
+      "path": "mods/trinkets-3.10.0.jar",
+      "sha256": "349fd2aa8930b232050ee5304db55e4ef738b017971afe7c84acd589a95fda2f"
+    },
+    {
+      "path": "mods/txnilib-fabric-1.0.24-1.21.1.jar",
+      "sha256": "814ea0db4bddf0bbc7beb316490e5f709e067203bbe1b8780ef3b2dde267ccc3"
+    },
+    {
+      "path": "mods/vanity-fabric-1.21.1-5.0.2.jar",
+      "sha256": "ed2d003d01c09bba5d5404717cf7009a7ccddc0e8f2e778917e80060e1c3c4b0"
+    },
+    {
+      "path": "mods/VisualWorkbench-v21.1.1-1.21.1-Fabric.jar",
+      "sha256": "198e9b3e7a86718354319dadeb26df71cd4d55163f21b826baeb4ccafff54a1d"
+    },
+    {
+      "path": "mods/voicechat-fabric-1.21.1-2.5.35.jar",
+      "sha256": "0928fd224c041af6c1474d62eab79f9a3579e0f7f9714f9cc07c116cb2bee964"
+    },
+    {
+      "path": "mods/wakes-0.2.2-1.21.jar",
+      "sha256": "d9a32b819d2052870b0ff091b93b9e79ab42cec96251d67935a3dca9bbbd9817"
+    },
+    {
+      "path": "mods/wits-1.3.0+1.21-fabric.jar",
+      "sha256": "06058383fdbb80fe618d4183ea7858ed76e207de5148c7677da973283e4040dd"
+    },
+    {
+      "path": "mods/worldedit-mod-7.3.8.jar",
+      "sha256": "5e7752c97876d87411e3760bcc573cc431f43c453722e6959fa7fe54db1b01ca"
+    },
+    {
+      "path": "mods/wraith-waystones-3.3.4+mc1.21.1.jar",
+      "sha256": "8bd5c0a7208d9ed7ea7b0bb973a55b96fae6f91f61bb7d09b6b06c4101aa7bc9"
+    },
+    {
+      "path": "mods/wthit-fabric-12.5.4.jar",
+      "sha256": "44222dd9c2b7d21d5db848d56077c649a7e94cd70645b775bc5bf47c8f2a8fd3"
+    },
+    {
+      "path": "mods/wwoo-2.3.4.jar",
+      "sha256": "de4ef02f438b5dc680ed90ae14ef003da295f774e58c34390d19552cee0d25b9"
+    },
+    {
+      "path": "mods/xercapaint-1.21.1-1.1.0.jar",
+      "sha256": "7445cc6179dfaae81c911a3a4accdd875d5d5736a22748bec861079efa284d70"
+    },
+    {
+      "path": "mods/yet_another_config_lib_v3-3.7.1+1.21.1-fabric.jar",
+      "sha256": "914f999e53a81cb37358ad9521422ddeeb293d399f0e4f1a6db3d946c1d80ad2"
+    },
+    {
+      "path": "mods/YungsApi-1.21.1-Fabric-5.1.6.jar",
+      "sha256": "36fb903a1ebcf1511745be2da9e5144f1d2465bff7a5c17beffd347399acd1ba"
+    },
+    {
+      "path": "mods/Zoomify-2.14.4+1.21.1.jar",
+      "sha256": "8e129989a3f2fd835b8767a9fd6ad86e505c4353253638b4aca76df3d7c0c3d9"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {verifiedHash} from './verificationCache';
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
 import { access, mkdir, readFile, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
@@ -1123,14 +1124,7 @@ async function requireFile(filePath: string, label: string, failures: string[]):
 }
 
 async function hashFile(filePath: string, algorithm: "sha1" | "sha256"): Promise<string> {
-  const hash = createHash(algorithm);
-  const stream = createReadStream(filePath);
-
-  return new Promise((resolve, reject) => {
-    stream.on("data", (chunk: Buffer) => hash.update(chunk));
-    stream.on("error", reject);
-    stream.on("end", () => resolve(hash.digest("hex")));
-  });
+  return verifiedHash(filePath, algorithm);
 }
 
 async function pathExists(filePath: string): Promise<boolean> {

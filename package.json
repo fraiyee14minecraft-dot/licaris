@@ -1,23 +1,25 @@
 {
   "name": "cobblemon-friends-launcher",
   "productName": "Licaris Launcher",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Le launcher Licaris pour votre aventure Cobblemon.",
   "author": "Licaris",
   "main": "dist-electron/main.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && node scripts/build-ui.cjs",
     "start": "npm run build && node scripts/run-electron.cjs",
     "test": "npm run build && node --test tests/*.test.cjs",
     "dist": "npm run test && electron-builder --win nsis portable --publish never",
     "publish:modpack": "node scripts/publish-modpack.mjs",
-    "publish:launcher": "npm run dist && node scripts/publish-launcher.mjs"
+    "publish:launcher": "npm run dist && node scripts/publish-launcher.mjs",
+    "catalog:clients": "python -X utf8 scripts/build-client-catalog.py"
   },
   "dependencies": {
     "electron-updater": "^6.8.9",
     "prismarine-nbt": "2.8.0",
-    "yauzl": "3.2.0",
+    "skinview3d": "3.4.2",
+    "yauzl": "3.4.0",
     "yazl": "^3.3.1"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "@types/yauzl": "2.10.3",
     "electron": "43.0.0",
     "electron-builder": "26.15.3",
+    "esbuild": "0.25.12",
     "typescript": "6.0.3"
   },
   "build": {
@@ -33,7 +36,7 @@
     "asar": true,
     "npmRebuild": false,
     "directories": {
-      "output": "release/0.4.0"
+      "output": "release/0.5.0"
     },
     "files": [
       "dist-electron/**/*",
@@ -42,7 +45,8 @@
       "launcher-config.json",
       "package.json",
       "!**/*.map",
-      "!**/*.test.*"
+      "!**/*.test.*",
+      "pack/client-options.json"
     ],
     "win": {
       "target": [

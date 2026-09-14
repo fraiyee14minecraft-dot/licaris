@@ -33,11 +33,11 @@ test('player settings never expose or overwrite connection details when saving m
  const before={...config.officialServer},previousId=config.microsoftClientId;
  const file=installPaths.getSettingsFile();
  try{
-  assert.deepEqual(prefs.getPlayerSettings(current),{settings:{ramGb:8},serverConfigured:true,microsoftConfigured:true});
+  assert.deepEqual(prefs.getPlayerSettings(current),{settings:{ramGb:8,launchBehavior:'keep'},serverConfigured:true,microsoftConfigured:true});
   const saved=await prefs.savePlayerPreferences(current,{ramGb:4,serverHost:'attacker.example',serverPort:12345,microsoftClientId:'replacement-id'});
-  assert.deepEqual(saved,{...current,ramGb:4});
+  assert.deepEqual(saved,{...current,ramGb:4,launchBehavior:'keep'});
   assert.deepEqual(JSON.parse(await fs.readFile(file,'utf8')),saved);
-  assert.deepEqual(prefs.getPlayerSettings({...current,serverHost:'',microsoftClientId:''}),{settings:{ramGb:8},serverConfigured:false,microsoftConfigured:false});
+  assert.deepEqual(prefs.getPlayerSettings({...current,serverHost:'',microsoftClientId:''}),{settings:{ramGb:8,launchBehavior:'keep'},serverConfigured:false,microsoftConfigured:false});
  }finally{Object.assign(config.officialServer,before);config.microsoftClientId=previousId;await fs.rm(file,{force:true});}
 });
 

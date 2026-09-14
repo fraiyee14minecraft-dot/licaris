@@ -6,6 +6,7 @@ import { Readable, Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import * as yauzl from 'yauzl';
 import { getLauncherDataDir, getMinecraftInstanceDir } from './installPaths';
+import {verifiedHash} from './verificationCache';
 
 export interface PackFile { path: string; url: string; size: number; sha256: string }
 export interface PackLock { id:string; version: string; minecraftVersion: string; fabricLoaderVersion: string; archive: Omit<PackFile, 'path'>; files: PackFile[] }
@@ -31,10 +32,7 @@ async function rejectLinks(root: string, target: string): Promise<void> {
   }
 }
 export async function hashFile(file: string, knownSize?:number): Promise<string> {
-  if(knownSize !== undefined && knownSize <= 1024*1024) return createHash('sha256').update(await readFile(file)).digest('hex');
-  const hash = createHash('sha256');
-  for await (const chunk of createReadStream(file)) hash.update(chunk);
-  return hash.digest('hex');
+  return verifiedHash(file);
 }
 export async function matches(file: string, expected: {size: number; sha256: string}): Promise<boolean> {
   try { return (await stat(file)).size === expected.size && await hashFile(file) === expected.sha256; }
@@ -69,24 +67,26 @@ export async function download(file: Omit<PackFile, 'path'>, destination: string
   throw lastError;
 }
 
-export async function extractOverrides(archive: string, instance: string, onCount?: (count:number, total:number) => void, overwrite = false): Promise<number> {
+export async function extractOverrides(archive: string, instance: string, onCount?: (count:number, total:number) => void, overwrite = false, selectedPaths?:ReadonlySet<string>): Promise<number> {
   // Buffer-backed random access avoids Electron's ASAR filesystem wrapper when
   // reading a large external archive. Keep a strict compressed-size limit.
   if ((await stat(archive)).size > 512 * 1024 ** 2) throw new Error('Archive compressée trop volumineuse.');
   const archiveBytes = await readFile(archive);
   const zip = await new Promise<yauzl.ZipFile>((resolve, reject) => yauzl.fromBuffer(archiveBytes, {lazyEntries:true, autoClose:true}, (err, value) => err || !value ? reject(err) : resolve(value)));
   let count = 0;
+  let scanned = 0;
   let totalBytes = 0;
   return new Promise((resolve, reject) => {
     zip.on('error', reject);
     zip.on('end', () => resolve(count));
     zip.on('entry', (entry: yauzl.Entry) => {
       void (async () => {
-        if (count % 200 === 0) onCount?.(count, zip.entryCount);
+        scanned++;if (scanned % 200 === 0 || scanned===zip.entryCount) onCount?.(scanned, zip.entryCount);
         if (!entry.fileName.startsWith('overrides/') || entry.fileName.endsWith('/')) { zip.readEntry(); return; }
         const relative = entry.fileName.slice('overrides/'.length);
         const target = safePath(instance, relative);
         if (((entry.externalFileAttributes >>> 16) & 0o170000) === 0o120000) throw new Error('Lien symbolique refusé dans le pack.');
+        if(selectedPaths&&!selectedPaths.has(relative)){zip.readEntry();return;}
         totalBytes += entry.uncompressedSize;
         if (totalBytes > 4 * 1024 ** 3 || entry.uncompressedSize > 512 * 1024 ** 2) throw new Error('Archive trop volumineuse.');
         await rejectLinks(instance, target);

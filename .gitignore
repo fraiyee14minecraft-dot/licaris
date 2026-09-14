@@ -22,3 +22,4 @@ launcher-config.json
 Documentation locale/
 __pycache__/
 *.pyc
+ui/skin-viewer.js

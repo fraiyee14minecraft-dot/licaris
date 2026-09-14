@@ -19,7 +19,19 @@ Récupérez le Setup ou la version Portable dans les [releases du launcher](http
 2. Choisir le compte Microsoft qui possède Minecraft Java Edition.
 3. Installer le modpack, puis lancer le jeu.
 
-Le launcher prépare Java, Minecraft et Fabric, puis vérifie le modpack avant chaque partie. Les réglages permettent de choisir la mémoire et de changer de compte Microsoft.
+Le launcher prépare Java, Minecraft et Fabric, puis vérifie le modpack avant chaque partie. Les fichiers inchangés réutilisent une empreinte récente et seules les ressources modifiées sont extraites. Le bouton **Vérifier les fichiers** force une nouvelle lecture complète.
+
+## Votre launcher
+
+- **Compte Microsoft** : choix du compte, déconnexion et avatar tiré du skin Minecraft.
+- **Skins** : aperçu 3D, bibliothèque PNG locale, modèles classique et fin, application au compte Minecraft connecté.
+- **Mods clients** : activation ou désactivation des options vérifiées. Les mods nécessaires au serveur et les dépendances restent protégés ; les choix prennent effet à la prochaine préparation.
+- **Shaders** : installation depuis Modrinth, sélection d’un shader local ou désactivation. Iris doit être activé.
+- **Réglages** : mémoire du jeu, maintien, réduction ou fermeture du launcher au démarrage de Minecraft.
+- **Journal** : accès aux fichiers et copie d’un rapport avec masquage des adresses de connexion et jetons connus.
+- **Liens** : [Immersive Studio](https://immersive-studio.fr/), modpack, téléchargements du launcher et profil Minecraft.
+
+Les modifications de fichiers sont bloquées pendant une partie. Les options et skins de chaque joueur restent dans ses données locales.
 
 ## Modpack
 
@@ -38,5 +50,9 @@ npm start
 ```
 
 Construction Windows : `npm run dist`.
+
+Le catalogue `pack/client-options.json` associe les options clientes aux empreintes et dépendances des JAR vérifiés. Après un changement des mods dans le dossier local de publication, exécuter `npm run catalog:clients` (Python 3), relire les dépendances et publier une nouvelle version du launcher pour proposer les options du nouveau pack. Si le catalogue ne correspond plus au pack, la désactivation est suspendue et les mods requis sont rétablis lors de la préparation. Les préférences sont conservées.
+
+L’aperçu utilise [skinview3d](https://github.com/bs-community/skinview3d) ; son bundle est produit par `npm run build`.
 
 Les accès d’administration, sessions de joueurs et configurations locales ne doivent pas être ajoutés au dépôt.

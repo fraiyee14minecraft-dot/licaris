@@ -32,12 +32,15 @@ async function boundedFetch(url:string,limit:number):Promise<Buffer>{
 export async function fetchPublishedPack():Promise<PublishedPack>{
  const pointer=JSON.parse((await boundedFetch(stableUrl,16*1024)).toString('utf8'));
  if(pointer.schemaVersion!==1||!pointer.manifestUrl?.startsWith(releasePrefix)||!/^[a-f0-9]{64}$/.test(pointer.sha256))throw new Error('Canal de publication invalide.');
- const bytes=await boundedFetch(pointer.manifestUrl,32*1024**2);
+ const cache=path.join(getLauncherDataDir(),'cache',`manifest-${pointer.sha256}.json`);
+ let bytes:Buffer|null=await readFile(cache).catch(()=>null);
+ if(!bytes||createHash('sha256').update(bytes).digest('hex')!==pointer.sha256)bytes=await boundedFetch(pointer.manifestUrl,32*1024**2);
  if(createHash('sha256').update(bytes).digest('hex')!==pointer.sha256)throw new Error('Le manifest distant ne correspond pas à son empreinte.');
  const manifest=validatePublishedPack(JSON.parse(bytes.toString('utf8')));
  const base=await readPackLock();
  if(manifest.id!==base.id||manifest.version!==base.version||manifest.minecraftVersion!==base.minecraftVersion||manifest.fabricLoaderVersion!==base.fabricLoaderVersion)throw new Error('Cette version du pack exige une mise à jour du launcher.');
  if(manifest.revision!==pointer.revision)throw new Error('Révision distante incohérente.');
+ await mkdir(path.dirname(cache),{recursive:true});await writeFile(cache,bytes);
  return manifest;
 }
 async function exists(file:string){try{return await lstat(file);}catch(e:any){if(e.code==='ENOENT')return null;throw e;}}
@@ -114,7 +117,11 @@ export async function installPublishedPack(progress:Progress):Promise<void>{
  progress('Recherche des mises à jour Licaris…',1);
  const instance=getMinecraftInstanceDir();await mkdir(instance,{recursive:true});
  await recoverTransaction(instance,path.join(getLauncherDataDir(),'update-transaction.json'));
- const manifest=await fetchPublishedPack();const observed=new Map<string,Observation>();const checked=new Set<string>();
+ const sourceManifest=await fetchPublishedPack();
+ const manifest=await (await import('./clientContentService')).filterOptionalMods(sourceManifest);
+ const previous=JSON.parse(await readFile(path.join(instance,'.licaris-managed.json'),'utf8').catch((e:any)=>{if(e.code==='ENOENT')return 'null';throw e;})) as {files:Entry[]}|null;
+ const previousMap=new Map((previous?.files||[]).map(f=>[f.path,f]));
+ const observed=new Map<string,Observation>();const checked=new Set<string>();
  const stage=path.join(getLauncherDataDir(),'staging',manifest.revision);await mkdir(stage,{recursive:true});
  let next=0,complete=0,failure:unknown;
  await Promise.all(Array.from({length:4},async()=>{
@@ -125,23 +132,29 @@ export async function installPublishedPack(progress:Progress):Promise<void>{
   }catch(e){failure=new Error(`${f.path} : ${e instanceof Error?e.message:String(e)}`);}}
  }));if(failure)throw failure;
  const archive=path.join(getLauncherDataDir(),'cache',`${manifest.archive.sha256}.zip`);
- const changedOverrides=[];
+ const changedOverrides:Entry[]=[];
  const totalOverrides=manifest.overrideFiles.length;
  progress(`Vérification des configurations et datapacks : 0/${totalOverrides}`,43);
- for(let i=0;i<totalOverrides;i++){
-  const f=manifest.overrideFiles[i],target=safePath(instance,f.path);
+ let nextOverride=0,checkedOverrides=0;
+ const overrideResults=await Promise.allSettled(Array.from({length:12},async()=>{while(nextOverride<totalOverrides){
+  const f=manifest.overrideFiles[nextOverride++],target=safePath(instance,f.path);
   const info=await refuseLinks(instance,target,checked);const sha=info?await hashFile(target,info.size):null;
-  observed.set(f.path,{exists:!!info,sha});if(sha!==f.sha256)changedOverrides.push(f);
-  if(i%100===0||i+1===totalOverrides)progress(`Vérification des configurations et datapacks : ${i+1}/${totalOverrides}`,43+7*(i+1)/totalOverrides);
- }
+  observed.set(f.path,{exists:!!info,sha});
+  const prior=previousMap.get(f.path);
+  const personal=f.path.startsWith('config/')&&info&&prior&&sha!==prior.sha256;
+  if(sha!==f.sha256&&!personal)changedOverrides.push(f);
+  checkedOverrides++;if(checkedOverrides%100===0||checkedOverrides===totalOverrides)progress(`Vérification des configurations et datapacks : ${checkedOverrides}/${totalOverrides}`,43+7*checkedOverrides/totalOverrides);
+ }}));
+ const overrideFailure=overrideResults.find(r=>r.status==='rejected');if(overrideFailure?.status==='rejected')throw overrideFailure.reason;
  if(changedOverrides.length){
   progress('Téléchargement des configurations et datapacks…',50);await download(manifest.archive,archive);
-  await extractOverrides(archive,stage,(n,total)=>progress(`Préparation des ressources : ${n} fichiers`,53+27*n/total),true);
-  progress(`Validation des ressources : 0/${totalOverrides}`,80);
-  for(let i=0;i<totalOverrides;i++){
-   const f=manifest.overrideFiles[i],staged=safePath(stage,f.path);
+  await extractOverrides(archive,stage,(n,total)=>progress(`Préparation de ${changedOverrides.length} ressources modifiées`,53+27*n/total),true,new Set(changedOverrides.map(f=>f.path)));
+  const totalChanged=changedOverrides.length;
+  progress(`Validation des ressources : 0/${totalChanged}`,80);
+  for(let i=0;i<totalChanged;i++){
+   const f=changedOverrides[i],staged=safePath(stage,f.path);
    if(!await exists(staged)||await hashFile(staged,f.size)!==f.sha256)throw new Error(`Ressource invalide : ${f.path}`);
-   if(i%100===0||i+1===totalOverrides)progress(`Validation des ressources : ${i+1}/${totalOverrides}`,80+9*(i+1)/totalOverrides);
+   if(i%100===0||i+1===totalChanged)progress(`Validation des ressources : ${i+1}/${totalChanged}`,80+9*(i+1)/totalChanged);
   }
  }
  progress('Préparation de la mise à jour…',89);

@@ -10,7 +10,6 @@ import {
   saveAuthSession,
   type StoredAuthSession
 } from "./authSessionStore";
-import { getMinecraftAvatarDataUrl } from "./avatarService";
 import { writeLauncherLog } from "./logService";
 
 type AuthStatusHandler = (status: MicrosoftAuthStatus) => void;
@@ -560,14 +559,12 @@ async function refreshSession(session: StoredAuthSession): Promise<StoredAuthSes
 
 async function createSignedInAuthStatus(session: StoredAuthSession): Promise<MicrosoftAuthStatus> {
   const { profile } = session.minecraft;
-  const avatarUrl = await getMinecraftAvatarDataUrl(profile);
 
   return {
     state: "signed-in",
     message: `Connecté en tant que ${profile.name}`,
     username: profile.name,
     uuid: profile.id,
-    avatarUrl,
     minecraftName: profile.name,
     minecraftId: profile.id
   };

@@ -4,7 +4,7 @@ call npm ci --no-audit --no-fund
 if errorlevel 1 goto failure
 call npm run dist
 if errorlevel 1 goto failure
-explorer "%~dp0release\0.4.0"
+explorer "%~dp0release\0.5.0"
 exit /b 0
 :failure
 echo La construction a echoue. Consulte le message ci-dessus.
