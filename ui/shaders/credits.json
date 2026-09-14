@@ -1,0 +1,74 @@
+[
+  {
+    "id": "makeup-ultra-fast-shaders",
+    "title": "MakeUp - Ultra Fast",
+    "image": "shaders/makeup-ultra-fast-shaders.webp",
+    "source": "https://modrinth.com/shader/makeup-ultra-fast-shaders",
+    "imageUrl": "https://cdn.modrinth.com/data/izsIPI7a/images/97776ad4f19f734243dbb301feaf81c327bae96b_350.webp",
+    "caption": "Cover image",
+    "size": 107328
+  },
+  {
+    "id": "complementary-reimagined",
+    "title": "Complementary Shaders - Reimagined",
+    "image": "shaders/complementary-reimagined.webp",
+    "source": "https://modrinth.com/shader/complementary-reimagined",
+    "imageUrl": "https://cdn.modrinth.com/data/HVnmMxH1/images/111e76bfa966c68b3581a93f7322588e642ce4db_350.webp",
+    "caption": null,
+    "size": 92514
+  },
+  {
+    "id": "bsl-shaders",
+    "title": "BSL Shaders",
+    "image": "shaders/bsl-shaders.webp",
+    "source": "https://modrinth.com/shader/bsl-shaders",
+    "imageUrl": "https://cdn.modrinth.com/data/Q1vvjJYV/images/40b899ae09647c98722d67bb2288f790ae28b4fc_350.webp",
+    "caption": "#1",
+    "size": 112470
+  },
+  {
+    "id": "solas-shader",
+    "title": "Solas Shader",
+    "image": "shaders/solas-shader.webp",
+    "source": "https://modrinth.com/shader/solas-shader",
+    "imageUrl": "https://cdn.modrinth.com/data/EpQFjzrQ/images/b87a4f77d7858c6b8fb9ecc40301f9d189a52c44_350.webp",
+    "caption": "Starry Night",
+    "size": 91050
+  },
+  {
+    "id": "complementary-unbound",
+    "title": "Complementary Shaders - Unbound",
+    "image": "shaders/complementary-unbound.webp",
+    "source": "https://modrinth.com/shader/complementary-unbound",
+    "imageUrl": "https://cdn.modrinth.com/data/R6NEzAwj/images/a5a420ab1668bcfe47a76a812eede7056c45fe31_350.webp",
+    "caption": null,
+    "size": 119430
+  },
+  {
+    "id": "photon-shader",
+    "title": "Photon Shaders",
+    "image": "shaders/photon-shader.webp",
+    "source": "https://modrinth.com/shader/photon-shader",
+    "imageUrl": "https://cdn.modrinth.com/data/lLqFfGNs/images/a7205115d731077733ab5cdcc639e5531f2dee12_350.webp",
+    "caption": "by fethry",
+    "size": 70656
+  },
+  {
+    "id": "bliss-shader",
+    "title": "Bliss Shaders",
+    "image": "shaders/bliss-shader.webp",
+    "source": "https://modrinth.com/shader/bliss-shader",
+    "imageUrl": "https://cdn.modrinth.com/data/ZvMtQlho/images/7ceb3b0fcd9ccdbd5fc4bdc80ba7ee766509c69f_350.webp",
+    "caption": "The end",
+    "size": 50810
+  },
+  {
+    "id": "miniature-shader",
+    "title": "Miniature Shader",
+    "image": "shaders/miniature-shader.webp",
+    "source": "https://modrinth.com/shader/miniature-shader",
+    "imageUrl": "https://cdn.modrinth.com/data/UaS8ROxa/images/47126cd6cc7ab7083c14fce162d185aa7e9953f4_350.webp",
+    "caption": "Cherry",
+    "size": 125962
+  }
+]

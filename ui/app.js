@@ -6,7 +6,19 @@ let launcherUpdate = {blocking:true};
 let logLines = [];
 let selectedRam = 8;
 let activeView='play', mods=[], skinState={saved:[],current:null}, selectedSkin=null, avatarKey='', avatarSequence=0;
+let shaderData=null, shaderFilter='all';
+const scenes={meteor:{title:'SOUS LES ÉTOILES',file:'art/meteor-pokemon.png'},stargazing:{title:'ENTRE AMIS',file:'art/stargazing-pokemon.png'},ocean:{title:'PROFONDEURS',file:'art/greninja.png'}};
+function chooseScene(name){
+  if(!Object.hasOwn(scenes,name))name='meteor';
+  document.body.dataset.scene=name;$('scene-caption').textContent=scenes[name].title;
+  for(const button of document.querySelectorAll('[data-scene-choice]'))button.setAttribute('aria-pressed',String(button.dataset.sceneChoice===name));
+  try{localStorage.setItem('licaris-scene',name);}catch{}
+}
+for(const button of document.querySelectorAll('[data-scene-choice]'))button.addEventListener('click',()=>chooseScene(button.dataset.sceneChoice));
+try{chooseScene(localStorage.getItem('licaris-scene')||'meteor');}catch{chooseScene('meteor');}
+for(const scene of Object.values(scenes)){const preload=new Image();preload.src=scene.file;}
 function view(name) {
+  if(activeView!==name)window.scrollTo({top:0,behavior:'instant'});
   activeView=name;window.licarisSkin?.visible(name==='skins');
   for (const section of document.querySelectorAll('.view')) section.hidden = section.id !== `view-${name}`;
   for (const nav of document.querySelectorAll('[data-view]')) {
@@ -15,7 +27,7 @@ function view(name) {
   }
   $('notice').hidden=true;
   if(name==='skins')void loadSkins();if(name==='mods')void loadMods();if(name==='shaders')void loadShaders();
-  $('page-title').textContent = {play:'Jouer',settings:'Réglages',logs:'Journal',skins:'Skins',mods:'Mods clients',shaders:'Shaders',links:'Liens'}[name];
+  $('page-title').textContent = {play:'Jouer',settings:'Réglages',logs:'Journal',skins:'Skins',mods:'Mods clients',shaders:'Shaders'}[name];
 }
 function notice(result) {
   if (!result?.message) return;
@@ -30,15 +42,14 @@ function renderButtons() {
   const locked=busy||launcherUpdate.blocking;
   const signed=current?.auth?.state === 'signed-in';
   const installed=current?.installed;
-  $('play-button').textContent=running ? 'Minecraft est ouvert' : launcherUpdate.blocking ? 'Mise à jour du launcher…' : busy ? 'Préparation en cours…' : !installed ? 'Installer le modpack  ↓' : !signed ? 'Se connecter pour jouer  ↗' : 'Jouer ensemble  ↗';
+  $('play-button').textContent=running ? 'Minecraft est ouvert' : launcherUpdate.blocking ? 'Mise à jour…' : busy ? 'Préparation…' : !installed ? 'Préparer mon aventure' : !signed ? 'Se connecter' : 'Jouer ensemble';
   for(const id of ['play-button','repair','account','logout','device-login','switch-account']) $(id).disabled=locked||running;
   for(const element of $('settings-form').querySelectorAll('input,select,button')) element.disabled=locked||running||(element.name==='ram' && Number(element.value)>(current?.totalRamGb??32)-2);
   for(const element of document.querySelectorAll('.mutation'))element.disabled=locked||running;
   $('apply-skin').disabled=locked||running||!signed||!selectedSkin||selectedSkin.id==='current';
   $('logout').hidden=!signed;
-  $('install-label').textContent=installed ? 'PRÊT POUR LE DÉPART' : 'PREMIÈRE ESCALE';
-  $('launch-heading').textContent=installed ? 'Votre aventure vous attend.' : 'On prépare votre sac ?';
-  $('launch-help').textContent=installed ? 'Le pack est installé. Il sera vérifié avant chaque lancement.' : 'Le launcher installe Minecraft, Fabric, Java et le modpack.';
+  $('install-label').textContent=running?'BONNE AVENTURE':installed ? 'PRÊT À VOUS RETROUVER' : 'PREMIÈRE CONNEXION';
+  $('launch-help').textContent=installed ? 'Votre prochaine aventure est à un clic.' : 'Une première installation, et tout est prêt.';
 }
 function renderLauncherUpdate(value) {
   if(!value)return;
@@ -51,7 +62,6 @@ function renderLauncherUpdate(value) {
   if(Number.isFinite(value.percent))$('launcher-update-progress').value=value.percent;
   else $('launcher-update-progress').removeAttribute('value');
   $('launcher-update-retry').hidden=!value.retryable;
-  $('launcher-update-downloads').hidden=value.phase!=='error';
   renderButtons();
 }
 function renderAccount(auth) {
@@ -81,18 +91,13 @@ async function refresh(fillForm=true) {
   if(!result.settings) return;
   current=result; busy=result.busy; running=result.running;
   renderLauncherUpdate(result.launcherUpdate);
-  $('pack-name').textContent=current.pack.label;
-  $('pack-version').textContent=current.pack.version;
-  $('pack-edition').textContent=current.pack.edition;
-  $('pack-sidebar').textContent=current.pack.name.toUpperCase();
-  $('runtime-label').textContent=`MINECRAFT ${current.pack.minecraftVersion} · FABRIC ${current.pack.fabricLoaderVersion} · JAVA 21`;
   $('ram-label').textContent=`${current.settings.ramGb} Go`;
   $('launcher-version').textContent=`v${current.version}`;
   if(fillForm) {
     selectedRam=current.settings.ramGb;
     $('launch-behavior').value=current.settings.launchBehavior||'keep';
     renderMemory(current.totalRamGb);
-    $('ram-help').textContent=`Votre ordinateur dispose de ${current.totalRamGb} Go. 6 à 8 Go conviennent pour ce pack ; gardez de la mémoire pour Windows.`;
+    $('ram-help').textContent=`6 à 8 Go conseillés · ${current.totalRamGb} Go disponibles sur votre ordinateur.`;
   }
   renderAccount(current.auth); renderButtons();
 }
@@ -100,7 +105,8 @@ async function checkServer() {
   $('refresh-server').disabled=true;
   $('server-label').textContent='Vérification…';
   const result=await invoke('server-status');
-  $('server-label').textContent=result.state === 'online' ? `En ligne · ${result.onlinePlayers ?? '?'} joueur(s)` : result.state === 'offline' ? 'Hors ligne ou injoignable' : 'Configuration en attente';
+  $('server-label').parentElement.dataset.serverState=result.state||'unknown';
+  $('server-label').textContent=result.state === 'online' ? `En ligne · ${result.onlinePlayers ?? '?'} joueur${result.onlinePlayers===1?'':'s'}` : result.state === 'offline' ? 'Serveur hors ligne' : 'Connexion en attente';
   $('refresh-server').disabled=false;
 }
 async function login(method='browser') {
@@ -130,7 +136,7 @@ function renderMods(){
   const query=$('mod-search').value.toLocaleLowerCase('fr');$('mod-list').replaceChildren();
   $('mods-count').textContent=`${mods.filter(m=>m.optional).length} OPTIONS CLIENTS`;
   for(const m of mods.filter(m=>(m.name+' '+m.description).toLocaleLowerCase('fr').includes(query))){
-    const row=node('div','content-row'),copy=node('div','content-copy');copy.append(node('h3','',m.name),node('p','',m.optional?m.description:m.reason));
+    const row=node('div','content-row'),copy=node('div','content-copy'),icon=node('img');icon.src=m.optional?'icons/mods.svg':'icons/lock.svg';icon.alt='';row.append(icon);copy.append(node('h3','',m.name),node('p','',m.optional?m.description:m.reason));
     if(m.optional){const label=node('label','toggle');const input=node('input');input.type='checkbox';input.checked=m.enabled;input.className='mutation';input.setAttribute('aria-label',m.name);const visual=node('span','toggle-track');label.append(input,visual);row.append(copy,label);
       input.addEventListener('change',async()=>{input.disabled=true;const result=await invoke('set-client-mod',{id:m.id,enabled:input.checked});if(result?.mods)mods=result.mods;renderMods();notice(result);});
     }else row.append(copy,node('span','locked-badge','Requis'));
@@ -152,13 +158,28 @@ function renderSkinLibrary(){
 }
 async function loadShaders(){const result=await invoke('shaders');if(result?.catalog)renderShaders(result);}
 function renderShaders(data){
-  $('shader-current').textContent=data.selected||'Sans shader · priorité à la fluidité';$('shader-local').replaceChildren();$('shader-catalog').replaceChildren();
-  for(const file of data.local){const row=node('div','content-row');row.append(node('h3','',file),action(data.selected===file?'Sélectionné':'Utiliser',async()=>{const result=await invoke('select-shader',{file});if(result?.catalog)renderShaders(result);notice(result);}));$('shader-local').append(row);}
-  if(!data.local.length)$('shader-local').append(node('p','muted','Installez votre premier shader ci-dessous.'));
-  for(const d of data.catalog){const card=node('article','shader-card');card.append(node('span','eyebrow',d.level),node('h3','',d.name),node('p','',d.description),action(d.installed?'Utiliser':'Installer',async()=>{
-    const result=await invoke(d.installed?'select-shader':'install-shader',d.installed?{file:d.file}:d.id);if(result?.catalog)renderShaders(result);notice(result);
-  }));$('shader-catalog').append(card);}renderButtons();
+  shaderData=data;
+  const displayName=file=>data.catalog.find(d=>d.file===file)?.name||file.replace(/\.zip$/i,'').replace(/_/g,' ');
+  $('shader-current').textContent=data.selected?displayName(data.selected):'Sans shader · fluidité maximale';$('shader-local').replaceChildren();$('shader-catalog').replaceChildren();
+  for(const file of data.local.filter(file=>!data.catalog.some(d=>d.file===file))){$('shader-local').append(action('Utiliser '+displayName(file),async()=>{const result=await invoke('select-shader',{file});if(result?.catalog)renderShaders(result);notice(result);}));}
+  for(const d of data.catalog.filter(d=>shaderFilter==='all'||d.group===shaderFilter)){
+    const selected=d.installed&&d.file===data.selected,card=node('article','shader-card'),cover=node('div','shader-cover'),img=node('img');
+    img.src=d.image;img.alt=`Aperçu de ${d.name}`;img.loading='eager';img.decoding='async';cover.append(img,node('span','shader-level',d.level));
+    const body=node('div','shader-body'),bottom=node('div','shader-card-action');body.append(node('h3','',d.name),node('p','',d.description));
+    const button=action(selected?'Sélectionné':d.installed?'Utiliser':'Installer',async()=>{
+      if(selected)return;button.textContent=d.installed?'Activation…':'Installation…';button.disabled=true;
+      const result=await invoke(d.installed?'select-shader':'install-shader',d.installed?{file:d.file}:d.id);
+      if(result?.catalog)renderShaders(result);else renderShaders(data);notice(result);
+    },'secondary mutation'+(selected?' selected':''));
+    bottom.append(node('span','',d.installed?'Dans votre collection':'Aperçu du créateur'),button);body.append(bottom);card.append(cover,body);$('shader-catalog').append(card);
+  }
+  renderButtons();
 }
+for(const button of document.querySelectorAll('[data-shader-filter]'))button.addEventListener('click',()=>{
+  shaderFilter=button.dataset.shaderFilter;
+  for(const b of document.querySelectorAll('[data-shader-filter]'))b.setAttribute('aria-pressed',String(b===button));
+  if(shaderData)renderShaders(shaderData);
+});
 $('mod-search').addEventListener('input',renderMods);
 $('refresh-skins').addEventListener('click',async()=>{await loadSkins();await refreshAvatar();});
 $('skin-model').addEventListener('change',()=>{if(selectedSkin)void window.licarisSkin?.show(selectedSkin.url,$('skin-model').value);});
@@ -187,7 +208,6 @@ $('edit-settings').addEventListener('click',()=>view('settings'));
 $('refresh-server').addEventListener('click',checkServer);
 $('game-folder').addEventListener('click',()=>invoke('open-folder','game'));
 $('logs-folder').addEventListener('click',()=>invoke('open-folder','logs'));
-$('pack-link').addEventListener('click',()=>invoke('open-pack'));
 $('launcher-update-retry').addEventListener('click',()=>invoke('retry-launcher-update'));
 $('window-minimize').addEventListener('click',()=>invoke('window-minimize'));
 $('window-close').addEventListener('click',()=>invoke('window-close'));

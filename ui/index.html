@@ -1,99 +1,72 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>Licaris Launcher</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="skin-viewer.js" defer></script>
-  <script src="app.js" defer></script>
+  <title>Licaris Launcher</title><link rel="stylesheet" href="style.css">
+  <script src="skin-viewer.js" defer></script><script src="app.js" defer></script>
 </head>
-<body>
-  <div class="titlebar"><span>✦ LICARIS <b>VOTRE AVENTURE COBBLEMON</b></span><div><button id="window-minimize" aria-label="Réduire">−</button><button id="window-close" aria-label="Fermer">×</button></div></div>
+<body data-scene="meteor">
+  <div class="titlebar"><span>LICARIS</span><div><button id="window-minimize" aria-label="Réduire">−</button><button id="window-close" aria-label="Fermer">×</button></div></div>
   <aside class="sidebar">
-    <div class="brand"><img src="licaris-logo.png" alt="Licaris"><small>UNE AVENTURE ENTRE AMIS</small></div>
-    <span class="section-label">VOTRE ESCALE</span>
+    <div class="brand"><img src="icons/licaris-mark.svg" alt=""><div>LICARIS<small>ENTRE AMIS</small></div></div>
     <nav aria-label="Navigation principale">
-      <button class="nav active" data-view="play" aria-current="page"><span>◈</span> Jouer <span class="nav-arrow">↗</span></button>
-      <button class="nav" data-view="skins"><span>♙</span> Skins</button>
-      <button class="nav" data-view="mods"><span>◫</span> Mods clients</button>
-      <button class="nav" data-view="shaders"><span>✧</span> Shaders</button>
-      <button class="nav" data-view="links"><span>↗</span> Liens</button>
-      <button class="nav" data-view="settings"><span>⚙</span> Réglages</button>
-      <button class="nav" data-view="logs"><span>≡</span> Journal</button>
+      <button class="nav active" data-view="play" aria-current="page"><img src="icons/play.svg" alt="">Jouer</button>
+      <button class="nav" data-view="skins"><img src="icons/skin.svg" alt="">Skins</button>
+      <button class="nav" data-view="mods"><img src="icons/mods.svg" alt="">Mods clients</button>
+      <button class="nav" data-view="shaders"><img src="icons/shader.svg" alt="">Shaders</button>
+      <div class="nav-divider"></div>
+      <button class="nav" data-view="settings"><img src="icons/settings.svg" alt="">Réglages</button>
+      <button class="nav" data-view="logs"><img src="icons/journal.svg" alt="">Journal</button>
     </nav>
-    <div class="sidebar-note"><span class="mini-spark">✦</span><p>Sous les mêmes étoiles.<br>Vers de nouvelles aventures.</p><span class="tiny" id="pack-sidebar">COBBLEMON ACADEMY · 2.0</span></div>
-    <button class="sidebar-link" id="pack-link">Découvrir le modpack <span>↗</span></button>
-    <div class="sidebar-bottom"><span class="status-dot"></span> Launcher privé <small id="launcher-version"></small></div>
+    <div class="sidebar-bottom">
+      <button class="studio-link" data-link="studio"><img src="icons/immersive-studio.svg" alt=""><span>Immersive Studio</span><span aria-hidden="true">↗</span></button>
+      <div class="launcher-meta"><span class="status-dot"></span>Licaris Launcher <small id="launcher-version"></small></div>
+    </div>
   </aside>
   <main>
-    <header><div class="breadcrumb">Votre espace <span>/</span> <strong id="page-title">Jouer</strong></div><button id="account" class="account"><span class="account-icon"><canvas id="account-avatar" width="32" height="32" hidden aria-label="Avatar Minecraft"></canvas><span id="avatar-fallback">♙</span></span><span id="account-label">Connexion Microsoft</span><span>↗</span></button></header>
+    <header><strong id="page-title">Jouer</strong><button id="account" class="account"><span class="account-icon"><canvas id="account-avatar" width="32" height="32" hidden aria-label="Avatar Minecraft"></canvas><img id="avatar-fallback" src="icons/account.svg" alt=""></span><span id="account-label">Connexion Microsoft</span><img class="account-arrow" src="icons/chevron.svg" alt=""></button></header>
     <div id="global-activity" hidden role="status"></div>
-    <div id="launcher-update-status" class="launcher-update-status" hidden role="status" aria-live="polite">
-      <div><strong id="launcher-update-title">MISE À JOUR DU LAUNCHER</strong><p id="launcher-update-message"></p></div>
-      <progress id="launcher-update-progress" max="100" aria-label="Mise à jour du launcher"></progress>
-      <button class="secondary" id="launcher-update-retry" hidden>Réessayer</button>
-      <button class="text-button" id="launcher-update-downloads" data-link="releases" hidden>Téléchargements ↗</button>
-    </div>
+    <div id="launcher-update-status" class="launcher-update-status" hidden role="status" aria-live="polite"><strong id="launcher-update-title">MISE À JOUR DU LAUNCHER</strong><p id="launcher-update-message"></p><progress id="launcher-update-progress" max="100" aria-label="Mise à jour du launcher"></progress><button class="secondary" id="launcher-update-retry" hidden>Réessayer</button></div>
     <section id="view-play" class="view">
-      <div class="intro"><div><span class="eyebrow">VOTRE AVENTURE COBBLEMON</span><h1>Bienvenue sur Licaris.</h1></div><span class="edition">ACADEMY <b id="pack-edition">2.0</b></span></div>
       <div class="hero">
-        <div class="hero-shade"></div>
-        <span class="hero-tag"><span></span> AU-DELÀ DES ÉTOILES</span>
-        <div class="hero-copy"><div class="hero-kicker">LE MONDE DE LICARIS</div><h2>Un monde à explorer.<br>Une histoire à partager.</h2><p>Retrouvez vos amis, rencontrez vos Pokémon.<br>Écrivez la suite de votre aventure.</p></div>
-        <div class="hero-seal" aria-hidden="true">L<span>✦</span></div>
-        <div class="hero-caption"><span>01 /</span> Votre aventure commence ici <span>✦</span></div>
+        <div class="hero-art" aria-hidden="true"></div><div class="hero-shade"></div>
+        <div class="hero-content"><span class="hero-kicker">VOTRE PROCHAINE AVENTURE</span><h1>L’aventure,<br><span>ensemble.</span></h1><p class="hero-description">Des Pokémon. Des amis.<br>Et tout un monde à découvrir.</p>
+          <div class="hero-launch"><span class="ready-label" id="install-label">PREMIÈRE CONNEXION</span><button id="play-button" class="primary" disabled>Préparer mon aventure</button><p id="launch-help">On s’occupe de tout.</p></div>
+        </div>
+        <div class="hero-scene-caption" id="scene-caption">SOUS LES ÉTOILES</div>
       </div>
-      <div class="facts">
-        <div><span class="fact-icon">◇</span><p>Le modpack<strong><span id="pack-name">Academy 2.0</span> <em id="pack-version">2.6.0</em></strong></p></div>
-        <div><span class="fact-icon">◉</span><p>Votre serveur<strong id="server-label">Connexion automatique</strong></p><button class="icon-button" id="refresh-server" title="Actualiser l’état du serveur" aria-label="Actualiser l’état du serveur">↻</button></div>
-        <div><span class="fact-icon">▤</span><p>Mémoire allouée<strong id="ram-label">8 Go</strong></p><button class="icon-button" id="edit-settings" title="Modifier les réglages" aria-label="Modifier les réglages">↗</button></div>
-      </div>
-      <div class="launch-box">
-        <div class="launch-text"><span class="section-label dark" id="install-label">PREMIÈRE ESCALE</span><h3 id="launch-heading">Préparez votre aventure.</h3><p id="launch-help">Le launcher installe Minecraft, Fabric, Java et le modpack.</p></div>
-        <button id="play-button" class="primary">Installer le modpack <span>↓</span></button>
-      </div>
+      <div class="home-status"><div><span class="live-dot"></span><strong id="server-label">Connexion…</strong><button id="refresh-server" class="icon-button" aria-label="Actualiser le serveur"><img src="icons/refresh.svg" alt=""></button></div><button id="edit-settings" class="memory-shortcut"><img src="icons/memory.svg" alt=""><span id="ram-label">8 Go</span><img src="icons/chevron.svg" alt=""></button></div>
       <div id="progress-wrap" class="progress-wrap" hidden><div><span id="progress-message">Préparation…</span><span id="progress-value">0 %</span></div><progress id="progress" max="100" value="0"></progress></div>
-      <footer><span id="runtime-label">MINECRAFT 1.21.1 · FABRIC 0.18.1 · JAVA 21</span><button id="game-folder">Ouvrir le dossier du jeu ↗</button></footer>
+      <div class="ambience"><span class="section-label">VOTRE AMBIANCE</span><div class="scene-choices" role="group" aria-label="Illustration de l’accueil"><button data-scene-choice="meteor" aria-pressed="true"><img src="art/meteor-pokemon.png" alt=""><span>Sous les étoiles</span></button><button data-scene-choice="stargazing" aria-pressed="false"><img src="art/stargazing-pokemon.png" alt=""><span>Entre amis</span></button><button data-scene-choice="ocean" aria-pressed="false"><img src="art/greninja.png" alt=""><span>Profondeurs</span></button></div></div>
     </section>
     <section id="view-settings" class="view" hidden>
-      <div class="intro"><div><span class="eyebrow">COMME À LA MAISON</span><h1>Vos réglages.</h1></div></div>
+      <div class="intro"><h1>À votre façon.</h1><p>Quelques réglages, et c’est parti.</p></div>
       <form id="settings-form">
-        <div class="settings-card account-card"><div class="card-heading"><div><span class="eyebrow">VOTRE IDENTITÉ EN JEU</span><h2>Compte Microsoft</h2></div><span class="account-badge" id="account-state">Non connecté</span></div><p id="account-detail">Connectez le compte qui possède Minecraft Java Edition.</p><div class="account-actions"><button class="secondary" id="switch-account" type="button">Choisir un compte Microsoft</button><button class="text-button danger" id="logout" type="button">Se déconnecter</button><button class="text-button" id="device-login" type="button">Connexion avec un code</button></div></div>
-        <div class="settings-grid memory-layout">
-          <div class="settings-card"><div class="card-heading"><div><span class="eyebrow">LE CONFORT DE JEU</span><h2>Mémoire du jeu</h2></div><output id="ram-selected">8 Go</output></div><p id="ram-help">Gardez de la mémoire pour Windows.</p><fieldset class="ram-choices" id="ram-choices"><legend class="sr-only">Mémoire allouée</legend></fieldset><p class="small">Conseillé : 8 Go si votre ordinateur le permet.</p></div>
-        </div>
-        <div class="settings-card"><span class="eyebrow">APRÈS LE DÉMARRAGE DU JEU</span><h2>À votre rythme.</h2><label for="launch-behavior">Comportement du launcher</label><select id="launch-behavior"><option value="keep">Garder le launcher ouvert</option><option value="minimize">Réduire dans la barre des tâches</option><option value="close">Fermer le launcher</option></select><p class="small">Minecraft continue de fonctionner si le launcher se ferme.</p></div>
-        <div class="form-actions"><button class="primary" type="submit">Enregistrer les réglages <span>✓</span></button><button class="secondary" id="repair" type="button">Vérifier les fichiers</button></div>
+        <div class="settings-card account-card"><div class="card-heading"><div class="card-title"><img src="icons/account.svg" alt=""><h2>Compte Microsoft</h2></div><span class="account-badge" id="account-state">Non connecté</span></div><p id="account-detail">Connectez le compte qui possède Minecraft Java.</p><div class="account-actions"><button class="secondary" id="switch-account" type="button">Changer de compte</button><button class="text-button danger" id="logout" type="button">Se déconnecter</button><button class="text-button" id="device-login" type="button">Connexion avec un code</button></div></div>
+        <div class="settings-card"><div class="card-heading"><div class="card-title"><img src="icons/memory.svg" alt=""><h2>Mémoire du jeu</h2></div><output id="ram-selected">8 Go</output></div><p id="ram-help">6 à 8 Go conseillés.</p><fieldset class="ram-choices" id="ram-choices" aria-label="Mémoire allouée au jeu"><legend class="sr-only">Mémoire allouée</legend></fieldset></div>
+        <div class="settings-card behavior-card"><div><h2>Quand Minecraft démarre</h2><p>Choisissez ce que fait le launcher.</p></div><label class="sr-only" for="launch-behavior">Comportement du launcher</label><select id="launch-behavior"><option value="keep">Rester ouvert</option><option value="minimize">Se réduire</option><option value="close">Se fermer</option></select></div>
+        <div class="form-actions"><button class="primary" type="submit">Enregistrer</button><button class="secondary" id="repair" type="button">Réparer les fichiers</button><button class="text-button" id="game-folder" type="button">Dossier du jeu ↗</button></div>
       </form>
     </section>
     <section id="view-skins" class="view" hidden>
-      <div class="intro"><div><span class="eyebrow">VOTRE IDENTITÉ</span><h1>Votre prochaine allure.</h1></div><button class="secondary" id="refresh-skins">Actualiser ↻</button></div>
-      <div class="skins-layout">
-        <div class="skin-stage"><canvas id="skin-canvas" aria-label="Aperçu 3D du skin"></canvas><canvas id="skin-fallback" width="128" height="256" hidden aria-label="Aperçu du skin"></canvas><div id="skin-empty">♙<p>Connectez votre compte<br>ou importez un skin.</p></div><div class="skin-stage-caption"><span id="skin-preview-name">Votre personnage</span><button class="text-button" id="skin-rotate" aria-pressed="true">Rotation ↻</button></div></div>
-        <div><div class="settings-card"><span class="eyebrow">VOTRE BIBLIOTHÈQUE</span><h2>Un style qui vous ressemble.</h2><p>Importez un skin PNG, regardez-le sous tous les angles, puis choisissez votre modèle.</p><label for="skin-model">Modèle</label><select id="skin-model"><option value="classic">Classique · bras larges</option><option value="slim">Slim · bras fins</option></select><div class="skin-actions"><button class="secondary mutation" id="import-skin">Importer un PNG +</button><button class="primary mutation" id="apply-skin">Appliquer à mon compte</button></div><p class="small">Le skin appliqué sera utilisé par votre compte Minecraft, sur tous les serveurs.</p><button class="text-button" data-link="skins">Gérer mon skin sur Minecraft.net ↗</button></div>
-        <div id="skin-library" class="skin-library"></div></div>
+      <div class="intro split"><div><h1>Un style bien à vous.</h1><p>Votre personnage, sous tous les angles.</p></div><button class="icon-button" id="refresh-skins" aria-label="Actualiser les skins"><img src="icons/refresh.svg" alt=""></button></div>
+      <div class="skins-layout"><div class="skin-stage"><canvas id="skin-canvas" aria-label="Aperçu 3D du skin"></canvas><canvas id="skin-fallback" width="128" height="256" hidden aria-label="Aperçu du skin"></canvas><div id="skin-empty"><img src="icons/skin.svg" alt=""><p>Votre prochain look<br>commence ici.</p></div><div class="skin-stage-caption"><span id="skin-preview-name">Votre personnage</span><button class="text-button" id="skin-rotate" aria-pressed="true">Rotation ↻</button></div></div>
+        <div><div class="settings-card"><h2>Votre bibliothèque</h2><p>Importez un skin PNG, puis appliquez-le à votre compte.</p><label for="skin-model">Silhouette</label><select id="skin-model"><option value="classic">Classique</option><option value="slim">Bras fins</option></select><div class="skin-actions"><button class="secondary mutation" id="import-skin">Importer un PNG</button><button class="primary mutation" id="apply-skin">Appliquer</button></div><p class="small">Le skin sera utilisé partout avec ce compte Minecraft.</p></div><div id="skin-library" class="skin-library"></div></div>
       </div>
     </section>
     <section id="view-mods" class="view" hidden>
-      <div class="intro"><div><span class="eyebrow">VOTRE CONFORT DE JEU</span><h1>Juste ce qu’il vous faut.</h1></div><span class="edition" id="mods-count">MODS CLIENTS</span></div>
-      <p class="muted">Activez les effets et outils que vous utilisez. Vos choix seront appliqués avant la prochaine partie.</p>
-      <div class="content-toolbar"><label class="sr-only" for="mod-search">Rechercher un mod</label><input id="mod-search" type="search" placeholder="Rechercher un mod client…"><span class="small">Les composants requis restent protégés.</span></div>
-      <div id="mod-list" class="content-list"><p class="muted">Chargement des mods clients…</p></div>
+      <div class="intro split"><div><h1>Gardez l’essentiel.</h1><p>Les petits plus que vous choisissez d’activer.</p></div><span class="badge" id="mods-count">MODS CLIENTS</span></div>
+      <div class="content-toolbar"><div class="search-field"><img src="icons/search.svg" alt=""><label class="sr-only" for="mod-search">Rechercher un mod</label><input id="mod-search" type="search" placeholder="Rechercher un mod…"></div><span class="small">Les mods requis restent activés.</span></div><div id="mod-list" class="content-list"><p class="muted">Chargement…</p></div>
     </section>
     <section id="view-shaders" class="view" hidden>
-      <div class="intro"><div><span class="eyebrow">UNE AUTRE LUMIÈRE</span><h1>Changez d’atmosphère.</h1></div><button class="secondary" id="shaders-folder">Ouvrir le dossier ↗</button></div>
-      <div class="shader-current settings-card"><div><span class="eyebrow">POUR LA PROCHAINE PARTIE</span><h2 id="shader-current">Aucun shader sélectionné</h2><p>Les effets se règlent ensuite dans les options graphiques de Minecraft.</p></div><button class="secondary mutation" id="shader-off">Désactiver les shaders</button></div>
-      <h2 class="subheading">Votre collection</h2><div id="shader-local" class="content-list"></div>
-      <h2 class="subheading">À découvrir</h2><p class="muted">Téléchargements depuis les pages officielles Modrinth, vérifiés avant installation. Iris doit être activé dans Mods clients.</p><div id="shader-catalog" class="shader-grid"></div>
+      <div class="intro split"><div><h1>Une autre lumière.</h1><p>Trouvez l’ambiance qui vous ressemble.</p></div><button class="secondary" id="shaders-folder">Mon dossier ↗</button></div>
+      <div class="shader-current settings-card"><div class="card-title"><img src="icons/shader.svg" alt=""><div><span class="section-label">ACTUELLEMENT</span><h2 id="shader-current">Sans shader</h2></div></div><button class="secondary mutation" id="shader-off">Désactiver</button></div>
+      <div id="shader-local" class="shader-local"></div>
+      <div class="shader-filters" role="group" aria-label="Filtrer les shaders"><button data-shader-filter="all" aria-pressed="true">Tout découvrir</button><button data-shader-filter="light" aria-pressed="false">Fluidité</button><button data-shader-filter="balanced" aria-pressed="false">Équilibré</button><button data-shader-filter="cinematic" aria-pressed="false">Cinématique</button></div>
+      <div id="shader-catalog" class="shader-grid"></div><p class="shader-note">Activez Iris dans Mods clients pour utiliser les shaders.</p>
     </section>
-    <section id="view-links" class="view" hidden>
-      <div class="intro"><div><span class="eyebrow">POUR ALLER PLUS LOIN</span><h1>Restons connectés.</h1></div></div>
-      <button class="studio-card" data-link="studio"><span class="eyebrow">LES MONDES D’IMMERSIVE STUDIO</span><h2>Vivez d’autres histoires.</h2><p>Découvrez les univers et projets d’Immersive Studio.</p><span class="studio-address">immersive-studio.fr <b>↗</b></span></button>
-      <div class="link-grid"><button class="settings-card link-card" data-link="pack"><span>◇</span><h2>Cobblemon Academy</h2><p>Découvrir le modpack à l’origine de l’aventure.</p><b>CurseForge ↗</b></button><button class="settings-card link-card" data-link="releases"><span>↓</span><h2>Les nouveautés Licaris</h2><p>Retrouver les versions et téléchargements du launcher.</p><b>GitHub ↗</b></button><button class="settings-card link-card" data-link="skins"><span>♙</span><h2>Mon compte Minecraft</h2><p>Gérer votre apparence sur le site officiel.</p><b>Minecraft.net ↗</b></button></div>
-    </section>
-    <section id="view-logs" class="view" hidden><div class="intro"><div><span class="eyebrow">SOUS LE CAPOT</span><h1>Le journal.</h1></div><button class="secondary" id="logs-folder">Ouvrir les fichiers ↗</button></div><p class="muted">Les étapes d’installation et les messages de Minecraft apparaissent ici.</p><button class="secondary" id="copy-diagnostics">Copier le rapport de diagnostic</button><pre id="log-content" tabindex="0">Aucun message pour le moment.</pre></section>
+    <section id="view-logs" class="view" hidden><div class="intro split"><div><h1>Un coup d’œil en coulisses.</h1><p>Les détails utiles quand quelque chose coince.</p></div><button class="secondary" id="logs-folder">Dossier des logs ↗</button></div><button class="secondary" id="copy-diagnostics">Copier le diagnostic</button><pre id="log-content" tabindex="0">Aucun message pour le moment.</pre></section>
     <div id="notice" role="status" aria-live="polite" hidden></div>
   </main>
 </body>

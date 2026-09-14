@@ -5,11 +5,15 @@ import {getLauncherDataDir,getMinecraftInstanceDir} from './installPaths';
 import {safePath} from './packService';
 import {listClientMods} from './clientContentService';
 const definitions=[
- {id:'makeup-ultra-fast-shaders',name:'MakeUp · Ultra Fast',level:'Léger',description:'Des effets réglables pour privilégier la fluidité.'},
- {id:'complementary-reimagined',name:'Complementary Reimagined',level:'Équilibré',description:'Une lumière travaillée qui conserve le style de Minecraft.'},
- {id:'bsl-shaders',name:'BSL Shaders',level:'Détaillé',description:'Des paysages lumineux, des reflets et des couleurs douces.'},
- {id:'solas-shader',name:'Solas Shader',level:'Détaillé',description:'Une ambiance fantasy avec des lumières colorées.'}
-];
+ {id:'makeup-ultra-fast-shaders',name:'MakeUp · Ultra Fast',group:'light',level:'Fluidité',description:'Des ombres douces, avec la fluidité en priorité.'},
+ {id:'complementary-reimagined',name:'Complementary Reimagined',group:'balanced',level:'Équilibré',description:'Toute la beauté des blocs, sous une nouvelle lumière.'},
+ {id:'bsl-shaders',name:'BSL Shaders',group:'balanced',level:'Équilibré',description:'Des couleurs douces et une eau lumineuse.'},
+ {id:'solas-shader',name:'Solas Shader',group:'cinematic',level:'Cinématique',description:'Des nuits colorées et des ciels spectaculaires.'},
+ {id:'miniature-shader',name:'Miniature',group:'light',level:'Fluidité',description:'Une touche de lumière, un rendu tout en simplicité.'},
+ {id:'photon-shader',name:'Photon',group:'balanced',level:'Équilibré',description:'Une lumière naturelle et une atmosphère chaleureuse.'},
+ {id:'complementary-unbound',name:'Complementary Unbound',group:'cinematic',level:'Cinématique',description:'Des reflets détaillés et des nuages tout en volume.'},
+ {id:'bliss-shader',name:'Bliss',group:'cinematic',level:'Cinématique',description:'Des horizons brumeux et des paysages à contempler.'}
+].map(d=>({...d,image:`shaders/${d.id}.webp`}));
 type ShaderPrefs={selected?:string|null;installed:Record<string,string>};
 const prefsFile=()=>path.join(getLauncherDataDir(),'shaders.json');
 const shaderDir=()=>path.join(getMinecraftInstanceDir(),'shaderpacks');
@@ -50,7 +54,7 @@ export async function selectShader(input:any){
 export async function installShader(id:unknown){
  const d=definitions.find(x=>x.id===id);if(!d)throw new Error('Shader inconnu.');
  const query=new URLSearchParams({game_versions:JSON.stringify(['1.21.1']),loaders:JSON.stringify(['iris'])});
- const r=await fetch(`https://api.modrinth.com/v2/project/${d.id}/version?${query}`,{headers:{'User-Agent':'Licaris-Launcher/0.5.0'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw new Error(`Catalogue indisponible (HTTP ${r.status}).`);
+ const r=await fetch(`https://api.modrinth.com/v2/project/${d.id}/version?${query}`,{headers:{'User-Agent':'Licaris-Launcher/0.6.0'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw new Error(`Catalogue indisponible (HTTP ${r.status}).`);
  const versions:any=await r.json(),v=versions.find((x:any)=>x.version_type==='release'),f=v?.files?.find((x:any)=>x.primary)||v?.files?.[0];
  if(!f||!Number.isSafeInteger(f.size)||f.size<=0||f.size>128*1024*1024||!/^https:\/\/cdn\.modrinth\.com\//.test(f.url)||!/^[a-f0-9]{128}$/.test(f.hashes?.sha512))throw new Error('Version de shader invalide ou indisponible pour Minecraft 1.21.1.');
  const name=validateShaderName(f.filename);if(!name.toLowerCase().endsWith('.zip'))throw new Error('Archive ZIP attendue.');

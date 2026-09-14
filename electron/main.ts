@@ -154,7 +154,7 @@ function registerIpc() {
     return {ok:true,message:'Rapport copié. Les adresses de connexion et jetons connus sont masqués.'};
   });
   handle('open-link', key => {
-    const links:Record<string,string>={studio:'https://immersive-studio.fr/',releases:'https://github.com/fraiyee14minecraft-dot/licaris/releases',pack:packDefinition.source,skins:'https://www.minecraft.net/msaprofile/mygames/editskin'};
+    const links:Record<string,string>={studio:'https://immersive-studio.fr/'};
     if(typeof key!=='string'||!Object.hasOwn(links,key))throw new Error('Lien inconnu.');return shell.openExternal(links[key]);
   });
   handle('play', () => exclusive(play));
@@ -170,20 +170,29 @@ function registerIpc() {
     const error = await shell.openPath(directory);
     return {ok:!error, message:error || 'Dossier ouvert.'};
   });
-  handle('open-pack', () => shell.openExternal(packDefinition.source));
 }
 async function createWindow() {
   window = new BrowserWindow({width:1240, height:850, frame:false, minWidth:900, minHeight:680, title:'Licaris Launcher', show:!testMode,
     backgroundColor:'#102744', autoHideMenuBar:true, icon:path.join(__dirname,'../ui/icon.ico'),
-    webPreferences:{preload:path.join(__dirname,'preload.js'), contextIsolation:true, nodeIntegration:false, sandbox:true}});
+    webPreferences:{preload:path.join(__dirname,'preload.js'), contextIsolation:true, nodeIntegration:false, sandbox:true, backgroundThrottling:!testMode}});
   window.webContents.setWindowOpenHandler(() => ({action:'deny'}));
   window.webContents.on('will-navigate', event => event.preventDefault());
   window.webContents.session.setPermissionRequestHandler((_contents, _permission, callback) => callback(false));
   addLogListener(entry => send('log', entry));
   await window.loadFile(uiFile);
   if (process.argv.includes('--smoke-test')) {
+    // Hidden smoke windows must render the same completed frames as visible windows.
+    const capture = async (name:string) => {
+      await window!.webContents.executeJavaScript(`(async()=>{
+        document.getAnimations().forEach(a=>a.finish());
+        await Promise.all([...document.querySelectorAll('img')].filter(i=>i.checkVisibility()).map(i=>i.decode()));
+        await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      })()`);
+      await writeFile(path.join(__dirname, '../.test-data/', name), (await window!.webContents.capturePage()).toPNG());
+    };
     await new Promise(resolve => setTimeout(resolve, 1500));
-    await writeFile(path.join(__dirname,'../.test-data/launcher-preview.png'), (await window.webContents.capturePage()).toPNG()).catch(error => writeLauncherLog(`[capture] ${error.message}`));
+    await window.webContents.executeJavaScript("chooseScene('meteor')");
+    await capture('launcher-preview.png');
     await window.webContents.executeJavaScript("document.querySelector('[data-view=settings]').click()");
     await new Promise(resolve => setTimeout(resolve, 300));
     const privacyCheck = await window.webContents.executeJavaScript(`(async () => {
@@ -198,12 +207,49 @@ async function createWindow() {
     if (privacyCheck.settingsFields.join(',') !== 'ramGb,launchBehavior' || !privacyCheck.removedServerCard || privacyCheck.statusFields.some((key:string) => ['host','port','error'].includes(key)) || privacyCheck.serverInputs || (settings.serverHost && privacyCheck.markup.includes(settings.serverHost))) {
       throw new Error('Des coordonnées du serveur sont encore exposées dans l’interface.');
     }
-    await writeFile(path.join(__dirname,'../.test-data/settings-preview.png'), (await window.webContents.capturePage()).toPNG());
-    for(const view of ['mods','shaders','skins','links']){
+    await capture('settings-preview.png');
+    for(const view of ['mods','shaders','skins']){
       await window.webContents.executeJavaScript(`document.querySelector('[data-view=${view}]').click()`);
       await new Promise(resolve=>setTimeout(resolve,view==='mods'?2500:500));
-      await writeFile(path.join(__dirname,`../.test-data/${view}-preview.png`),(await window.webContents.capturePage()).toPNG());
+      await capture(`${view}-preview.png`);
     }
+    const gallery = await window.webContents.executeJavaScript(`(async()=>{
+      view('shaders'); await loadShaders();
+      const counts={};
+      for(const filter of ['light','balanced','cinematic','all']) {
+        document.querySelector('[data-shader-filter='+filter+']').click();
+        counts[filter]=document.querySelectorAll('.shader-card').length;
+      }
+      await Promise.all([...document.querySelectorAll('.shader-cover img')].map(i=>i.decode()));
+      return {counts,images:[...document.querySelectorAll('.shader-cover img')].every(i=>i.naturalWidth>0),
+        studioOnly:[...document.querySelectorAll('[data-link]')].every(e=>e.dataset.link==='studio'),
+        noLinksTab:!document.querySelector('[data-view=links]')};
+    })()`);
+    if(!gallery.images || !gallery.studioOnly || !gallery.noLinksTab || gallery.counts.all!==8 || gallery.counts.light!==2 || gallery.counts.balanced!==3 || gallery.counts.cinematic!==3) throw new Error('Catalogue visuel ou navigation incomplet.');
+    await window.webContents.executeJavaScript("view('play')");
+    for(const scene of ['stargazing','ocean','meteor']) {
+      await window.webContents.executeJavaScript(`document.querySelector('[data-scene-choice=${scene}]').click()`);
+      await capture(`ambience-${scene}.png`);
+    }
+    window.setSize(900,680);
+    await new Promise(resolve=>setTimeout(resolve,250));
+    await capture('launcher-small-preview.png');
+    const compact = await window.webContents.executeJavaScript(`(()=>{
+      const b=document.getElementById('play-button').getBoundingClientRect(), hero=document.querySelector('.hero').getBoundingClientRect();
+      return {noHorizontalOverflow:document.documentElement.scrollWidth<=innerWidth,
+        playVisible:b.left>=hero.left&&b.right<=hero.right&&b.bottom<=hero.bottom,
+        opacity:getComputedStyle(document.getElementById('view-play')).opacity};
+    })()`);
+    if(!compact.noHorizontalOverflow || !compact.playVisible || compact.opacity!=='1')throw new Error('L’accueil ne tient pas dans la fenêtre minimale.');
+    await window.webContents.executeJavaScript("view('shaders')");
+    await capture('shaders-small-preview.png');
+    for(const name of ['settings','mods','skins','logs']) {
+      await window.webContents.executeJavaScript(`view('${name}')`);
+      await new Promise(resolve=>setTimeout(resolve,250));
+      await capture(`${name}-small-preview.png`);
+      if(!await window.webContents.executeJavaScript('document.documentElement.scrollWidth<=innerWidth'))throw new Error(`Débordement horizontal dans ${name}.`);
+    }
+    window.setSize(1240,850);
     if (!rendererReady) throw new Error('Le renderer ne communique pas avec le processus principal.');
     const updateUi = await window.webContents.executeJavaScript(`(() => {
       document.querySelector('[data-view=play]').click();
@@ -217,9 +263,9 @@ async function createWindow() {
       return {blocked,bannerVisible,percent,retryVisible,noManualInstallButton:!document.getElementById('launcher-update')};
     })()`);
     if(!updateUi.blocked || !updateUi.bannerVisible || updateUi.percent!==42 || !updateUi.retryVisible || !updateUi.noManualInstallButton)throw new Error('Le parcours de mise à jour automatique ne s’affiche pas correctement.');
-    await writeFile(path.join(__dirname,'../.test-data/update-preview.png'),(await window.webContents.capturePage()).toPNG());
+    await capture('update-preview.png');
     const {markup, ...privacy} = privacyCheck;
-    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady, privacy, updateUi}, null, 2));
+    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady, privacy, updateUi, gallery, compact}, null, 2));
     app.quit();
   }
 }

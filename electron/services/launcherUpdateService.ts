@@ -145,7 +145,7 @@ export class LauncherUpdates {
     if (this.retryTimer) { clearTimeout(this.retryTimer); this.retryTimer = undefined; }
     this.options.log(`[launcher-update] ${error instanceof Error ? error.message : String(error)}`);
     this.set({phase:'error', blocking:false, retryable:!this.inFlight,
-      message:installing ? 'L’installation de la mise à jour a échoué. Vous pouvez réessayer ou récupérer le Setup dans les téléchargements.'
+      message:installing ? 'L’installation de la mise à jour a échoué. Vous pouvez réessayer ou demander le dernier Setup à l’organisateur.'
         : 'La mise à jour n’a pas pu aboutir. Vous pouvez utiliser le launcher et réessayer ; elle sera vérifiée à la prochaine ouverture.'});
   }
 

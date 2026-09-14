@@ -11,15 +11,15 @@ async function main(){
  const tag=`v${pkg.version}`;
  let release;try{release=await request(`${apiBase}/releases/tags/${tag}`);}catch{}
  if(release&&!release.draft)throw new Error('Cette version est déjà publiée. Augmentez version dans package.json pour publier une nouvelle version.');
- const body=`Licaris ${pkg.version} installe automatiquement les mises à jour du launcher au démarrage, puis se relance. Le téléchargement affiche sa progression ; aucun bouton d’installation ni assistant Setup n’est nécessaire pour les mises à jour suivantes.
+ const body=`Licaris ${pkg.version} adopte une interface Pokémon bleue : trois illustrations au choix, une navigation avec icônes et un accueil centré sur Jouer. Le lien Immersive Studio et son logo se trouvent directement en bas de la barre latérale. Les mentions techniques, le bouton Découvrir le modpack et l’onglet Liens ont été retirés de l’interface.
 
-Une partie ou une opération déjà en cours se termine avant l’installation. Une panne réseau ne bloque pas le launcher : la vérification reprend à la prochaine ouverture, avec possibilité de réessayer après une erreur.
+Les shaders se choisissent dans une galerie de huit aperçus, filtrables par Fluidité, Équilibré ou Cinématique : MakeUp Ultra Fast, Complementary Reimagined, BSL, Solas, Miniature, Photon, Complementary Unbound et Bliss. Le Setup et l’icône Windows reprennent ce nouvel habillage.
 
-Les comptes Microsoft, les skins, les shaders, les réglages et le catalogue du modpack sont conservés. Aucun changement du serveur n’est nécessaire.
+La mise à jour s’installe automatiquement à l’ouverture depuis un launcher installé en version 0.5.2 ou ultérieure. Les comptes, skins, mods clients, shaders et réglages existants restent conservés. La version Portable reste à remplacer manuellement. Depuis 0.5.1 ou antérieure, utiliser une dernière fois le bouton de mise à jour ou le nouveau Setup.
 
-Depuis une version 0.5.1 ou antérieure, utiliser une dernière fois le bouton Installer la mise à jour du launcher, ou ouvrir le nouveau Setup. Les versions précédentes ne peuvent pas appliquer rétroactivement cette nouvelle logique. Pour les mises à jour automatiques, utiliser l’installation Setup ; la version Portable reste à remplacer manuellement.
+Aucun changement du modpack ni du serveur n’est nécessaire. Les nouveaux shaders sont facultatifs et s’installent individuellement.
 
-Validation : 36 tests automatisés, dont installation silencieuse, relance, mise en attente, cache, erreurs et délais réseau ; contrôle de l’interface Electron et des exécutables. Aucun lancement de Minecraft effectué pour cette livraison.`;
+Validation : 36 tests automatisés, contrôle des six vues Electron et de l’accueil en 900 × 680, chargement des huit aperçus, filtres et téléchargement vérifié des nouveaux shaders. Aucun lancement de Minecraft effectué.`;
  release??=await jsonRequest(`${apiBase}/releases`,'POST',{tag_name:tag,name:`Licaris · Launcher ${pkg.version}`,draft:true,body,make_latest:'false'});
  for(const name of names){console.log(`Envoi : ${name}`);await upload(release,name,path.join(folder,name));}
  await jsonRequest(`${apiBase}/releases/${release.id}`,'PATCH',{draft:false,make_latest:'true'});

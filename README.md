@@ -1,10 +1,10 @@
 # Licaris Launcher
 
-<p align="center"><img src="ui/licaris-logo.png" alt="Licaris" width="250"></p>
+<p align="center"><img src="ui/icons/licaris-mark.svg" alt="Licaris" width="100"></p>
 
-![Le monde de Licaris](ui/licaris-background.png)
+![L’accueil de Licaris](docs/launcher-preview.png)
 
-Launcher Windows pour jouer ensemble à **Cobblemon Academy 2.0**.
+Launcher Windows pour votre aventure Cobblemon entre amis.
 
 ## Télécharger
 
@@ -28,12 +28,14 @@ Le launcher prépare Java, Minecraft et Fabric, puis vérifie le modpack avant c
 ## Votre launcher
 
 - **Compte Microsoft** : choix du compte, déconnexion et avatar tiré du skin Minecraft.
+- **Accueil** : trois ambiances Pokémon bleues au choix, mémorisées sur cet ordinateur.
 - **Skins** : aperçu 3D, bibliothèque PNG locale, modèles classique et fin, application au compte Minecraft connecté.
 - **Mods clients** : activation ou désactivation des options vérifiées. Les mods nécessaires au serveur et les dépendances restent protégés ; les choix prennent effet à la prochaine préparation.
-- **Shaders** : installation depuis Modrinth, sélection d’un shader local ou désactivation. Iris doit être activé.
+- **Shaders** : huit choix avec aperçus et filtres Fluidité, Équilibré et Cinématique. Installation depuis Modrinth, sélection d’un shader local ou désactivation. Iris doit être activé. Le rendu et les performances dépendent du matériel et des réglages du jeu.
 - **Réglages** : mémoire du jeu, maintien, réduction ou fermeture du launcher au démarrage de Minecraft.
 - **Journal** : accès aux fichiers et copie d’un rapport avec masquage des adresses de connexion et jetons connus.
-- **Liens** : [Immersive Studio](https://immersive-studio.fr/), modpack, téléchargements du launcher et profil Minecraft.
+
+[Immersive Studio](https://immersive-studio.fr/) est accessible directement en bas de la navigation, avec son logo.
 
 Les modifications de fichiers sont bloquées pendant une partie. Les options et skins de chaque joueur restent dans ses données locales.
 
@@ -58,5 +60,9 @@ Construction Windows : `npm run dist`.
 Le catalogue `pack/client-options.json` associe les options clientes aux empreintes et dépendances des JAR vérifiés. Après un changement des mods dans le dossier local de publication, exécuter `npm run catalog:clients` (Python 3), relire les dépendances et publier une nouvelle version du launcher pour proposer les options du nouveau pack. Si le catalogue ne correspond plus au pack, la désactivation est suspendue et les mods requis sont rétablis lors de la préparation. Les préférences sont conservées.
 
 L’aperçu utilise [skinview3d](https://github.com/bs-community/skinview3d) ; son bundle est produit par `npm run build`.
+
+Les illustrations d’accueil ont été fournies pour Licaris et sont utilisées sans retouche. Les aperçus des shaders proviennent des galeries de leurs créateurs ; les pages et images sources figurent dans `ui/shaders/credits.json`. Les icônes de navigation et le monogramme bleu sont dessinés en SVG ; le logo Immersive Studio provient du projet du studio.
+
+L’habillage du Setup se reconstruit avec Electron via `scripts/render-installer.cjs`, puis avec `python scripts/export-brand-icons.py` (Pillow requis) pour les formats BMP et ICO. Le Setup et les mises à jour conservent la même identité d’application et les données des joueurs.
 
 Les accès d’administration, sessions de joueurs et configurations locales ne doivent pas être ajoutés au dépôt.
