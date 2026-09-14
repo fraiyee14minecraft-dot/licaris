@@ -1,4 +1,8 @@
-# Licaris — Cobblemon Launcher
+# Licaris Launcher
+
+<p align="center"><img src="ui/licaris-logo.png" alt="Licaris" width="250"></p>
+
+![Le monde de Licaris](ui/licaris-background.png)
 
 Launcher Windows pour jouer ensemble à **Cobblemon Academy 2.0**.
 

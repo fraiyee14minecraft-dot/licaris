@@ -7,13 +7,13 @@ export const packDefinition = JSON.parse(readFileSync(path.join(__dirname, '..',
 };
 if (!/^[a-z0-9-]+$/.test(packDefinition.id) || !/^[a-zA-Z0-9._-]+$/.test(packDefinition.version)) throw new Error('Identifiant de pack invalide.');
 export const launcherRuntimeConfig = {
-  launcherName: 'Cobblemon Launcher',
+  launcherName: 'Licaris Launcher',
   distributionEnabled: publicConfig.distributionEnabled === true,
   minecraftVersion: packDefinition.minecraftVersion,
   fabricLoaderVersion: packDefinition.fabricLoaderVersion,
   microsoftClientId: String(publicConfig.microsoftClientId || ''),
   officialServer: {
-    name: 'Cobblemon entre amis', host: String(publicConfig.serverHost || ''), port: Number(publicConfig.serverPort || 25565),
+    name: 'Licaris', host: String(publicConfig.serverHost || ''), port: Number(publicConfig.serverPort || 25565),
     addressForMinecraftList: '', addressForPing: {host: '', port: 25565}
   },
   javaRuntime: {

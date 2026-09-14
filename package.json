@@ -1,10 +1,10 @@
 {
   "name": "cobblemon-friends-launcher",
-  "productName": "Cobblemon Launcher",
-  "version": "0.3.1",
+  "productName": "Licaris Launcher",
+  "version": "0.4.0",
   "private": true,
-  "description": "Launcher privé pour Cobblemon Academy 2.0, entre amis.",
-  "author": "Cobblemon entre amis",
+  "description": "Le launcher Licaris pour votre aventure Cobblemon.",
+  "author": "Licaris",
   "main": "dist-electron/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -29,11 +29,11 @@
   },
   "build": {
     "appId": "fr.cobblemon.friends.launcher",
-    "productName": "Cobblemon Launcher",
+    "productName": "Licaris Launcher",
     "asar": true,
     "npmRebuild": false,
     "directories": {
-      "output": "release/0.3.1"
+      "output": "release/0.4.0"
     },
     "files": [
       "dist-electron/**/*",
@@ -55,8 +55,8 @@
       "oneClick": false,
       "perMachine": false,
       "createDesktopShortcut": true,
-      "shortcutName": "Cobblemon Launcher",
-      "artifactName": "Cobblemon-Launcher-Setup-${version}.${ext}",
+      "shortcutName": "Licaris Launcher",
+      "artifactName": "Licaris-Launcher-Setup-${version}.${ext}",
       "include": "build/installer.nsh",
       "installerLanguages": [
         "fr_FR"
@@ -64,7 +64,7 @@
       "language": "1036"
     },
     "portable": {
-      "artifactName": "Cobblemon-Launcher-Portable-${version}.${ext}"
+      "artifactName": "Licaris-Launcher-Portable-${version}.${ext}"
     },
     "publish": [
       {

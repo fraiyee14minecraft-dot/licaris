@@ -126,6 +126,6 @@ if(api) {
   api.on('progress',p=>{$('progress-wrap').hidden=false;$('progress-message').textContent=p.message;$('progress').value=p.percent;$('progress-value').textContent=`${Math.round(p.percent)} %`;});
   void (async()=>{await refresh();const logs=await invoke('logs');if(Array.isArray(logs))logs.forEach(appendLog);await checkServer();await invoke('ui-ready');})();
 } else {
-  notice({ok:false,message:'Ouvrez Cobblemon Launcher avec son exécutable pour installer le pack et jouer.'});
+  notice({ok:false,message:'Ouvrez Licaris Launcher avec son exécutable pour installer le pack et jouer.'});
   $('play-button').disabled=true;
 }

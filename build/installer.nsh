@@ -172,17 +172,17 @@ ManifestDPIAware true
     ; supplied 16:9 banner fully visible and undistorted above it.
     System::Call 'user32::CreateWindowExW(i 0, w "STATIC", w "$CobblemonInstallerOperation", i 0x50000000, i 22, i 548, i 275, i 20, p $R0, p 0, p 0, p 0) p .s'
     Pop $CobblemonInstallerTitle
-    SetCtlColors $CobblemonInstallerTitle FFF1D0 100E0B
+    SetCtlColors $CobblemonInstallerTitle FFF1D0 070F20
     SendMessage $CobblemonInstallerTitle ${WM_SETFONT} $CobblemonInstallerTitleFont 1
 
-    System::Call 'user32::CreateWindowExW(i 0, w "STATIC", w "Préparation de Cobblemon Launcher...", i 0x50000000, i 22, i 571, i 375, i 17, p $R0, p 0, p 0, p 0) p .s'
+    System::Call 'user32::CreateWindowExW(i 0, w "STATIC", w "Préparation de Licaris Launcher...", i 0x50000000, i 22, i 571, i 375, i 17, p $R0, p 0, p 0, p 0) p .s'
     Pop $CobblemonInstallerSubtitle
-    SetCtlColors $CobblemonInstallerSubtitle E9D8B6 100E0B
+    SetCtlColors $CobblemonInstallerSubtitle C3D1E8 070F20
     SendMessage $CobblemonInstallerSubtitle ${WM_SETFONT} $CobblemonInstallerBodyFont 1
 
     System::Call 'user32::CreateWindowExW(i 0, w "STATIC", w "v${VERSION}", i 0x50000002, i 300, i 550, i 95, i 18, p $R0, p 0, p 0, p 0) p .s'
     Pop $CobblemonInstallerVersion
-    SetCtlColors $CobblemonInstallerVersion E9D8B6 100E0B
+    SetCtlColors $CobblemonInstallerVersion C3D1E8 070F20
     SendMessage $CobblemonInstallerVersion ${WM_SETFONT} $CobblemonInstallerBodyFont 1
 
     ; Reuse the actual NSIS status/progress controls. The bar follows real
@@ -190,7 +190,7 @@ ManifestDPIAware true
     GetDlgItem $R2 $R0 1006
     System::Call 'user32::SetWindowPos(p $R2, p 0, i 410, i 569, i 370, i 18, i 0x0010)'
     ShowWindow $R2 ${SW_SHOW}
-    SetCtlColors $R2 FFFFFF 100E0B
+    SetCtlColors $R2 FFFFFF 070F20
     SendMessage $R2 ${WM_SETFONT} $CobblemonInstallerBodyFont 1
 
     GetDlgItem $R3 $R0 1004

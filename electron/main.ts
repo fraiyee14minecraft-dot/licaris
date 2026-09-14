@@ -18,7 +18,7 @@ import { ensureServerInMultiplayerList } from './services/serverListService';
 import { getOfficialServerStatus } from './services/serverStatusService';
 import type { LauncherSyncProgress } from './types/launcher';
 
-app.setName('Cobblemon Launcher');
+app.setName('Licaris Launcher');
 const testMode = process.argv.includes('--smoke-test') || process.argv.includes('--prepare-test');
 app.setPath('userData', testMode ? path.join(__dirname, '..', '.test-data', process.argv.includes('--smoke-test') ? 'smoke' : '') : path.join(app.getPath('appData'), 'CobblemonFriendsLauncher'));
 const owned = app.requestSingleInstanceLock();
@@ -141,8 +141,8 @@ function registerIpc() {
   handle('open-pack', () => shell.openExternal(packDefinition.source));
 }
 async function createWindow() {
-  window = new BrowserWindow({width:1240, height:850, frame:false, minWidth:900, minHeight:680, title:'Cobblemon Launcher', show:!testMode,
-    backgroundColor:'#100e0b', autoHideMenuBar:true, icon:path.join(__dirname,'../ui/icon.ico'),
+  window = new BrowserWindow({width:1240, height:850, frame:false, minWidth:900, minHeight:680, title:'Licaris Launcher', show:!testMode,
+    backgroundColor:'#070f20', autoHideMenuBar:true, icon:path.join(__dirname,'../ui/icon.ico'),
     webPreferences:{preload:path.join(__dirname,'preload.js'), contextIsolation:true, nodeIntegration:false, sandbox:true}});
   window.webContents.setWindowOpenHandler(() => ({action:'deny'}));
   window.webContents.on('will-navigate', event => event.preventDefault());
@@ -189,6 +189,6 @@ app.whenReady().then(async () => {
   registerIpc(); await createWindow();checkLauncherUpdate();
 }).catch(async error => {
   await writeLauncherLog(`[error] ${error.message}`);
-    if (!testMode) dialog.showErrorBox('Cobblemon Launcher', sanitizeLogMessage(error.message));
+    if (!testMode) dialog.showErrorBox('Licaris Launcher', sanitizeLogMessage(error.message));
   app.exit(1);
 });

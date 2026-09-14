@@ -4,33 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>Cobblemon Launcher</title>
+  <title>Licaris Launcher</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="titlebar"><span>COBBLEMON <b>ENTRE AMIS</b></span><div><button id="window-minimize" aria-label="Réduire">−</button><button id="window-close" aria-label="Fermer">×</button></div></div>
+  <div class="titlebar"><span>✦ LICARIS <b>VOTRE AVENTURE COBBLEMON</b></span><div><button id="window-minimize" aria-label="Réduire">−</button><button id="window-close" aria-label="Fermer">×</button></div></div>
   <aside class="sidebar">
-    <div class="brand"><span class="ball" aria-hidden="true"></span><div>COBBLEMON<small>ENTRE AMIS</small></div></div>
-    <span class="section-label">VOTRE PETIT COIN</span>
+    <div class="brand"><img src="licaris-logo.png" alt="Licaris"><small>UNE AVENTURE ENTRE AMIS</small></div>
+    <span class="section-label">VOTRE ESCALE</span>
     <nav aria-label="Navigation principale">
       <button class="nav active" data-view="play" aria-current="page"><span>◈</span> Jouer <span class="nav-arrow">↗</span></button>
       <button class="nav" data-view="settings"><span>⚙</span> Réglages</button>
       <button class="nav" data-view="logs"><span>≡</span> Journal</button>
     </nav>
-    <div class="sidebar-note"><span class="mini-spark">✳</span><p>Une aventure à partager.<br>À votre rythme.</p><span class="tiny" id="pack-sidebar">COBBLEMON ACADEMY · 2.0</span></div>
+    <div class="sidebar-note"><span class="mini-spark">✦</span><p>Sous les mêmes étoiles.<br>Vers de nouvelles aventures.</p><span class="tiny" id="pack-sidebar">COBBLEMON ACADEMY · 2.0</span></div>
     <button class="sidebar-link" id="pack-link">Découvrir le modpack <span>↗</span></button>
     <div class="sidebar-bottom"><span class="status-dot"></span> Launcher privé <small id="launcher-version"></small></div>
   </aside>
   <main>
     <header><div class="breadcrumb">Votre espace <span>/</span> <strong id="page-title">Jouer</strong></div><button id="account" class="account"><span class="account-icon">☺</span><span id="account-label">Connexion Microsoft</span><span>↗</span></button></header>
     <section id="view-play" class="view">
-      <div class="intro"><div><span class="eyebrow">ON SE RETROUVE EN JEU ?</span><h1>L’aventure vous attend.</h1></div><span class="edition">ACADEMY <b id="pack-edition">2.0</b></span></div>
+      <div class="intro"><div><span class="eyebrow">VOTRE AVENTURE COBBLEMON</span><h1>Bienvenue sur Licaris.</h1></div><span class="edition">ACADEMY <b id="pack-edition">2.0</b></span></div>
       <div class="hero">
         <div class="hero-shade"></div>
-        <span class="hero-tag"><span></span> VOTRE PROCHAINE ESCALE</span>
-        <div class="hero-copy"><div class="hero-kicker">COBBLEMON ACADEMY</div><h2>Un monde à explorer.<br>Des amis à retrouver.</h2><p>Attrapez, construisez, partez à l’aventure.<br>Le reste peut attendre.</p></div>
-        <div class="hero-caption"><span>01 /</span> Votre aventure commence ici <span>✳</span></div>
+        <span class="hero-tag"><span></span> AU-DELÀ DES ÉTOILES</span>
+        <div class="hero-copy"><div class="hero-kicker">LE MONDE DE LICARIS</div><h2>Un monde à explorer.<br>Une histoire à partager.</h2><p>Retrouvez vos amis, rencontrez vos Pokémon.<br>Écrivez la suite de votre aventure.</p></div>
+        <div class="hero-seal" aria-hidden="true">L<span>✦</span></div>
+        <div class="hero-caption"><span>01 /</span> Votre aventure commence ici <span>✦</span></div>
       </div>
       <div class="facts">
         <div><span class="fact-icon">◇</span><p>Le modpack<strong><span id="pack-name">Academy 2.0</span> <em id="pack-version">2.6.0</em></strong></p></div>
