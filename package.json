@@ -1,7 +1,7 @@
 {
   "name": "cobblemon-friends-launcher",
   "productName": "Licaris Launcher",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "description": "Le launcher Licaris pour votre aventure Cobblemon.",
   "author": "Licaris",
@@ -36,7 +36,7 @@
     "asar": true,
     "npmRebuild": false,
     "directories": {
-      "output": "release/0.6.0"
+      "output": "release/0.6.1"
     },
     "files": [
       "dist-electron/**/*",
@@ -47,9 +47,10 @@
       "!**/*.map",
       "!**/*.test.*",
       "pack/client-options.json",
-      "!ui/licaris-logo.png",
       "!ui/licaris-background.png",
-      "!ui/scene-*.png"
+      "!ui/scene-*.png",
+      "!ui/licaris-mark.png",
+      "!ui/icons/licaris-mark.svg"
     ],
     "win": {
       "target": [

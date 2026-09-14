@@ -1,6 +1,6 @@
 # Licaris Launcher
 
-<p align="center"><img src="ui/icons/licaris-mark.svg" alt="Licaris" width="100"></p>
+<p align="center"><img src="ui/licaris-logo.png" alt="Licaris" width="180"></p>
 
 ![L’accueil de Licaris](docs/launcher-preview.png)
 
@@ -61,7 +61,7 @@ Le catalogue `pack/client-options.json` associe les options clientes aux emprein
 
 L’aperçu utilise [skinview3d](https://github.com/bs-community/skinview3d) ; son bundle est produit par `npm run build`.
 
-Les illustrations d’accueil ont été fournies pour Licaris et sont utilisées sans retouche. Les aperçus des shaders proviennent des galeries de leurs créateurs ; les pages et images sources figurent dans `ui/shaders/credits.json`. Les icônes de navigation et le monogramme bleu sont dessinés en SVG ; le logo Immersive Studio provient du projet du studio.
+Les illustrations d’accueil ont été fournies pour Licaris et sont utilisées sans retouche. Les aperçus des shaders proviennent des galeries de leurs créateurs ; les pages et images sources figurent dans `ui/shaders/credits.json`. Le logo Licaris original est conservé dans le launcher et le Setup. Les icônes de navigation sont dessinées en SVG ; le logo Immersive Studio provient du projet du studio.
 
 L’habillage du Setup se reconstruit avec Electron via `scripts/render-installer.cjs`, puis avec `python scripts/export-brand-icons.py` (Pillow requis) pour les formats BMP et ICO. Le Setup et les mises à jour conservent la même identité d’application et les données des joueurs.
 
