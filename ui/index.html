@@ -30,6 +30,12 @@
   <main>
     <header><div class="breadcrumb">Votre espace <span>/</span> <strong id="page-title">Jouer</strong></div><button id="account" class="account"><span class="account-icon"><canvas id="account-avatar" width="32" height="32" hidden aria-label="Avatar Minecraft"></canvas><span id="avatar-fallback">♙</span></span><span id="account-label">Connexion Microsoft</span><span>↗</span></button></header>
     <div id="global-activity" hidden role="status"></div>
+    <div id="launcher-update-status" class="launcher-update-status" hidden role="status" aria-live="polite">
+      <div><strong id="launcher-update-title">MISE À JOUR DU LAUNCHER</strong><p id="launcher-update-message"></p></div>
+      <progress id="launcher-update-progress" max="100" aria-label="Mise à jour du launcher"></progress>
+      <button class="secondary" id="launcher-update-retry" hidden>Réessayer</button>
+      <button class="text-button" id="launcher-update-downloads" data-link="releases" hidden>Téléchargements ↗</button>
+    </div>
     <section id="view-play" class="view">
       <div class="intro"><div><span class="eyebrow">VOTRE AVENTURE COBBLEMON</span><h1>Bienvenue sur Licaris.</h1></div><span class="edition">ACADEMY <b id="pack-edition">2.0</b></span></div>
       <div class="hero">
@@ -88,7 +94,6 @@
       <div class="link-grid"><button class="settings-card link-card" data-link="pack"><span>◇</span><h2>Cobblemon Academy</h2><p>Découvrir le modpack à l’origine de l’aventure.</p><b>CurseForge ↗</b></button><button class="settings-card link-card" data-link="releases"><span>↓</span><h2>Les nouveautés Licaris</h2><p>Retrouver les versions et téléchargements du launcher.</p><b>GitHub ↗</b></button><button class="settings-card link-card" data-link="skins"><span>♙</span><h2>Mon compte Minecraft</h2><p>Gérer votre apparence sur le site officiel.</p><b>Minecraft.net ↗</b></button></div>
     </section>
     <section id="view-logs" class="view" hidden><div class="intro"><div><span class="eyebrow">SOUS LE CAPOT</span><h1>Le journal.</h1></div><button class="secondary" id="logs-folder">Ouvrir les fichiers ↗</button></div><p class="muted">Les étapes d’installation et les messages de Minecraft apparaissent ici.</p><button class="secondary" id="copy-diagnostics">Copier le rapport de diagnostic</button><pre id="log-content" tabindex="0">Aucun message pour le moment.</pre></section>
-    <button class="secondary" id="launcher-update" hidden>Installer la mise à jour du launcher</button>
     <div id="notice" role="status" aria-live="polite" hidden></div>
   </main>
 </body>

@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 const api = window.cobblemon;
 let current = null, busy = false, running = false;
+let launcherUpdate = {blocking:true};
 let logLines = [];
 let selectedRam = 8;
 let activeView='play', mods=[], skinState={saved:[],current:null}, selectedSkin=null, avatarKey='', avatarSequence=0;
@@ -26,17 +27,32 @@ async function invoke(channel, input) {
   catch(error) { const result={ok:false,message:error.message}; notice(result); return result; }
 }
 function renderButtons() {
+  const locked=busy||launcherUpdate.blocking;
   const signed=current?.auth?.state === 'signed-in';
   const installed=current?.installed;
-  $('play-button').textContent=running ? 'Minecraft est ouvert' : busy ? 'Préparation en cours…' : !installed ? 'Installer le modpack  ↓' : !signed ? 'Se connecter pour jouer  ↗' : 'Jouer ensemble  ↗';
-  for(const id of ['play-button','repair','account','logout','device-login','switch-account']) $(id).disabled=busy||running;
-  for(const element of $('settings-form').querySelectorAll('input,select,button')) element.disabled=busy||running||(element.name==='ram' && Number(element.value)>(current?.totalRamGb??32)-2);
-  for(const element of document.querySelectorAll('.mutation'))element.disabled=busy||running;
-  $('apply-skin').disabled=busy||running||!signed||!selectedSkin||selectedSkin.id==='current';
+  $('play-button').textContent=running ? 'Minecraft est ouvert' : launcherUpdate.blocking ? 'Mise à jour du launcher…' : busy ? 'Préparation en cours…' : !installed ? 'Installer le modpack  ↓' : !signed ? 'Se connecter pour jouer  ↗' : 'Jouer ensemble  ↗';
+  for(const id of ['play-button','repair','account','logout','device-login','switch-account']) $(id).disabled=locked||running;
+  for(const element of $('settings-form').querySelectorAll('input,select,button')) element.disabled=locked||running||(element.name==='ram' && Number(element.value)>(current?.totalRamGb??32)-2);
+  for(const element of document.querySelectorAll('.mutation'))element.disabled=locked||running;
+  $('apply-skin').disabled=locked||running||!signed||!selectedSkin||selectedSkin.id==='current';
   $('logout').hidden=!signed;
   $('install-label').textContent=installed ? 'PRÊT POUR LE DÉPART' : 'PREMIÈRE ESCALE';
   $('launch-heading').textContent=installed ? 'Votre aventure vous attend.' : 'On prépare votre sac ?';
   $('launch-help').textContent=installed ? 'Le pack est installé. Il sera vérifié avant chaque lancement.' : 'Le launcher installe Minecraft, Fabric, Java et le modpack.';
+}
+function renderLauncherUpdate(value) {
+  if(!value)return;
+  launcherUpdate=value;
+  $('launcher-update-status').hidden=['current','unavailable'].includes(value.phase);
+  $('launcher-update-status').classList.toggle('update-error',value.phase==='error');
+  $('launcher-update-title').textContent=value.phase==='installing'?'REDÉMARRAGE AUTOMATIQUE':'MISE À JOUR DU LAUNCHER';
+  $('launcher-update-message').textContent=value.message+(value.phase==='downloading'&&Number.isFinite(value.percent)?` ${Math.floor(value.percent)} %`:'');
+  $('launcher-update-progress').hidden=!value.blocking;
+  if(Number.isFinite(value.percent))$('launcher-update-progress').value=value.percent;
+  else $('launcher-update-progress').removeAttribute('value');
+  $('launcher-update-retry').hidden=!value.retryable;
+  $('launcher-update-downloads').hidden=value.phase!=='error';
+  renderButtons();
 }
 function renderAccount(auth) {
   if(!auth) return;
@@ -64,6 +80,7 @@ async function refresh(fillForm=true) {
   const result=await invoke('state');
   if(!result.settings) return;
   current=result; busy=result.busy; running=result.running;
+  renderLauncherUpdate(result.launcherUpdate);
   $('pack-name').textContent=current.pack.label;
   $('pack-version').textContent=current.pack.version;
   $('pack-edition').textContent=current.pack.edition;
@@ -171,14 +188,14 @@ $('refresh-server').addEventListener('click',checkServer);
 $('game-folder').addEventListener('click',()=>invoke('open-folder','game'));
 $('logs-folder').addEventListener('click',()=>invoke('open-folder','logs'));
 $('pack-link').addEventListener('click',()=>invoke('open-pack'));
-$('launcher-update').addEventListener('click',()=>invoke('install-launcher-update'));
+$('launcher-update-retry').addEventListener('click',()=>invoke('retry-launcher-update'));
 $('window-minimize').addEventListener('click',()=>invoke('window-minimize'));
 $('window-close').addEventListener('click',()=>invoke('window-close'));
 $('switch-account').addEventListener('click',async()=>{notice(await invoke('switch-account'));await refresh(false);});
 $('logout').addEventListener('click',async()=>{notice(await invoke('logout'));await refresh(false);});
 $('device-login').addEventListener('click',()=>login('device'));
 if(api) {
-  api.on('launcher-update',()=>{$('launcher-update').hidden=false;});
+  api.on('launcher-update',renderLauncherUpdate);
   api.on('busy',value=>{busy=value;if(!value)$('global-activity').hidden=true;renderButtons();});
   api.on('running',value=>{running=value;renderButtons();});
   api.on('auth',auth=>{renderAccount(auth);if(activeView==='skins')void loadSkins();notice({ok:auth.state !== 'error',message:auth.message});});

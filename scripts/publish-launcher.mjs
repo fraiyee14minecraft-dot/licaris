@@ -11,15 +11,15 @@ async function main(){
  const tag=`v${pkg.version}`;
  let release;try{release=await request(`${apiBase}/releases/tags/${tag}`);}catch{}
  if(release&&!release.draft)throw new Error('Cette version est déjà publiée. Augmentez version dans package.json pour publier une nouvelle version.');
- const body=`Licaris ${pkg.version} actualise le catalogue des options clientes pour le modpack intégrant FTB Chunks 2101.1.22, FTB Teams 2101.1.11 et FTB Library 2101.1.36.
+ const body=`Licaris ${pkg.version} installe automatiquement les mises à jour du launcher au démarrage, puis se relance. Le téléchargement affiche sa progression ; aucun bouton d’installation ni assistant Setup n’est nécessaire pour les mises à jour suivantes.
 
-Ces trois mods restent obligatoires. Les options clientes déjà présentes, les skins, les shaders, l’avatar Minecraft et les préférences du joueur sont conservés.
+Une partie ou une opération déjà en cours se termine avant l’installation. Une panne réseau ne bloque pas le launcher : la vérification reprend à la prochaine ouverture, avec possibilité de réessayer après une erreur.
 
-Les mods sont synchronisés avant la prochaine partie. L’administrateur du serveur doit ajouter FTB Chunks et FTB Teams, puis remplacer l’ancienne version de FTB Library par la 2101.1.36.
+Les comptes Microsoft, les skins, les shaders, les réglages et le catalogue du modpack sont conservés. Aucun changement du serveur n’est nécessaire.
 
-Les installations existantes reçoivent la mise à jour via le launcher. Pour une première installation, choisissez le Setup. La version Portable doit être remplacée manuellement pour profiter du catalogue actualisé.
+Depuis une version 0.5.1 ou antérieure, utiliser une dernière fois le bouton Installer la mise à jour du launcher, ou ouvrir le nouveau Setup. Les versions précédentes ne peuvent pas appliquer rétroactivement cette nouvelle logique. Pour les mises à jour automatiques, utiliser l’installation Setup ; la version Portable reste à remplacer manuellement.
 
-Validation : dépendances contrôlées avec Fabric Loader, empreintes client/serveur identiques, tests automatisés et contrôle de l’interface. Aucun lancement de Minecraft effectué pour cette livraison.`;
+Validation : 36 tests automatisés, dont installation silencieuse, relance, mise en attente, cache, erreurs et délais réseau ; contrôle de l’interface Electron et des exécutables. Aucun lancement de Minecraft effectué pour cette livraison.`;
  release??=await jsonRequest(`${apiBase}/releases`,'POST',{tag_name:tag,name:`Licaris · Launcher ${pkg.version}`,draft:true,body,make_latest:'false'});
  for(const name of names){console.log(`Envoi : ${name}`);await upload(release,name,path.join(folder,name));}
  await jsonRequest(`${apiBase}/releases/${release.id}`,'PATCH',{draft:false,make_latest:'true'});

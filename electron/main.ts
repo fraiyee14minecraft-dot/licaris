@@ -22,6 +22,7 @@ import {listClientMods,setClientMod} from './services/clientContentService';
 import {accountSkin,listSkins,importSkin,applySkin,deleteSkin} from './services/skinService';
 import {listShaders,installShader,selectShader,applyShaderPreferences} from './services/shaderService';
 import {isManagedGameRunning,rememberGame,forgetGame} from './services/gameProcessService';
+import {LauncherUpdates} from './services/launcherUpdateService';
 
 app.setName('Licaris Launcher');
 const testMode = process.argv.includes('--smoke-test') || process.argv.includes('--prepare-test');
@@ -33,14 +34,7 @@ let busy = false;
 let game: ChildProcess | null = null;
 let settings: Preferences;
 let rendererReady = false;
-let launcherUpdateReady = false;
-function checkLauncherUpdate() {
-  if (!app.isPackaged || testMode || process.env.PORTABLE_EXECUTABLE_DIR) return;
-  autoUpdater.autoDownload=true;autoUpdater.autoInstallOnAppQuit=false;autoUpdater.allowDowngrade=false;
-  autoUpdater.on('update-downloaded', () => {launcherUpdateReady=true;send('launcher-update',true);});
-  autoUpdater.on('error', error => {void writeLauncherLog(`[launcher-update] ${error.message}`);});
-  void autoUpdater.checkForUpdates().catch(error => writeLauncherLog(`[launcher-update] ${error.message}`));
-}
+let launcherUpdates: LauncherUpdates;
 const uiFile = path.join(__dirname, '..', 'ui', 'index.html');
 const send = (channel: string, payload: unknown) => { if (window && !window.isDestroyed()) window.webContents.send(channel, payload); };
 let reportedProgress=-10;
@@ -68,9 +62,10 @@ async function prepare(force=false) {
 async function state() {
   const ready = await readFile(path.join(getMinecraftInstanceDir(), '.launcher-ready.json'), 'utf8').then(JSON.parse).catch(() => null);
   return {...getPlayerSettings(settings), pack:packDefinition, auth:await getMicrosoftAuthStatus(), installed:ready?.version === packDefinition.version, running:!!game||await isManagedGameRunning(),
-    totalRamGb:Math.floor(os.totalmem()/1024**3), instancePath:getMinecraftInstanceDir(), version:app.getVersion(), busy};
+    totalRamGb:Math.floor(os.totalmem()/1024**3), instancePath:getMinecraftInstanceDir(), version:app.getVersion(), busy, launcherUpdate:launcherUpdates.snapshot()};
 }
 async function exclusive(action: () => Promise<unknown>) {
+  if (launcherUpdates.blocking) return {ok:false, message:'Le launcher se met à jour automatiquement. Patientez quelques instants.'};
   if (busy) return {ok:false, message:'Une opération est déjà en cours.'};
   busy = true; send('busy', true);
   try {if(game||await isManagedGameRunning())return {ok:false,message:'Fermez Minecraft avant de modifier ses fichiers ou ses réglages.'};return await action(); }
@@ -78,7 +73,7 @@ async function exclusive(action: () => Promise<unknown>) {
     const message = sanitizeLogMessage(error instanceof Error ? error.message : String(error));
     await writeLauncherLog(`[error] ${message}`);
     return {ok:false, message};
-  } finally { busy=false; send('busy', false); }
+  } finally { busy=false; send('busy', false); if(launcherUpdates.snapshot().phase==='deferred')void launcherUpdates.resume(); }
 }
 async function play() {
   const auth = await getAuthenticatedSession();
@@ -94,6 +89,7 @@ async function play() {
     if(child.pid)void forgetGame(child.pid);
     if (game === child) game=null;
     send('running', false);
+    if(launcherUpdates.snapshot().phase==='deferred')void launcherUpdates.resume();
     const message = code === 0 ? 'Partie terminée. À bientôt !' : `Minecraft s’est arrêté (code ${code ?? 'inconnu'}). Consulte le journal.`;
     send('notice', {ok:code === 0, message});
     void writeLauncherLog(`[minecraft] ${message}`);
@@ -133,10 +129,7 @@ function registerIpc() {
     return startMicrosoftLogin(status => send('auth', status));
   }));
   handle('window-minimize', () => { window?.minimize(); return {ok:true}; });
-  handle('install-launcher-update', async () => {
-    if(busy || game || await isManagedGameRunning() || !launcherUpdateReady) return {ok:false,message:'Terminez l’opération en cours avant de mettre à jour le launcher.'};
-    autoUpdater.quitAndInstall(false,true);return {ok:true};
-  });
+  handle('retry-launcher-update', () => { void launcherUpdates.retry(); return {ok:true}; });
   handle('window-close', () => { window?.close(); return {ok:true}; });
   handle('logout', () => exclusive(() => logoutMicrosoft(status => send('auth', status))));
   handle('install', () => exclusive(async () => { await prepare(); return {ok:true, message:'Installation terminée. Le pack est prêt.'}; }));
@@ -212,25 +205,43 @@ async function createWindow() {
       await writeFile(path.join(__dirname,`../.test-data/${view}-preview.png`),(await window.webContents.capturePage()).toPNG());
     }
     if (!rendererReady) throw new Error('Le renderer ne communique pas avec le processus principal.');
+    const updateUi = await window.webContents.executeJavaScript(`(() => {
+      document.querySelector('[data-view=play]').click();
+      renderLauncherUpdate({phase:'downloading',blocking:true,percent:42,version:'0.5.3',message:'Téléchargement de la mise à jour… Installation automatique à suivre.'});
+      const blocked=document.getElementById('play-button').disabled;
+      const bannerVisible=!document.getElementById('launcher-update-status').hidden;
+      const percent=document.getElementById('launcher-update-progress').value;
+      renderLauncherUpdate({phase:'error',blocking:false,retryable:true,message:'La mise à jour n’a pas pu aboutir. Vous pouvez réessayer.'});
+      const retryVisible=!document.getElementById('launcher-update-retry').hidden;
+      renderLauncherUpdate({phase:'installing',blocking:true,percent:100,message:'Installation de la mise à jour… Le launcher va se fermer et se rouvrir automatiquement.'});
+      return {blocked,bannerVisible,percent,retryVisible,noManualInstallButton:!document.getElementById('launcher-update')};
+    })()`);
+    if(!updateUi.blocked || !updateUi.bannerVisible || updateUi.percent!==42 || !updateUi.retryVisible || !updateUi.noManualInstallButton)throw new Error('Le parcours de mise à jour automatique ne s’affiche pas correctement.');
+    await writeFile(path.join(__dirname,'../.test-data/update-preview.png'),(await window.webContents.capturePage()).toPNG());
     const {markup, ...privacy} = privacyCheck;
-    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady, privacy}, null, 2));
+    await writeFile(path.join(__dirname,'../.test-data/smoke-result.json'), JSON.stringify({...await state(), rendererReady, privacy, updateUi}, null, 2));
     app.quit();
   }
 }
 app.on('second-instance', () => { window?.restore(); window?.show(); window?.focus(); });
 app.on('window-all-closed', () => app.quit());
+app.on('before-quit', () => launcherUpdates?.dispose());
 app.whenReady().then(async () => {
   if (!owned) return;
   Menu.setApplicationMenu(null);
   await mkdir(getLauncherDataDir(), {recursive:true});
   settings=await readPreferences(); applyPreferences(settings);
+  launcherUpdates = new LauncherUpdates({driver:autoUpdater,
+    supported:app.isPackaged && !testMode && !process.env.PORTABLE_EXECUTABLE_DIR,
+    busy:()=>busy, gameRunning:async()=>!!game || await isManagedGameRunning(),
+    changed:value=>send('launcher-update',value), log:message=>{void writeLauncherLog(message);}});
   if (process.argv.includes('--prepare-test')) {
     const started=Date.now();
     await prepare();
     await writeFile(path.join(getLauncherDataDir(), 'prepare-result.json'), JSON.stringify({ok:true, seconds:(Date.now()-started)/1000, files:(await readPackLock()).files.length}));
     app.quit(); return;
   }
-  registerIpc(); await createWindow();checkLauncherUpdate();
+  registerIpc(); await createWindow();void launcherUpdates.start();
 }).catch(async error => {
   await writeLauncherLog(`[error] ${error.message}`);
     if (!testMode) dialog.showErrorBox('Licaris Launcher', sanitizeLogMessage(error.message));

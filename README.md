@@ -10,8 +10,12 @@ Launcher Windows pour jouer ensemble à **Cobblemon Academy 2.0**.
 
 Récupérez le Setup ou la version Portable dans les [releases du launcher](https://github.com/fraiyee14minecraft-dot/licaris/releases/latest).
 
-- **Setup** : installe le launcher et permet de recevoir ses mises à jour.
+- **Setup** : installe le launcher. À chaque ouverture, les mises à jour sont recherchées, téléchargées puis installées automatiquement, avec relance du launcher.
 - **Portable** : fonctionne sans installation ; les nouvelles versions de l’exécutable se téléchargent manuellement.
+
+Depuis la version 0.5.2, aucun bouton d’installation n’est nécessaire pour les mises à jour du launcher installé. Une progression apparaît au démarrage. Une partie ou une opération déjà en cours se termine avant l’installation ; en cas d’échec réseau, le launcher reste utilisable et réessaie à la prochaine ouverture.
+
+Pour passer d’une version 0.5.1 ou antérieure à ce fonctionnement, utiliser une dernière fois son bouton **Installer la mise à jour du launcher**, ou ouvrir le nouveau Setup. Les mises à jour suivantes s’installeront automatiquement.
 
 ## Jouer
 
