@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "modsFingerprint": "57d15c410f690793913911fe77705edbfb0fcdbdc3fa38fcf287e1020a9bccb0",
+  "modsFingerprint": "fff74eb363413ff12bd4e36c96b8598820dcdac2e5346ef466f3785b63a39289",
   "entries": [
     {
       "id": "autorun",
@@ -756,12 +756,20 @@
       "sha256": "2be62a8c237c2b3fbd9dff4177aac72b31049fe25fce8f3358f2ed2b1c245c8f"
     },
     {
+      "path": "mods/ftb-chunks-fabric-2101.1.22.jar",
+      "sha256": "6b783610069b64f7b28aa0675a707b3cf171364b6647e0c7b406cf6ca7674215"
+    },
+    {
       "path": "mods/ftb-essentials-fabric-2101.1.10.jar",
       "sha256": "9e85afd6a77ed7aaae770d6d3e019fcc753c0e286aa6328558b03bf0c66ca12e"
     },
     {
-      "path": "mods/ftb-library-fabric-2101.1.35.jar",
-      "sha256": "73d0e241ac9465d9d1a1edc4c1691a9664d2f0890316df1ae6d4c9128c98c99b"
+      "path": "mods/ftb-library-fabric-2101.1.36.jar",
+      "sha256": "0344e19cd35c0bb6aa608343cc352c9733e400b946b52fd49beec2d7fc0406b6"
+    },
+    {
+      "path": "mods/ftb-teams-fabric-2101.1.11.jar",
+      "sha256": "39e34b438e0232a614a8cf1269fcff2705b85fde8b930a03d558bc66a03c7cf6"
     },
     {
       "path": "mods/fusion-1.2.11-fabric-mc1.21.jar",

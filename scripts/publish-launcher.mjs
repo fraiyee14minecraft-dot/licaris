@@ -11,15 +11,15 @@ async function main(){
  const tag=`v${pkg.version}`;
  let release;try{release=await request(`${apiBase}/releases/tags/${tag}`);}catch{}
  if(release&&!release.draft)throw new Error('Cette version est déjà publiée. Augmentez version dans package.json pour publier une nouvelle version.');
- const body=`Licaris ${pkg.version} ajoute un avatar Minecraft, une bibliothèque de skins avec aperçu 3D, les options de mods clients, la gestion des shaders et les liens utiles dont Immersive Studio.
+ const body=`Licaris ${pkg.version} actualise le catalogue des options clientes pour le modpack intégrant FTB Chunks 2101.1.22, FTB Teams 2101.1.11 et FTB Library 2101.1.36.
 
-Les réglages gagnent un bleu plus clair et le choix de garder, réduire ou fermer le launcher au démarrage du jeu. Le bloc de configuration du serveur est retiré. La préparation conserve les configurations personnelles, réutilise les vérifications récentes et extrait seulement les ressources nécessaires.
+Ces trois mods restent obligatoires. Les options clientes déjà présentes, les skins, les shaders, l’avatar Minecraft et les préférences du joueur sont conservés.
 
-Les mods nécessaires au serveur et leurs dépendances restent protégés. La modification des fichiers est bloquée pendant une partie. Aucun changement de serveur n’est nécessaire pour cette version du launcher.
+Les mods sont synchronisés avant la prochaine partie. L’administrateur du serveur doit ajouter FTB Chunks et FTB Teams, puis remplacer l’ancienne version de FTB Library par la 2101.1.36.
 
-Les installations existantes reçoivent la mise à jour via le launcher. Pour une première installation, choisissez le Setup. La version Portable doit être remplacée manuellement.
+Les installations existantes reçoivent la mise à jour via le launcher. Pour une première installation, choisissez le Setup. La version Portable doit être remplacée manuellement pour profiter du catalogue actualisé.
 
-Validation : tests automatisés, contrôle de l’interface et de l’aperçu 3D, téléchargement et sélection de shader vérifiés. Aucun lancement de Minecraft effectué pour cette livraison.`;
+Validation : dépendances contrôlées avec Fabric Loader, empreintes client/serveur identiques, tests automatisés et contrôle de l’interface. Aucun lancement de Minecraft effectué pour cette livraison.`;
  release??=await jsonRequest(`${apiBase}/releases`,'POST',{tag_name:tag,name:`Licaris · Launcher ${pkg.version}`,draft:true,body,make_latest:'false'});
  for(const name of names){console.log(`Envoi : ${name}`);await upload(release,name,path.join(folder,name));}
  await jsonRequest(`${apiBase}/releases/${release.id}`,'PATCH',{draft:false,make_latest:'true'});
